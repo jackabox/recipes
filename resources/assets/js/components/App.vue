@@ -1,14 +1,12 @@
 <template>
-    <div>
+    <div class="container">
         <h1>Recipes</h1>
         <p>
             <router-link :to="{ name: 'home' }">Home</router-link>
             <router-link :to="{ name: 'recipes.index' }">Recipes</router-link>
         </p>
 
-        <div class="container">
-            <router-view></router-view>
-        </div>
+        <router-view></router-view>
     </div>
 </template>
 
