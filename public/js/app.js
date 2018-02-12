@@ -50152,6 +50152,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -50160,7 +50163,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             loading: false,
             recipe: null,
-            errors: null
+            errors: null,
+            qty: 1,
+            ingredients: {}
         };
     },
     created: function created() {
@@ -50174,14 +50179,33 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.error = this.users = null;
             this.loading = true;
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/${id}').then(function (response) {
-                console.log(response.data);
-
                 _this.loading = false; // loading is done
                 _this.recipe = response.data; // set the users from the response
+                _this.ingredients = response.data.ingredients;
+                _this.qty = _this.recipe.id; // set this to servings field
             }).catch(function (error) {
                 _this.loading = false;
                 _this.error = error.response.data.message || error.message;
             });
+        },
+        updateIngredientsList: function updateIngredientsList(newQty) {
+            var _this2 = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/' + this.recipe.id + '/ingredients', {
+                params: {
+                    qty: newQty
+                }
+            }).then(function (response) {
+                _this2.ingredients = response.data;
+            }).catch(function (error) {
+                _this2.loading = false;
+                _this2.error = error.response.data.message || error.message;
+            });
+        }
+    },
+    watch: {
+        qty: function qty(newQty, oldQty) {
+            this.updateIngredientsList(newQty);
         }
     }
 });
@@ -50240,9 +50264,37 @@ var render = function() {
             _c("div", { staticClass: "ingredients" }, [
               _c("h3", [_vm._v("Ingredients")]),
               _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model.lazy",
+                    value: _vm.qty,
+                    expression: "qty",
+                    modifiers: { lazy: true }
+                  }
+                ],
+                attrs: { type: "number", name: "qty", min: "1" },
+                domProps: { value: _vm.qty },
+                on: {
+                  change: function($event) {
+                    _vm.qty = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
               _c(
                 "ul",
-                _vm._l(_vm.recipe.ingredients, function(i) {
+                {
+                  model: {
+                    value: _vm.ingredients,
+                    callback: function($$v) {
+                      _vm.ingredients = $$v
+                    },
+                    expression: "ingredients"
+                  }
+                },
+                _vm._l(_vm.ingredients, function(i) {
                   return _c("li", [
                     _c("b", [_vm._v(_vm._s(i.amount))]),
                     _vm._v(" " + _vm._s(i.type))

@@ -20,3 +20,18 @@ Route::get('/recipes', function () {
 Route::get('/recipe/{id}', function () {
     return factory('App\Models\Recipe', 1)->make()[0];
 });
+
+Route::get('/recipe/{id}/ingredients', function (Request $request) {
+    $list = factory('App\Models\Recipe', 1)->make()[0];
+
+    $ingredient = [];
+
+    foreach ($list->ingredients as $key => $l) {
+        $ingredient[] = [
+            'amount' => ($l['amount'] / 1) * $request->input('qty'),
+            'type' => $l['type']
+        ];
+    }
+
+    return $ingredient;
+});

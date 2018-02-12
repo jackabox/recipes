@@ -25,8 +25,11 @@
 
                 <div class="ingredients">
                     <h3>Ingredients</h3>
-                    <ul>
-                        <li v-for="i in recipe.ingredients"><b>{{ i.amount }}</b> {{ i.type }}</li>
+            
+                    <input type="number" name="qty" v-model.lazy="qty" min="1">
+                    
+                    <ul v-model="ingredients">
+                        <li v-for="i in ingredients"><b>{{ i.amount }}</b> {{ i.type }}</li>
                     </ul>
                 </div>
 
@@ -50,6 +53,8 @@
                 loading: false,
                 recipe: null,
                 errors: null,
+                qty: 1,
+                ingredients: {}
             };
         },
         created() {
@@ -62,14 +67,32 @@
                 axios
                     .get('/api/recipe/${id}')
                     .then(response => {
-                        console.log(response.data);
-
                         this.loading = false; // loading is done
                         this.recipe = response.data; // set the users from the response
+                        this.ingredients = response.data.ingredients;
+                        this.qty = this.recipe.id; // set this to servings field
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
                     });
+            },
+            updateIngredientsList(newQty) {
+                axios
+                    .get('/api/recipe/' + this.recipe.id + '/ingredients', {
+                        params: {
+                            qty: newQty
+                        }
+                    }).then(response => {
+                        this.ingredients = response.data;
+                    }).catch(error => {
+                        this.loading = false;
+                        this.error = error.response.data.message || error.message;
+                    });
+            }
+        },
+        watch: {
+            qty(newQty, oldQty) {
+                this.updateIngredientsList(newQty);
             }
         }
     }
