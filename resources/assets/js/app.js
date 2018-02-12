@@ -11,6 +11,7 @@ import App from './components/App'
 import Home from './components/Home'
 import Recipes from './components/Recipes'
 import RecipesSingle from './components/RecipesSingle'
+import NotFound from './components/NotFound'
 
 // routes
 const router = new VueRouter({
@@ -28,6 +29,10 @@ const router = new VueRouter({
             path: '/recipes/:id',
             name: 'recipes.single',
             component: RecipesSingle
+        }, {
+            path: '*',
+            name: '404',
+            component: NotFound
         }
     ]
 });
