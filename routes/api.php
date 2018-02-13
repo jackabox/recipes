@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,4 +35,23 @@ Route::get('/recipe/{id}/ingredients', function (Request $request) {
     }
 
     return $ingredient;
+});
+
+/**
+ * Can't use sessions in an API, without modification.
+ * Would we post this to a database preferrably?
+ */
+Route::post('/shoppingList/update', function(Request $request) {
+    $list = [
+        'id' => $request->input('recipe_id'),
+        'ingredients' => $request->input('ingredients')
+    ];
+
+    if ($old_list = session('shopping_list')) {
+        $list = array_merge($old_list, $list);
+    }
+
+    session(['shopping_list' => $list]);
+
+    return session('shopping_list');
 });

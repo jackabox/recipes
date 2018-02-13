@@ -27,6 +27,7 @@
                     <h3>Ingredients</h3>
             
                     <input type="number" name="qty" v-model.lazy="qty" min="1">
+                    <button @click="saveShoppingList()">Save To Shopping List</button>
                     
                     <ul v-model="ingredients">
                         <li v-for="i in ingredients"><b>{{ i.amount }}</b> {{ i.type }}</li>
@@ -79,15 +80,28 @@
             updateIngredientsList(newQty) {
                 axios
                     .get('/api/recipe/' + this.recipe.id + '/ingredients', {
-                        params: {
-                            qty: newQty
-                        }
+                        qty: newQty
                     }).then(response => {
                         this.ingredients = response.data;
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
                     });
+            },
+            saveShoppingList() {
+                let json = JSON.parse(localStorage.getItem('shopping_list'));
+
+                let data = {                  
+                    ingredients: this.ingredients,
+                    recipe_id: this.recipe.id
+                }
+
+                var list = Object.assign(json, data);
+
+                localStorage.setItem('shopping_list', JSON.stringify(list));
+                
+                console.log(list);
+
             }
         },
         watch: {

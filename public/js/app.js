@@ -1078,7 +1078,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(12);
-module.exports = __webpack_require__(52);
+module.exports = __webpack_require__(54);
 
 
 /***/ }),
@@ -1098,7 +1098,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Recipes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Recipes__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_RecipesSingle__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_RecipesSingle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_RecipesSingle__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_NotFound__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_NotFound__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_NotFound___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_NotFound__);
 __webpack_require__(13);
 
@@ -50162,6 +50162,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -50199,15 +50200,27 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this2 = this;
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/' + this.recipe.id + '/ingredients', {
-                params: {
-                    qty: newQty
-                }
+                qty: newQty
             }).then(function (response) {
                 _this2.ingredients = response.data;
             }).catch(function (error) {
                 _this2.loading = false;
                 _this2.error = error.response.data.message || error.message;
             });
+        },
+        saveShoppingList: function saveShoppingList() {
+            var json = JSON.parse(localStorage.getItem('shopping_list'));
+
+            var data = {
+                ingredients: this.ingredients,
+                recipe_id: this.recipe.id
+            };
+
+            var list = Object.assign(json, data);
+
+            localStorage.setItem('shopping_list', JSON.stringify(list));
+
+            console.log(list);
         }
     },
     watch: {
@@ -50291,6 +50304,18 @@ var render = function() {
               }),
               _vm._v(" "),
               _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      _vm.saveShoppingList()
+                    }
+                  }
+                },
+                [_vm._v("Save To Shopping List")]
+              ),
+              _vm._v(" "),
+              _c(
                 "ul",
                 {
                   model: {
@@ -50337,16 +50362,6 @@ if (false) {
 
 /***/ }),
 /* 52 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -50354,7 +50369,7 @@ var normalizeComponent = __webpack_require__(2)
 /* script */
 var __vue_script__ = null
 /* template */
-var __vue_template__ = __webpack_require__(58)
+var __vue_template__ = __webpack_require__(53)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -50393,7 +50408,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 58 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -50411,6 +50426,12 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-078b1bb4", module.exports)
   }
 }
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
