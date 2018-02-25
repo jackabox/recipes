@@ -24,22 +24,22 @@ $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
 
     for ($i = 0; $i < $ingredients; $i++) {
         $ingredient_list[] =  [
-            'amount' => $faker->numberBetween(25, 150),
-            'type'  => $faker->word
+            'amount' => $faker->numberBetween(1, 150) . 'g',
+            'name'  => $faker->word
         ];
     }
 
     for ($i = 0; $i < $method; $i++) {
-        $method_list[] = $faker->paragraph();
+        $method_list[$i] = $faker->paragraph();
     }
     
     return [
-        'id' => 1,
-        'name' => $faker->sentence,
-        'description' => $faker->text(400),
-        'cook_time' => $faker->numberBetween(5, 180),
-        'prep_time' => $faker->numberBetween(5, 180),
-        'ingredients' => $ingredient_list,
-        'method'    => $method_list
+        'name'          => $faker->sentence,
+        'user_id'       => 1,
+        'description'   => $faker->text(400),
+        'cook_time'     => $faker->numberBetween(5, 180),
+        'prep_time'     => $faker->numberBetween(5, 180),
+        'ingredients'   => json_encode($ingredient_list),
+        'method'        => json_encode($method_list)
     ];
 });
