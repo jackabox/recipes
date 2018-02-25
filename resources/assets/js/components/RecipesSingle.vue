@@ -26,11 +26,12 @@
                 <div class="ingredients">
                     <h3>Ingredients</h3>
             
-                    <input type="number" name="qty" v-model.lazy="qty" min="1">
+                    <input type="number" name="qty" v-model="qty" min="1">
+
                     <button @click.prevent="saveShoppingList()">Save To Shopping List</button>
                     
                     <ul v-model="ingredients">
-                        <li v-for="i in ingredients"><b>{{ i.amount }}</b> {{ i.type }}</li>
+                        <li v-for="i in ingredients"><b>{{ i.amount }}{{ i.measurement }}</b> {{ i.name }}</li>
                     </ul>
                 </div>
 
@@ -46,15 +47,16 @@
 </template>
 
 <script>
-    import axios from 'axios';
-    
     export default {
         data() {
             return {
+                slug: this.$route.params.id,
                 loading: false,
                 recipe: null,
                 errors: null,
                 qty: 1,
+                newQty: 1,
+                oldQty: 1,
                 ingredients: {}
             };
         },
@@ -65,7 +67,7 @@
         methods: {
             getShoppingList() {
                 axios
-                    .get('shopping-list')
+                    .get('v1/shopping-list')
                     .then(response => {
                        console.log(response.data);
                     }).catch(error => {
@@ -77,8 +79,9 @@
                 this.error = this.users = null;
                 this.loading = true;
                 axios
-                    .get('recipe/${id}')
+                    .get('v1/recipes/' + this.slug)
                     .then(response => {
+                        console.log(response)
                         this.loading = false; // loading is done
                         this.recipe = response.data; // set the users from the response
                         this.ingredients = response.data.ingredients;
@@ -88,20 +91,9 @@
                         this.error = error.response.data.message || error.message;
                     });
             },
-            updateIngredientsList(newQty) {
-                axios
-                    .get('recipe/' + this.recipe.id + '/ingredients', {
-                        qty: newQty
-                    }).then(response => {
-                        this.ingredients = response.data;
-                    }).catch(error => {
-                        this.loading = false;
-                        this.error = error.response.data.message || error.message;
-                    });
-            },
             saveShoppingList() {
                 axios
-                    .post('shopping-list/update', {
+                    .post('v1/shopping-list/update', {
                         ingredients: this.ingredients,
                         recipe_id: this.recipe.id
                     }).then(response => {
@@ -115,7 +107,17 @@
         },
         watch: {
             qty(newQty, oldQty) {
-                this.updateIngredientsList(newQty);
+                if (newQty) {
+                    this.newQty = newQty;
+                }
+
+                if (oldQty) {
+                    this.oldQty = oldQty;
+                }
+
+                for(var i = 0; i <= this.ingredients.length; i++){
+                    this.ingredients[i].amount = this.ingredients[i].amount / this.oldQty * this.newQty;
+                }
             }
         }
     }

@@ -5,7 +5,7 @@
         </div>
         <form autocomplete="off" @submit.prevent="login" method="post">
             <div class="form-group">
-                <label for="email">E-mail</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" class="form-control" placeholder="user@example.com" v-model="email" required>
             </div>
             <div class="form-group">
@@ -19,7 +19,7 @@
 
 <script>
   export default {
-    data(){
+    data() {
       return {
         email: null,
         password: null,
@@ -27,8 +27,9 @@
       }
     },
     methods: {
-      login(){
+      login() {
         var app = this
+
         this.$auth.login({
             params: {
               email: app.email,
@@ -41,10 +42,10 @@
 
             },
             rememberMe: true,
-            redirect: '/recipes',
+            redirect: '/',
             fetchUser: true,
         });       
-      },
+      }
     }
   } 
 </script>

@@ -6,5 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Recipe extends Model
 {
-    //
+    public function getIngredientsAttribute($value)
+    {
+        return json_decode($value);
+    }
+
+    public function getMethodAttribute($value)
+    {
+        return json_decode($value);
+    }
 }

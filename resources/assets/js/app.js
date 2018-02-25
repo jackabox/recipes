@@ -9,7 +9,7 @@ import VueAxios from 'vue-axios'
 Vue.use(VueRouter)
 Vue.use(VueAxios, axios)
 
-Vue.axios.defaults.baseURL = '/api';
+Vue.axios.defaults.baseURL = '/api/';
 
 // components to utilise
 import App from './components/App'

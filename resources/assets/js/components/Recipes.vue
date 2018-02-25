@@ -26,7 +26,7 @@
                 <div class="ingredients">
                     <h3>Ingredients</h3>
                     <ul>
-                        <li v-for="i in recipe.ingredients"><b>{{ i.amount }}</b> {{ i.type }}</li>
+                        <li v-for="i in recipe.ingredients"><b>{{ i.amount }}</b> {{ i.name }}</li>
                     </ul>
                 </div>
 
@@ -61,12 +61,12 @@
                 this.error = this.users = null;
                 this.loading = true;
                 axios
-                    .get('recipes')
+                    .get('v1/recipes')
                     .then(response => {
                         console.log(response.data);
 
                         this.loading = false; // loading is done
-                        this.recipes = response.data; // set the users from the response
+                        this.recipes = response.data.data; // set the users from the response
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
