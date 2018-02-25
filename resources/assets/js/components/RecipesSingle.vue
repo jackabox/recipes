@@ -65,7 +65,7 @@
         methods: {
             getShoppingList() {
                 axios
-                    .get('/api/shopping-list')
+                    .get('shopping-list')
                     .then(response => {
                        console.log(response.data);
                     }).catch(error => {
@@ -77,7 +77,7 @@
                 this.error = this.users = null;
                 this.loading = true;
                 axios
-                    .get('/api/recipe/${id}')
+                    .get('recipe/${id}')
                     .then(response => {
                         this.loading = false; // loading is done
                         this.recipe = response.data; // set the users from the response
@@ -90,7 +90,7 @@
             },
             updateIngredientsList(newQty) {
                 axios
-                    .get('/api/recipe/' + this.recipe.id + '/ingredients', {
+                    .get('recipe/' + this.recipe.id + '/ingredients', {
                         qty: newQty
                     }).then(response => {
                         this.ingredients = response.data;
@@ -101,7 +101,7 @@
             },
             saveShoppingList() {
                 axios
-                    .post('/api/shopping-list/update', {
+                    .post('shopping-list/update', {
                         ingredients: this.ingredients,
                         recipe_id: this.recipe.id
                     }).then(response => {

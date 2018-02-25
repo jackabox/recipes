@@ -19,17 +19,17 @@ use Symfony\Component\HttpFoundation\Session\Session;
  */
 
 Route::group([
-    'middleware' => 'api',
     'prefix' => 'auth'
 ], function ($router) {
+    Route::post('register', 'AuthController@register');
     Route::post('login', 'AuthController@login');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
-    Route::post('me', 'AuthController@me');
-
+    Route::post('user', 'AuthController@me');
 });
 
 
+Route::group(['middleware' => 'auth:api'], function ($router) {
 
 Route::get('/recipes', function () {
     return factory('App\Models\Recipe', 10)->make();
@@ -56,8 +56,9 @@ Route::get('/recipe/{id}/ingredients', function (Request $request) {
 
 
 Route::get('/shopping-list', function(Request $request) {
-    return auth()->id();
-    return session('shopping_list');
+    return 'shop listing';
+    // SHOPPING_LIST
+    // return session('shopping_list');
 });
 
 Route::post('/shopping-list/update', function(Request $request) {
@@ -73,4 +74,6 @@ Route::post('/shopping-list/update', function(Request $request) {
     session(['shopping_list' => $list]);
 
     return session('shopping_list');
+});
+
 });

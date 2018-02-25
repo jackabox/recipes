@@ -61,7 +61,7 @@
                 this.error = this.users = null;
                 this.loading = true;
                 axios
-                    .get('/api/recipes')
+                    .get('recipes')
                     .then(response => {
                         console.log(response.data);
 
