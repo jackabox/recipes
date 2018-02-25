@@ -14,6 +14,23 @@ use Symfony\Component\HttpFoundation\Session\Session;
 |
 */
 
+/** 
+ * AUTH
+ */
+
+Route::group([
+    'middleware' => 'api',
+    'prefix' => 'auth'
+], function ($router) {
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+
+});
+
+
+
 Route::get('/recipes', function () {
     return factory('App\Models\Recipe', 10)->make();
 });
@@ -37,13 +54,15 @@ Route::get('/recipe/{id}/ingredients', function (Request $request) {
     return $ingredient;
 });
 
-/**
- * Can't use sessions in an API, without modification.
- * Would we post this to a database preferrably?
- */
-Route::post('/shoppingList/update', function(Request $request) {
+
+Route::get('/shopping-list', function(Request $request) {
+    return auth()->id();
+    return session('shopping_list');
+});
+
+Route::post('/shopping-list/update', function(Request $request) {
     $list = [
-        'id' => $request->input('recipe_id'),
+        'id'          => $request->input('recipe_id'),
         'ingredients' => $request->input('ingredients')
     ];
 

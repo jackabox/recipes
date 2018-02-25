@@ -50178,49 +50178,59 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     created: function created() {
         this.fetchData();
+        this.getShoppingList();
     },
 
     methods: {
-        fetchData: function fetchData() {
+        getShoppingList: function getShoppingList() {
             var _this = this;
 
-            this.error = this.users = null;
-            this.loading = true;
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/${id}').then(function (response) {
-                _this.loading = false; // loading is done
-                _this.recipe = response.data; // set the users from the response
-                _this.ingredients = response.data.ingredients;
-                _this.qty = _this.recipe.id; // set this to servings field
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/shopping-list').then(function (response) {
+                console.log(response.data);
             }).catch(function (error) {
                 _this.loading = false;
                 _this.error = error.response.data.message || error.message;
             });
         },
-        updateIngredientsList: function updateIngredientsList(newQty) {
+        fetchData: function fetchData() {
             var _this2 = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/' + this.recipe.id + '/ingredients', {
-                qty: newQty
-            }).then(function (response) {
-                _this2.ingredients = response.data;
+            this.error = this.users = null;
+            this.loading = true;
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/${id}').then(function (response) {
+                _this2.loading = false; // loading is done
+                _this2.recipe = response.data; // set the users from the response
+                _this2.ingredients = response.data.ingredients;
+                _this2.qty = _this2.recipe.id; // set this to servings field
             }).catch(function (error) {
                 _this2.loading = false;
                 _this2.error = error.response.data.message || error.message;
             });
         },
-        saveShoppingList: function saveShoppingList() {
-            var json = JSON.parse(localStorage.getItem('shopping_list'));
+        updateIngredientsList: function updateIngredientsList(newQty) {
+            var _this3 = this;
 
-            var data = {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/recipe/' + this.recipe.id + '/ingredients', {
+                qty: newQty
+            }).then(function (response) {
+                _this3.ingredients = response.data;
+            }).catch(function (error) {
+                _this3.loading = false;
+                _this3.error = error.response.data.message || error.message;
+            });
+        },
+        saveShoppingList: function saveShoppingList() {
+            var _this4 = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/shopping-list/update', {
                 ingredients: this.ingredients,
                 recipe_id: this.recipe.id
-            };
-
-            var list = Object.assign(json, data);
-
-            localStorage.setItem('shopping_list', JSON.stringify(list));
-
-            console.log(list);
+            }).then(function (response) {
+                console.log(response);
+            }).catch(function (error) {
+                _this4.loading = false;
+                _this4.error = error.response.data.message || error.message;
+            });
         }
     },
     watch: {
@@ -50308,6 +50318,7 @@ var render = function() {
                 {
                   on: {
                     click: function($event) {
+                      $event.preventDefault()
                       _vm.saveShoppingList()
                     }
                   }
