@@ -58,7 +58,7 @@
                 newQty: 1,
                 oldQty: 1,
                 ingredients: {}
-            };
+            }
         },
         created() {
             this.fetchData();
