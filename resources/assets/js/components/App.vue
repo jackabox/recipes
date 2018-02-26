@@ -17,7 +17,7 @@
             </ul>
         </nav>
 
-        <shopping-list></shopping-list>
+        <shopping-list v-if="$auth.check()"></shopping-list>
 
         <router-view></router-view>
     </div>

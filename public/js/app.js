@@ -49927,7 +49927,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("shopping-list"),
+      _vm.$auth.check() ? _c("shopping-list") : _vm._e(),
       _vm._v(" "),
       _c("router-view")
     ],
