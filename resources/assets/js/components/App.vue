@@ -17,6 +17,8 @@
             </ul>
         </nav>
 
+        <shopping-list></shopping-list>
+
         <router-view></router-view>
     </div>
 </template>

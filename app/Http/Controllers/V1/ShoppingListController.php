@@ -14,7 +14,7 @@ class ShoppingListController extends Controller
         $this->middleware('auth:api');
     }
 
-    public function get(Request $request)
+    public function get()
     {
         $list = ShoppingList::selectRaw('sum(quantity) as qty, ingredient, measurement')
             ->where('user_id', auth()->id())
@@ -40,7 +40,7 @@ class ShoppingListController extends Controller
             $item->save();
         }
     
-        return response()->json('List Updated');
+        return $this->get();
     }
 
     public function delete(Request $request, $id)

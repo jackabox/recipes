@@ -62,19 +62,8 @@
         },
         created() {
             this.fetchData();
-            this.getShoppingList();
         },
         methods: {
-            getShoppingList() {
-                axios
-                    .get('v1/shopping-list')
-                    .then(response => {
-                       console.log(response.data);
-                    }).catch(error => {
-                        this.loading = false;
-                        this.error = error.response.data.message || error.message;
-                    });
-            },
             fetchData() {
                 this.error = this.users = null;
                 this.loading = true;
@@ -92,17 +81,12 @@
                     });
             },
             saveShoppingList() {
-                axios
-                    .post('v1/shopping-list/update', {
-                        ingredients: this.ingredients,
-                        recipe_id: this.recipe.id
-                    }).then(response => {
-                        console.log(response)
-                    }).catch(error => {
-                        this.loading = false;
-                        this.error = error.response.data.message || error.message;
-                    });
+                let data = {
+                    ingredients: this.ingredients,
+                    recipe_id: this.recipe.id
+                }
 
+                this.$root.$emit('update-shopping-list', data)
             }
         },
         watch: {

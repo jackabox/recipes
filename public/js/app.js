@@ -1171,6 +1171,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_RecipesSingle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_RecipesSingle__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_NotFound__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_NotFound___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_NotFound__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_ShoppingList__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_ShoppingList___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_ShoppingList__);
 __webpack_require__(14);
 
 
@@ -1187,6 +1189,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.axios.defaults.baseURL = '/api/';
 // components to utilise
 
 // Auth
+
 
 
 
@@ -1242,6 +1245,8 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.router = router;
 __WEBPACK_IMPORTED_MODULE_4__components_App___default.a.router = __WEBPACK_IMPORTED_MODULE_0_vue___default.a.router;
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('shopping-list', __WEBPACK_IMPORTED_MODULE_11__components_ShoppingList___default.a);
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(62), {
     auth: __webpack_require__(66),
@@ -49835,6 +49840,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
@@ -49919,6 +49926,8 @@ var render = function() {
             : _vm._e()
         ])
       ]),
+      _vm._v(" "),
+      _c("shopping-list"),
       _vm._v(" "),
       _c("router-view")
     ],
@@ -50878,48 +50887,32 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     created: function created() {
         this.fetchData();
-        this.getShoppingList();
     },
 
     methods: {
-        getShoppingList: function getShoppingList() {
-            var _this = this;
-
-            axios.get('v1/shopping-list').then(function (response) {
-                console.log(response.data);
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.error = error.response.data.message || error.message;
-            });
-        },
         fetchData: function fetchData() {
-            var _this2 = this;
+            var _this = this;
 
             this.error = this.users = null;
             this.loading = true;
             axios.get('v1/recipes/' + this.slug).then(function (response) {
                 console.log(response);
-                _this2.loading = false; // loading is done
-                _this2.recipe = response.data; // set the users from the response
-                _this2.ingredients = response.data.ingredients;
-                _this2.qty = _this2.recipe.id; // set this to servings field
+                _this.loading = false; // loading is done
+                _this.recipe = response.data; // set the users from the response
+                _this.ingredients = response.data.ingredients;
+                _this.qty = _this.recipe.id; // set this to servings field
             }).catch(function (error) {
-                _this2.loading = false;
-                _this2.error = error.response.data.message || error.message;
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
             });
         },
         saveShoppingList: function saveShoppingList() {
-            var _this3 = this;
-
-            axios.post('v1/shopping-list/update', {
+            var data = {
                 ingredients: this.ingredients,
                 recipe_id: this.recipe.id
-            }).then(function (response) {
-                console.log(response);
-            }).catch(function (error) {
-                _this3.loading = false;
-                _this3.error = error.response.data.message || error.message;
-            });
+            };
+
+            this.$root.$emit('update-shopping-list', data);
         }
     },
     watch: {
@@ -52216,6 +52209,159 @@ module.exports = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(75)
+/* template */
+var __vue_template__ = __webpack_require__(76)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/ShoppingList.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f2749e46", Component.options)
+  } else {
+    hotAPI.reload("data-v-f2749e46", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            loading: true,
+            list: null
+        };
+    },
+    created: function created() {
+        console.log('mounted');
+
+        this.$root.$on('update-shopping-list', this.saveShoppingList);
+
+        this.getShoppingList();
+    },
+
+    methods: {
+        getShoppingList: function getShoppingList() {
+            var _this = this;
+
+            axios.get('v1/shopping-list').then(function (response) {
+                _this.loading = false, _this.list = response.data;
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
+            });
+        },
+        saveShoppingList: function saveShoppingList(data) {
+            var _this2 = this;
+
+            axios.post('v1/shopping-list/update', data).then(function (response) {
+                console.log(response);
+                _this2.list = response.data;
+            }).catch(function (error) {
+                _this2.loading = false;
+                _this2.error = error.response.data.message || error.message;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h5", [_vm._v("Shopping List")]),
+    _vm._v(" "),
+    _vm.loading
+      ? _c("div", { staticClass: "loading" }, [
+          _vm._v("\n        loading...\n    ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.list, function(item) {
+        return _c("li", [
+          _vm._v(
+            _vm._s(item.qty) +
+              _vm._s(item.measurement) +
+              " " +
+              _vm._s(item.ingredient)
+          )
+        ])
+      })
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-f2749e46", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

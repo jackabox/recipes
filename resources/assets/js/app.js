@@ -21,6 +21,7 @@ import Home from './components/Home'
 import Recipes from './components/Recipes'
 import RecipesSingle from './components/RecipesSingle'
 import NotFound from './components/NotFound'
+import ShoppingList from './components/ShoppingList'
 
 // routes
 const router = new VueRouter({
@@ -71,6 +72,8 @@ const router = new VueRouter({
 
 Vue.router = router
 App.router = Vue.router
+
+Vue.component('shopping-list', ShoppingList)
 
 Vue.use(require('@websanova/vue-auth'), {
     auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),
