@@ -47,7 +47,7 @@ const router = new VueRouter({
                 auth: true
             }
         }, {
-            path: '/recipes/:id',
+            path: '/recipes/:slug',
             name: 'recipes.single',
             component: RecipesSingle,
             meta: {

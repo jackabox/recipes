@@ -28,7 +28,7 @@ Route::group(['prefix' => 'auth'], function ($router) {
 
 Route::prefix('v1')->namespace('V1')->group(function() {
     Route::get('/recipes', 'RecipeController@index');
-    Route::get('/recipes/{id}', 'RecipeController@show');
+    Route::get('/recipes/{recipe}', 'RecipeController@show');
  
     Route::get('/shopping-list', 'ShoppingListController@get');
     Route::post('/shopping-list/update', 'ShoppingListController@add');

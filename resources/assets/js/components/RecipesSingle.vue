@@ -50,7 +50,7 @@
     export default {
         data() {
             return {
-                slug: this.$route.params.id,
+                slug: this.$route.params.slug,
                 loading: false,
                 recipe: null,
                 errors: null,

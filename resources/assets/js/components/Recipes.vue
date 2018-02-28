@@ -36,7 +36,7 @@
                         <li v-for="method in recipe.method">{{ method }}</li>
                     </ol>
                 </div>
-                <router-link :to="{ name: 'recipes.single', params: { id: recipe.id }}">View Item</router-link>
+                <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">View Item</router-link>
             </div>
         </div>
     </div>

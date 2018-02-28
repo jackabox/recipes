@@ -1223,7 +1223,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
             auth: true
         }
     }, {
-        path: '/recipes/:id',
+        path: '/recipes/:slug',
         name: 'recipes.single',
         component: __WEBPACK_IMPORTED_MODULE_9__components_RecipesSingle___default.a,
         meta: {
@@ -50754,7 +50754,10 @@ var render = function() {
                   "router-link",
                   {
                     attrs: {
-                      to: { name: "recipes.single", params: { id: recipe.id } }
+                      to: {
+                        name: "recipes.single",
+                        params: { slug: recipe.slug }
+                      }
                     }
                   },
                   [_vm._v("View Item")]
@@ -50882,7 +50885,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            slug: this.$route.params.id,
+            slug: this.$route.params.slug,
             loading: false,
             recipe: null,
             errors: null,

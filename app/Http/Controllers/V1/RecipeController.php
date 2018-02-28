@@ -18,8 +18,8 @@ class RecipeController extends Controller
         return response()->json(Recipe::latest()->paginate());
     }
 
-    public function show(Request $request, $id)
+    public function show(Request $request, Recipe $recipe)
     {
-        return response()->json(Recipe::find($id));
+        return response()->json($recipe);
     }
 }
