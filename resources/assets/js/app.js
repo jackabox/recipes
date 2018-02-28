@@ -21,7 +21,8 @@ import Home from './components/Home'
 import Recipes from './components/Recipes'
 import RecipesSingle from './components/RecipesSingle'
 import NotFound from './components/NotFound'
-import ShoppingList from './components/ShoppingList'
+import ShoppingList from './components/ShoppingList' 
+import Dashboard from './components/Account/Dashboard' 
 
 // routes
 const router = new VueRouter({
@@ -31,13 +32,6 @@ const router = new VueRouter({
             path: '/',
             name: 'home',
             component: Home
-        }, {
-            path: '/register',
-            name: 'register',
-            component: Register,
-            meta: {
-                auth: false
-            }
         }, {
             path: '/login',
             name: 'login',
@@ -56,6 +50,13 @@ const router = new VueRouter({
             path: '/recipes/:id',
             name: 'recipes.single',
             component: RecipesSingle,
+            meta: {
+                auth: true
+            }
+        }, {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: Dashboard,
             meta: {
                 auth: true
             }

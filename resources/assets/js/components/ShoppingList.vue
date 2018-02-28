@@ -38,8 +38,7 @@ export default {
                     this.error = error.response.data.message || error.message;
                 });
         },
-        saveShoppingList(data)
-        {
+        saveShoppingList(data) {
             axios
                 .post('v1/shopping-list/update', data)
                 .then(response => {

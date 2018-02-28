@@ -26,6 +26,7 @@
                 <input type="password" id="password" class="form-control" v-model="password" required>
                 <span class="help-block" v-if="error && errors.password">{{ errors.password }}</span>
             </div>
+            
             <button type="submit" class="btn btn-default">Submit</button>
         </form>
     </div>
