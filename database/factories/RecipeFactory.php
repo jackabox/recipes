@@ -26,7 +26,7 @@ $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
         $ingredient_list[] =  [
             'amount' => $faker->numberBetween(1, 150),
             'measurement' => str_random(1),
-            'name'  => $faker->word
+            'ingredient'  => $faker->word
         ];
     }
 
@@ -35,7 +35,7 @@ $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
     }
     
     return [
-        'name'          => $faker->sentence,
+        'title'          => $faker->sentence,
         'user_id'       => 1,
         'description'   => $faker->text(400),
         'cook_time'     => $faker->numberBetween(5, 180),
