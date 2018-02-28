@@ -8,6 +8,26 @@
             <input type="text" class="form-control" placeholder="Enter a Title" autofocus v-model="recipe.title">
         </div>
 
+        <div class="form-group">
+            <label>Description</label>
+            <textarea class="form-control" v-model="recipe.description"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="title">Cook Time</label>
+            <input type="number" class="form-control" v-model="recipe.cook_time">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Prep Time</label>
+            <input type="number" class="form-control" v-model="recipe.prep_time">
+        </div>
+
+        <div class="form-group">
+            <label for="title">Serves</label>
+            <input type="number" class="form-control" v-model="recipe.serves">
+        </div>
+
         <div class="row">
             <!-- Ingredients -->
             <div class="col-md-4">
@@ -68,6 +88,10 @@ export default {
         return {
             recipe: {
                 title: '',
+                description: '',
+                cook_time: '',
+                prep_time: '',
+                serves: '',
                 method: [
                     {
                         description: '',
