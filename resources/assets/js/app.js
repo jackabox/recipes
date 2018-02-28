@@ -23,6 +23,7 @@ import RecipesSingle from './components/RecipesSingle'
 import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
 import Dashboard from './components/Account/Dashboard' 
+import RecipeCreate from './components/Account/RecipeCreate' 
 
 // routes
 const router = new VueRouter({
@@ -57,6 +58,13 @@ const router = new VueRouter({
             path: '/dashboard',
             name: 'dashboard',
             component: Dashboard,
+            meta: {
+                auth: true
+            }
+        }, {
+            path: '/dashboard/recipes/add',
+            name: 'dashboard.recipe.add',
+            component: RecipeCreate,
             meta: {
                 auth: true
             }

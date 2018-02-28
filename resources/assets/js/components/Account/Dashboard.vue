@@ -8,7 +8,9 @@
             <div class="col-md-4">
                 <h2>Add Recipe</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
-                <p><a href="" class="btn btn-primary">Click</a></p>
+                <p>
+                    <router-link :to="{ name: 'dashboard.recipe.add' }" class="btn btn-primary">Click</router-link>
+                </p>
             </div>
 
             <div class="col-md-4">
@@ -20,7 +22,7 @@
             <div class="col-md-4">
                 <h2>Account Settings</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
-                <p><a href="" class="btn btn-primary">Click</a></p>
+                
             </div>
         </div>
     </div>
