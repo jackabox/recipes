@@ -2,6 +2,7 @@
     <div>
         <h1>Add Recipe</h1>
 
+        <form @submit.prevent="saveRecipe()">
         <!-- title -->
         <div class="form-group">
             <label for="title">Title</label>
@@ -79,6 +80,8 @@
             </div>
         </div>
 
+        <p><button type="submit" class="btn">Lets Go</button></p>
+        </form>
     </div>
 </template>
 
@@ -95,7 +98,6 @@ export default {
                 method: [
                     {
                         description: '',
-                        order: 1
                     }
                 ],
                 ingredients: []
@@ -123,6 +125,24 @@ export default {
             }
 
             this.recipe.method.push(methodData)
+        },
+        saveRecipe() {
+            console.log('starting save');
+            
+            axios
+                .post('v1/recipes/create', { 
+                    title: this.recipe.title, 
+                    description: this.recipe.description, 
+                    cook_time: this.recipe.cook_time, 
+                    prep_time: this.recipe.prep_time, 
+                    serves: this.recipe.serves, 
+                    method: this.recipe.method, 
+                    ingredients: this.recipe.ingredients, 
+                }).then(response => {
+                    console.log(response.data)
+                }).catch(error => {
+                    console.log(error)
+                })
         }
     }
 }

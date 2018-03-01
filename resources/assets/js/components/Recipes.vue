@@ -20,13 +20,14 @@
                 <p>{{ recipe.description }}</p>
                 <p>
                     <b>Cook Time:</b> {{ recipe.cook_time }}min | 
-                    <b>Prep Time:</b> {{ recipe.prep_time }}min
+                    <b>Prep Time:</b> {{ recipe.prep_time }}min |
+                    <b>Serves:</b> {{ recipe.serves }}
                 </p>
 
                 <div class="ingredients">
                     <h3>Ingredients</h3>
                     <ul>
-                        <li v-for="i in recipe.ingredients"><b>{{ i.amount }}</b> {{ i.name }}</li>
+                        <li v-for="i in recipe.ingredients"><b>{{ i.amount }}{{ i.measurement }}</b> {{ i.title }}</li>
                     </ul>
                 </div>
 

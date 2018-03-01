@@ -20,7 +20,8 @@
                 <p>{{ recipe.description }}</p>
                 <p>
                     <b>Cook Time:</b> {{ recipe.cook_time }}min | 
-                    <b>Prep Time:</b> {{ recipe.prep_time }}min
+                    <b>Prep Time:</b> {{ recipe.prep_time }}min |
+                    <b>Serves:</b> {{ recipe.serves }}
                 </p>
 
                 <div class="ingredients">
@@ -31,7 +32,7 @@
                     <button @click.prevent="saveShoppingList()">Save To Shopping List</button>
                     
                     <ul v-model="ingredients">
-                        <li v-for="i in ingredients"><b>{{ i.amount }}{{ i.measurement }}</b> {{ i.name }}</li>
+                        <li v-for="i in ingredients"><b>{{ i.amount }} {{ i.measurement }}</b> {{ i.title }}</li>
                     </ul>
                 </div>
 
@@ -54,7 +55,7 @@
                 loading: false,
                 recipe: null,
                 errors: null,
-                qty: 1,
+                qty: null,
                 newQty: 1,
                 oldQty: 1,
                 ingredients: {}
@@ -74,7 +75,10 @@
                         this.loading = false; // loading is done
                         this.recipe = response.data; // set the users from the response
                         this.ingredients = response.data.ingredients;
-                        this.qty = this.recipe.id; // set this to servings field
+                        this.oldQty = this.recipe.serves;
+                        this.qty = this.recipe.serves;
+                        
+                        // this.qty = this.recipe.serves; // set this to servings field
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;

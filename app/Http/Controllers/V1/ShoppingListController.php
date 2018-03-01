@@ -35,7 +35,7 @@ class ShoppingListController extends Controller
             $item->recipe_id = $recipe_id;
             $item->quantity = $ingredient['amount'];
             $item->measurement = $ingredient['measurement'];
-            $item->ingredient = $ingredient['name'];
+            $item->ingredient = $ingredient['title'];
             $item->expires_on = Carbon::now()->addWeeks(2);
             $item->save();
         }

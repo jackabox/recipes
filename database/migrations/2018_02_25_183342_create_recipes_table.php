@@ -19,6 +19,7 @@ class CreateRecipesTable extends Migration
             $table->string('slug');
             $table->longText('description')->nullable(true);
             $table->integer('user_id')->unsigned()->nullable(true);
+            $table->mediumInteger('serves');
             $table->mediumInteger('cook_time');
             $table->mediumInteger('prep_time');
             $table->json('ingredients');
