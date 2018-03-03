@@ -22,7 +22,9 @@
             <div class="col-md-4">
                 <h2>Account Settings</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
-                
+                 <p>
+                    <router-link :to="{ name: 'me.settings' }" class="btn btn-primary">Click</router-link>
+                </p>
             </div>
         </div>
     </div>

@@ -24,6 +24,7 @@ import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
 import Dashboard from './components/Account/Dashboard' 
 import RecipeCreate from './components/Account/RecipeCreate' 
+import Settings from './components/Account/Settings' 
 
 // routes
 const router = new VueRouter({
@@ -54,7 +55,14 @@ const router = new VueRouter({
             meta: {
                 auth: true
             }
-        }, {
+        },{
+            path: '/me/settings',
+            name: 'me.settings',
+            component: Settings,
+            meta: {
+                auth: true
+            }
+        },{
             path: '/dashboard',
             name: 'dashboard',
             component: Dashboard,
