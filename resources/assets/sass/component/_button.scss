@@ -9,6 +9,8 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: .4s all ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);    
+    font-size: 1.5rem;
 
     &:hover, &:focus {
         background-color: darken($primary, 10%);
@@ -33,5 +35,10 @@
 
 .btn--tertiary {
 
+}
+
+.btn--grey {
+    background-color: darken($grey-soft, 5%);
+    color: hsla(0,0,0,.6);
 }
 

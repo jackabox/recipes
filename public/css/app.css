@@ -169,19 +169,20 @@ h4,
 h5 {
   font-family: "Roboto", sans-serif;
   margin: 0;
+  font-weight: 600;
 }
 
 h1 {
   font-size: 3.2rem;
-  line-height: 3rem;
-  padding-top: 3rem;
-  padding-bottom: .5rem;
+  line-height: 4.8rem;
+  padding-top: 4.8rem;
+  padding-bottom: .8rem;
 }
 
 h2,
 h3 {
   padding-top: 3.2rem;
-  padding-bottom: .5rem;
+  padding-bottom: .8rem;
 }
 
 h2 {
@@ -189,20 +190,20 @@ h2 {
 }
 
 h3 {
-  font-size: 1.9srem;
+  font-size: 2rem;
 }
 
 h4 {
   font-size: 1.7rem;
-  padding-top: 1.5rem;
+  padding-top: 2.4rem;
 }
 
 p,
 ul,
 ol {
-  font-size: 1.6rem;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
+  font-size: 1.7rem;
+  padding-top: .9rem;
+  padding-bottom: .9rem;
 }
 
 ul {
@@ -421,11 +422,19 @@ img {
   text-transform: uppercase;
   -webkit-transition: .4s all ease-in-out;
   transition: .4s all ease-in-out;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: #5749b8;
+}
+
+.btn--grey {
+  background-color: #e8e8e8;
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .shopping-list {
@@ -450,5 +459,157 @@ img {
 .shopping-list ul {
   padding: 15px;
   list-style: none;
+}
+
+.recipe-single {
+  margin-top: 50px;
+}
+
+.recipe-single__header {
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+}
+
+.recipe-single__header h1 {
+  font-size: 3.6rem;
+  padding-top: 1.5rem;
+}
+
+.recipe-single-lead {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.recipe-single-lead__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  width: 340px;
+  margin-right: 4%;
+}
+
+.recipe-single-lead__info .prep-time,
+.recipe-single-lead__info .cook-time {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  font-weight: 600;
+}
+
+.recipe-single-lead__info .prep-time span,
+.recipe-single-lead__info .cook-time span {
+  display: inline-block;
+  border: 3px solid #796EC6;
+  width: 61px;
+  height: 61px;
+  line-height: 46px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  margin-right: 10px;
+}
+
+.recipe-single-lead__image {
+  -ms-flex-preferred-size: calc(96% - 340px);
+      flex-basis: calc(96% - 340px);
+}
+
+.recipe-single-lead__image .inner-image {
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+
+.recipe-single-lead__image img {
+  position: relative;
+  top: 50%;
+  max-width: 100%;
+  height: auto;
+}
+
+.recipe-single-lead__actions {
+  margin-top: 2rem;
+}
+
+.recipe-single-lead__actions .btn {
+  margin-right: 10px;
+}
+
+.recipe-single-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recipe-single-ingredients {
+  padding-top: 30px;
+  width: 340px;
+  padding-right: 2%;
+  border-right: 1px solid #E0E0E0;
+  position: relative;
+}
+
+.recipe-single-ingredients ul {
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
+.recipe-single-ingredients .form {
+  position: absolute;
+  right: 20px;
+  top: 57px;
+  max-width: 120px;
+}
+
+.recipe-single-ingredients .form input {
+  max-width: 60px;
+  margin-left: 5px;
+}
+
+.recipe-single-method {
+  padding-left: 2%;
+  padding-top: 30px;
+  -ms-flex-preferred-size: calc(98% - 340px);
+      flex-basis: calc(98% - 340px);
+}
+
+.recipe-single-method ol {
+  list-style: none;
+  padding-left: 40px;
+}
+
+.recipe-single-method li {
+  margin-bottom: 16px;
+  position: relative;
+  position: relative;
+}
+
+.recipe-single-method li::before {
+  position: absolute;
+  content: '';
+  display: block;
+  left: -40px;
+  top: 6px;
+  width: 20px;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 4px;
 }
 

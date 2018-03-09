@@ -50951,6 +50951,34 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -50975,7 +51003,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             this.error = this.users = null;
             this.loading = true;
-            axios.get('v1/recipes/' + this.slug).then(function (response) {
+            axios.get(route('recipe.single', this.slug)).then(function (response) {
                 console.log(response);
                 _this.loading = false; // loading is done
                 _this.recipe = response.data; // set the users from the response
@@ -51023,7 +51051,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "users" }, [
+  return _c("div", [
     _vm.loading
       ? _c("div", { staticClass: "loading" }, [
           _vm._v("\n        loading...\n    ")
@@ -51051,61 +51079,64 @@ var render = function() {
       : _vm._e(),
     _vm._v(" "),
     _vm.recipe
-      ? _c("div", [
-          _c("div", [
-            _c("h1", [_vm._v(_vm._s(_vm.recipe.name))]),
+      ? _c("div", { staticClass: "recipe-single" }, [
+          _c("div", { staticClass: "recipe-single__header" }, [
+            _vm._m(0),
             _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.recipe.description))]),
-            _vm._v(" "),
-            _c("p", [
-              _c("b", [_vm._v("Cook Time:")]),
-              _vm._v(
-                " " + _vm._s(_vm.recipe.cook_time) + "min | \n                "
-              ),
-              _c("b", [_vm._v("Prep Time:")]),
-              _vm._v(
-                " " + _vm._s(_vm.recipe.prep_time) + "min |\n                "
-              ),
-              _c("b", [_vm._v("Serves:")]),
-              _vm._v(" " + _vm._s(_vm.recipe.serves) + "\n            ")
+            _c("h1", [_vm._v(_vm._s(_vm.recipe.title))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipe-single-lead" }, [
+            _c("div", { staticClass: "recipe-single-lead__info" }, [
+              _c("p", { staticClass: "prep-time" }, [
+                _c("span", [_vm._v(_vm._s(_vm.recipe.prep_time))]),
+                _vm._v(" Prep Time\n                ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "cook-time" }, [
+                _c("span", [_vm._v(_vm._s(_vm.recipe.cook_time))]),
+                _vm._v(" Cook Time\n                ")
+              ]),
+              _vm._v(" "),
+              _c("h3", [_vm._v("Introduction")]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.recipe.description))]),
+              _vm._v(" "),
+              _vm._m(1)
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "ingredients" }, [
+            _vm._m(2)
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipe-single-body" }, [
+            _c("div", { staticClass: "recipe-single-ingredients" }, [
               _c("h3", [_vm._v("Ingredients")]),
               _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.qty,
-                    expression: "qty"
-                  }
-                ],
-                attrs: { type: "number", name: "qty", min: "1" },
-                domProps: { value: _vm.qty },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
+              _c("form", { staticClass: "form", attrs: { action: "#" } }, [
+                _c("label", { staticClass: "inline-label" }, [
+                  _vm._v("Serves "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.qty,
+                        expression: "qty"
+                      }
+                    ],
+                    attrs: { type: "number", name: "qty", min: "1" },
+                    domProps: { value: _vm.qty },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.qty = $event.target.value
+                      }
                     }
-                    _vm.qty = $event.target.value
-                  }
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.saveShoppingList()
-                    }
-                  }
-                },
-                [_vm._v("Save To Shopping List")]
-              ),
+                  })
+                ])
+              ]),
               _vm._v(" "),
               _c(
                 "ul",
@@ -51126,10 +51157,26 @@ var render = function() {
                     _vm._v(" " + _vm._s(i.title))
                   ])
                 })
-              )
+              ),
+              _vm._v(" "),
+              _c("p", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.saveShoppingList()
+                      }
+                    }
+                  },
+                  [_vm._v("Add To Shopping List")]
+                )
+              ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "method" }, [
+            _c("div", { staticClass: "recipe-single-method" }, [
               _c("h3", [_vm._v("Method")]),
               _vm._v(" "),
               _c(
@@ -51144,7 +51191,48 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "breadcrumb" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Recipes")]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Desserts")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "recipe-single-lead__actions" }, [
+      _c("a", { staticClass: "btn", attrs: { href: "#" } }, [
+        _vm._v("Add To Favourites")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "btn btn--grey", attrs: { href: "#" } }, [
+        _vm._v("PRT")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "recipe-single-lead__image" }, [
+      _c("div", { staticClass: "inner-image" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=7b65345dde1da9bc81241c54a4f7ce2d",
+            alt: ""
+          }
+        })
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -51307,7 +51395,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         getShoppingList: function getShoppingList() {
             var _this = this;
 
-            axios.get('v1/shopping-list').then(function (response) {
+            axios.get(route('shopping-list')).then(function (response) {
                 _this.loading = false, _this.list = response.data;
             }).catch(function (error) {
                 _this.loading = false;
@@ -51317,7 +51405,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         saveShoppingList: function saveShoppingList(data) {
             var _this2 = this;
 
-            axios.post('v1/shopping-list/update', data).then(function (response) {
+            axios.post(route('shopping-list.update'), data).then(function (response) {
                 console.log(response);
                 _this2.list = response.data;
             }).catch(function (error) {

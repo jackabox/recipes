@@ -11,6 +11,8 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    @routes
+    
     <div id="app">
         <app></app>
     </div>

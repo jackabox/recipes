@@ -29,7 +29,7 @@ export default {
     methods: {
         getShoppingList() {
             axios
-                .get('v1/shopping-list')
+                .get(route('shopping-list'))
                 .then(response => {
                     this.loading = false,
                     this.list = response.data
@@ -40,7 +40,7 @@ export default {
         },
         saveShoppingList(data) {
             axios
-                .post('v1/shopping-list/update', data)
+                .post(route('shopping-list.update'), data)
                 .then(response => {
                     console.log(response)
                     this.list = response.data
