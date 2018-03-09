@@ -1,0 +1,10 @@
+.recipes {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.recipes__item {
+    width: 31%;
+    margin-bottom: 40px;
+}

@@ -1,5 +1,7 @@
 <template>
-    <div class="users">
+    <div>
+        <h1>Recipes</h1>
+
         <div class="loading" v-if="loading">
             loading...
         </div>
@@ -14,29 +16,13 @@
             </p>
         </div>
 
-        <div v-if="recipes">
-            <div v-for="recipe in recipes">
-                <h1>{{ recipe.name }}</h1>
+        <div v-if="recipes" class="recipes">
+            <div v-for="recipe in recipes" class="recipes__item">
+                <img src="https://placehold.it/400" alt="">
+                <h2>{{ recipe.title }}</h2>
                 <p>{{ recipe.description }}</p>
-                <p>
-                    <b>Cook Time:</b> {{ recipe.cook_time }}min | 
-                    <b>Prep Time:</b> {{ recipe.prep_time }}min |
-                    <b>Serves:</b> {{ recipe.serves }}
-                </p>
-
-                <div class="ingredients">
-                    <h3>Ingredients</h3>
-                    <ul>
-                        <li v-for="i in recipe.ingredients"><b>{{ i.amount }}{{ i.measurement }}</b> {{ i.title }}</li>
-                    </ul>
-                </div>
-
-                <div class="method">
-                    <h3>Method</h3>
-                    <ol>
-                        <li v-for="method in recipe.method">{{ method }}</li>
-                    </ol>
-                </div>
+            
+            
                 <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">View Item</router-link>
             </div>
         </div>

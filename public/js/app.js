@@ -50689,20 +50689,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -50745,7 +50731,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "users" }, [
+  return _c("div", [
+    _c("h1", [_vm._v("Recipes")]),
+    _vm._v(" "),
     _vm.loading
       ? _c("div", { staticClass: "loading" }, [
           _vm._v("\n        loading...\n    ")
@@ -50775,53 +50763,19 @@ var render = function() {
     _vm.recipes
       ? _c(
           "div",
+          { staticClass: "recipes" },
           _vm._l(_vm.recipes, function(recipe) {
             return _c(
               "div",
+              { staticClass: "recipes__item" },
               [
-                _c("h1", [_vm._v(_vm._s(recipe.name))]),
+                _c("img", {
+                  attrs: { src: "https://placehold.it/400", alt: "" }
+                }),
+                _vm._v(" "),
+                _c("h2", [_vm._v(_vm._s(recipe.title))]),
                 _vm._v(" "),
                 _c("p", [_vm._v(_vm._s(recipe.description))]),
-                _vm._v(" "),
-                _c("p", [
-                  _c("b", [_vm._v("Cook Time:")]),
-                  _vm._v(
-                    " " + _vm._s(recipe.cook_time) + "min | \n                "
-                  ),
-                  _c("b", [_vm._v("Prep Time:")]),
-                  _vm._v(
-                    " " + _vm._s(recipe.prep_time) + "min |\n                "
-                  ),
-                  _c("b", [_vm._v("Serves:")]),
-                  _vm._v(" " + _vm._s(recipe.serves) + "\n            ")
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "ingredients" }, [
-                  _c("h3", [_vm._v("Ingredients")]),
-                  _vm._v(" "),
-                  _c(
-                    "ul",
-                    _vm._l(recipe.ingredients, function(i) {
-                      return _c("li", [
-                        _c("b", [
-                          _vm._v(_vm._s(i.amount) + _vm._s(i.measurement))
-                        ]),
-                        _vm._v(" " + _vm._s(i.title))
-                      ])
-                    })
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "method" }, [
-                  _c("h3", [_vm._v("Method")]),
-                  _vm._v(" "),
-                  _c(
-                    "ol",
-                    _vm._l(recipe.method, function(method) {
-                      return _c("li", [_vm._v(_vm._s(method))])
-                    })
-                  )
-                ]),
                 _vm._v(" "),
                 _c(
                   "router-link",

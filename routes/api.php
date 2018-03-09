@@ -34,7 +34,3 @@ Route::prefix('v1')->namespace('V1')->group(function() {
     Route::get('/shopping-list', 'ShoppingListController@get')->name('shopping-list');
     Route::post('/shopping-list/update', 'ShoppingListController@add')->name('shopping-list.update');
 });
-
-
-
-
