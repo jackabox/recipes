@@ -23,7 +23,7 @@ Route::group(['prefix' => 'auth'], function ($router) {
     Route::post('login', 'AuthController@login')->name('login');
     Route::post('logout', 'AuthController@logout');
     Route::post('refresh', 'AuthController@refresh');
-    Route::post('user', 'AuthController@me');
+    Route::get('user', 'AuthController@user');
 });
 
 Route::prefix('v1')->namespace('V1')->group(function() {

@@ -39,5 +39,9 @@
 </template>
 
 <script>
-    export default {}
+    export default {
+        created() {
+            // this.$auth.fetch({url: '/api/user', method: 'get'});
+        },
+    }
 </script>
