@@ -6,21 +6,13 @@
 @import "variables";
 
 // Bootstrap
-@import 'vendor/normalize';
+@import 'base/reset';
+@import 'base/core';
+@import 'base/typography';
+
+@import 'layout/header';
+@import 'layout/grid';
+@import 'layout/forms';
 
 @import 'component/button';
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: $font-family;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-}
-
-.header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+@import 'component/shopping-list';

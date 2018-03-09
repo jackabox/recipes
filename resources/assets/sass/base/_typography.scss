@@ -1,0 +1,119 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 3rem;
+  padding-top: 3rem;
+  padding-bottom: .5rem;
+}
+
+h2, h3 {
+  padding-top: 3.2rem;
+  padding-bottom: .5rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.9srem;
+}
+
+h4 {
+  font-size: 1.7rem;
+  padding-top: 1.5rem;
+}
+
+p,
+ul,
+ol {
+  font-size: 1.6rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 2.1rem;
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 2.1rem;
+}
+
+ul.unlisted {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+// p, li {
+//   code {
+//     // background: #f5f2f0;
+//     padding: .3rem;
+//     font-size: .9rem;
+//     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+//   }
+// }
+
+pre code {
+  font-size: 1.4rem;
+}
+
+small {
+  font-size: 1.3rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+//   border-bottom: 3px solid $link;
+  transition: .3s all ease-in-out;
+}
+
+a:hover,
+a:focus {
+//   border-bottom-color: $link-active;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 1.2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+blockquote {
+  background-color: #f5f2f0;
+  border-left: 8px solid darken(#f5f2f0, 10%);
+  color: #70818a;
+  padding: 1.5rem;
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}

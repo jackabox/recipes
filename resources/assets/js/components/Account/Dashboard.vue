@@ -3,7 +3,6 @@
         <h1>Dashboard</h1>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus impedit magni magnam cumque repellendus quod!</p>
 
-
         <div class="row">
             <div class="col-md-4">
                 <h2>Add Recipe</h2>

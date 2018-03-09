@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="shopping-list">
         <h5>Shopping List</h5>
         <div class="loading" v-if="loading">
             loading...

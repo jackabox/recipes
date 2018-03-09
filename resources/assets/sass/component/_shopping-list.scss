@@ -1,0 +1,22 @@
+.shopping-list {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);    
+    position: absolute;
+    top: 50px;
+    width: 240px;
+    display: none;
+
+    h5 {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        font-weight: 600;
+        background: hsla(0,0,0,0.08);
+        padding: 6px 15px;
+        letter-spacing: 1px;
+    }
+
+    ul {
+        padding: 15px;    
+        list-style: none;  
+    }
+}

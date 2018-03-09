@@ -1,0 +1,75 @@
+.form {
+    label {
+      display: block;
+      position: relative;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  
+    input,
+    select,
+    textarea {
+      padding: 8px 10px;
+      outline: none;
+      font-size: inherit;
+      border: 0;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+      width: 100%;
+    }
+  
+    textarea {
+      min-height: 150px;
+    }
+  
+    select {
+      appearance: none;
+      border-radius: 4px;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);      
+    }
+  
+    input[type="checkbox"],
+    input[type="radio"] {
+      font-size: 1.6rem;
+    }
+  
+    input[type="file"] {
+      font-size: 1.6rem;
+    }
+  
+    fieldset {}
+  
+    legend {}
+  
+    ::placeholder {
+  
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+  
+    .label--inline {
+      display: inline-block;
+      font-weight: 400;
+  
+      & + * {
+        margin-left: 10px
+      }
+    }
+  
+  }
+
+.form--search {
+    input {
+        box-shadow: none;
+        background: hsla(0,0,0,0.04);
+        max-width: 240px;
+    }
+
+    button {
+        border: 0;
+        background: 0;
+    }
+}
