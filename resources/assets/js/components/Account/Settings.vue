@@ -12,9 +12,13 @@
             <h3>Settings Panel</h3>
 
             <h6>Account</h6>
-            <form action="POST" @submit.prevent="updateAccount">
+            <form action="POST" enctype="multipart/form-data" @submit.prevent="updateAccount">
+                <div class="dropbox"><p>
+                    <input type="file" name="uploadFieldName">
+                </p></div>
                 <p><input type="text" class="form-control" placeholder="name"></p>
                 <p><input type="text" class="form-control" placeholder="email"></p>
+                <p><input type="password" class="form-control" placeholder="confirm password"></p>
                 <p><button type="submit" class="btn">Save</button></p>
             </form>
 
@@ -32,16 +36,23 @@
 export default {
     data() {
         return {
-            
+            account: {
+                name: '',
+                email: '',
+                password: ''
+            },
+            password: {
+                old: '',
+                new: ''
+            }
         }
     },
     created() {
-
+        
     },
     methods: {
         updateAccount() {
-            console.log('account update')
-
+            console.log(this.account)
         },
         passwordChange() {
             console.log('password update')

@@ -50354,6 +50354,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -50471,11 +50472,9 @@ var render = function() {
           })
         ]),
         _vm._v(" "),
-        _c(
-          "button",
-          { staticClass: "btn btn-default", attrs: { type: "submit" } },
-          [_vm._v("Sign in")]
-        )
+        _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+          _vm._v("Sign in")
+        ])
       ]
     )
   ])
@@ -52211,16 +52210,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
-        return {};
+        return {
+            account: {
+                name: '',
+                email: '',
+                password: ''
+            },
+            password: {
+                old: '',
+                new: ''
+            }
+        };
     },
     created: function created() {},
 
     methods: {
         updateAccount: function updateAccount() {
-            console.log('account update');
+            console.log(this.account);
         },
         passwordChange: function passwordChange() {
             console.log('password update');
@@ -52247,7 +52260,7 @@ var render = function() {
       _c(
         "form",
         {
-          attrs: { action: "POST" },
+          attrs: { action: "POST", enctype: "multipart/form-data" },
           on: {
             submit: function($event) {
               $event.preventDefault()
@@ -52255,7 +52268,17 @@ var render = function() {
             }
           }
         },
-        [_vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3)]
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _vm._m(5)
+        ]
       ),
       _vm._v(" "),
       _c("h6", [_vm._v("Password")]),
@@ -52271,7 +52294,7 @@ var render = function() {
             }
           }
         },
-        [_vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _vm._m(6)]
+        [_vm._m(6), _vm._v(" "), _vm._m(7), _vm._v(" "), _vm._m(8)]
       )
     ])
   ])
@@ -52295,6 +52318,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dropbox" }, [
+      _c("p", [
+        _c("input", { attrs: { type: "file", name: "uploadFieldName" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("p", [
       _c("input", {
         staticClass: "form-control",
@@ -52310,6 +52343,17 @@ var staticRenderFns = [
       _c("input", {
         staticClass: "form-control",
         attrs: { type: "text", placeholder: "email" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "password", placeholder: "confirm password" }
       })
     ])
   },

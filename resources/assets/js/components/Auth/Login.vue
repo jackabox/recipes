@@ -15,7 +15,8 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" class="form-control" v-model="password" required>
             </div>
-            <button type="submit" class="btn btn-default">Sign in</button>
+
+            <button type="submit" class="btn">Sign in</button>
         </form>
     </div>
 </template>

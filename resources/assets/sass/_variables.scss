@@ -1,12 +1,16 @@
 
 // Body
-$body-bg: #f5f8fa;
+$body-bg: #FAFAFA;
+$grey-soft: #F5F5F5;
+$font-secondary: #B4B4B4;
+$font-primary: #000000;
+$primary: #796EC6;
 
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
-$font-size-base: 0.9rem;
+$font-family: "Roboto", sans-serif;
+$font-size-base: 1.6rem;
 $line-height-base: 1.6;
-$text-color: #636b6f;
+$text-color: $font-primary;
 
 // Navbar
 $navbar-default-bg: #fff;
