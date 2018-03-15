@@ -153,7 +153,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.6;
   background-color: #FAFAFA;
-  padding-top: 120px;
+  padding-top: 140px;
 }
 
 main {
@@ -294,7 +294,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 25px 0;
+  padding: 20px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -352,13 +352,13 @@ img {
 .form input,
 .form select,
 .form textarea {
-  padding: 8px 10px;
+  padding: 10px;
   outline: none;
   font-size: inherit;
   border: 0;
   border-radius: 4px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
   width: 100%;
 }
 
@@ -372,8 +372,8 @@ img {
           appearance: none;
   border-radius: 4px;
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .form input[type="checkbox"],
@@ -386,7 +386,7 @@ img {
 }
 
 .form .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .form .label--inline {
@@ -430,6 +430,7 @@ img {
 .btn:hover,
 .btn:focus {
   background-color: #5749b8;
+  cursor: pointer;
 }
 
 .btn--grey {
@@ -444,7 +445,6 @@ img {
   position: absolute;
   top: 50px;
   width: 240px;
-  display: none;
 }
 
 .shopping-list h5 {
@@ -629,5 +629,10 @@ img {
   height: 20px;
   background: #e0e0e0;
   border-radius: 4px;
+}
+
+.login-container {
+  max-width: 600px;
+  margin: 0 auto;
 }
 

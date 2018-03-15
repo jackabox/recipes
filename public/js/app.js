@@ -50400,7 +50400,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -50438,7 +50437,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "login-container" }, [
     _vm.error
       ? _c("div", { staticClass: "alert alert-danger" }, [
           _c("p", [
@@ -50452,7 +50451,7 @@ var render = function() {
     _c(
       "form",
       {
-        staticClass: "form",
+        staticClass: "form form--login",
         attrs: { autocomplete: "off", method: "post" },
         on: {
           submit: function($event) {
