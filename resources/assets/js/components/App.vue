@@ -7,13 +7,13 @@
             <div class="site-header__search">
                 <form action="" class="form form--search">
                     <input type="search" placeholder="enter a recipe name">
-                    <button type="submit">S</button>
+                    <button type="submit"><icon src="/img/zondicons/search.svg" /></button>
                 </form>
             </div>
 
             <nav class="site-navigation">
                 <ul>
-                    <li><a href="#">SL</a></li>
+                    <li><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
                     <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
                     <li v-if="$auth.check()">
                         <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>

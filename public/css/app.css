@@ -438,6 +438,16 @@ img {
   color: rgba(0, 0, 0, 0.6);
 }
 
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon svg {
+  max-width: 20px;
+  height: auto;
+}
+
 .shopping-list {
   background: white;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);

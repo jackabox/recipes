@@ -11,8 +11,12 @@ Vue.use(VueAxios, axios)
 
 Vue.axios.defaults.baseURL = '/api/';
 
+// Utilities
+import Icon from './components/Utilities/Icon'
+
 // components to utilise
 import App from './components/App'
+
 // Auth
 import Register from './components/Auth/Register'
 import Login from './components/Auth/Login'
@@ -91,6 +95,7 @@ Vue.router = router
 App.router = Vue.router
 
 Vue.component('shopping-list', ShoppingList)
+Vue.component('icon', Icon)
 
 Vue.use(require('@websanova/vue-auth'), {
     auth: require('@websanova/vue-auth/drivers/auth/bearer.js'),
