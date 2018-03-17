@@ -2,27 +2,27 @@
 <div>
     <header class="site-header">
         <div class="container">
-            <h1><img src="/img/logo.svg"></h1>
-
-            <div class="site-header__search">
-                <form action="" class="form form--search">
-                    <input type="search" placeholder="enter a recipe name">
-                    <button type="submit"><icon src="/img/zondicons/search.svg" /></button>
-                </form>
-            </div>
+            <h1><router-link :to="{ name: 'home' }"><img src="/img/logo.svg"></router-link></h1>
 
             <nav class="site-navigation">
                 <ul>
-                    <li><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
                     <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
-                    <li v-if="$auth.check()">
-                        <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>
+                    <li><a href="#">Pantry</a></li>
+                    <li class="divider"></li>                    
+                    <li><a href="#"><icon src="/img/zondicons/search.svg" /></a>
+                    <li class="divider"></li>                    
+                    <li><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
+                    <li class="divider"></li>
+                    <li class="account" v-if="$auth.check()">
+                        <img class="profile-pic" src="https://placehold.it/40" alt="">
+                        <a href="#">Jack</a>
+                        <ul>
+                            <li><router-link :to="{ name: 'dashboard' }">Dashboard</router-link></li>
+                            <li><a href="#" @click.prevent="$auth.logout()">Logout</a></li>
+                        </ul>
                     </li>
                     <li v-if="!$auth.check()">
                         <router-link :to="{ name: 'login' }">Login</router-link>
-                    </li>
-                    <li v-if="$auth.check()">
-                        <a href="#" @click.prevent="$auth.logout()">Logout</a>
                     </li>
                 </ul>
 

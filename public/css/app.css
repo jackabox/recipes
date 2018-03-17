@@ -317,10 +317,13 @@ img {
   position: relative;
 }
 
-.site-navigation > ul {
+.site-navigation ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.site-navigation > ul {
   text-align: right;
 }
 
@@ -329,9 +332,39 @@ img {
   margin-left: 2rem;
 }
 
+.site-navigation > ul > li > ul {
+  display: none;
+}
+
 .site-navigation > ul a {
   padding: 40px 0;
   line-height: 20px;
+}
+
+.site-navigation .icon {
+  width: 16px;
+  height: 16px;
+}
+
+.site-navigation .profile-pic {
+  vertical-align: middle;
+  width: 36px;
+  height: auto;
+  margin-right: 6px;
+  margin-top: -2px;
+}
+
+.site-navigation .divider {
+  width: 1px;
+  content: '';
+  border-left: 1px solid #eee;
+  height: 26px;
+  vertical-align: middle;
+  margin-left: 2rem;
+}
+
+.profile-pic {
+  border-radius: 100%;
 }
 
 footer {
@@ -360,9 +393,18 @@ footer {
   font-size: inherit;
   border: 0;
   border-radius: 4px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
   width: 100%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 }
 
 .form textarea {
@@ -373,10 +415,7 @@ footer {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  border-radius: 4px;
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 }
 
 .form input[type="checkbox"],
@@ -399,18 +438,6 @@ footer {
 
 .form .label--inline + * {
   margin-left: 10px;
-}
-
-.form--search input {
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  background: rgba(0, 0, 0, 0.04);
-  max-width: 240px;
-}
-
-.form--search button {
-  border: 0;
-  background: 0;
 }
 
 .btn {
@@ -473,6 +500,35 @@ footer {
 .shopping-list ul {
   padding: 15px;
   list-style: none;
+}
+
+.search__box {
+  position: relative;
+}
+
+.search__box input {
+  padding-right: 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.search__box button {
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  border: 0;
+  background: 0;
+}
+
+.search__box button:hover {
+  cursor: pointer;
+}
+
+.search__box button .icon {
+  width: 16px;
+  height: auto;
 }
 
 .page-title {

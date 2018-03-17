@@ -21,7 +21,7 @@
                     <a href="#">Desserts</a>
                 </div>
 
-                <h1>{{ recipe.title }}</h1>
+                <h1 class="page-title">{{ recipe.title }}</h1>
             </div>
 
             <div class="recipe-single-lead">
@@ -37,8 +37,8 @@
                     <p>{{ recipe.description }}</p>
 
                     <div class="recipe-single-lead__actions">
-                        <a href="#" class="btn">Add To Favourites</a>
-                        <a href="#" class="btn btn--grey">PRT</a>
+                        <a href="#" class="btn"><icon src="/img/zondicons/heart.svg" /></a>
+                        <a href="#" class="btn btn--grey"><icon src="/img/zondicons/printer.svg"/></a>
                     </div>
                 </div>
 

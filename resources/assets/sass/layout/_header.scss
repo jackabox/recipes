@@ -32,15 +32,23 @@
     flex-basis: auto;
     position: relative;
 
-    > ul { 
+    ul {
         list-style: none;
         margin: 0;
         padding: 0;
+    }
+
+    > ul { 
+
         text-align: right;
 
         > li {
             display: inline-block;
             margin-left: 2rem;
+
+            > ul {
+                display: none;
+            }
         }
 
         a {
@@ -48,4 +56,30 @@
             line-height: 20px;
         }
     }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .profile-pic {
+        vertical-align: middle;
+        width: 36px;
+        height: auto;
+        margin-right: 6px;
+        margin-top: -2px;
+    }
+
+    .divider {
+        width: 1px;
+        content: '';
+        border-left:1px solid #eee;
+        height: 26px;
+        vertical-align: middle;
+        margin-left: 2rem;
+    }
+}
+
+.profile-pic {
+    border-radius: 100%;
 }

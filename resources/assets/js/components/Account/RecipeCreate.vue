@@ -1,8 +1,8 @@
 <template>
     <div>
-        <h1>Add Recipe</h1>
+        <h1 class="page-title">Add Recipe</h1>
 
-        <form @submit.prevent="saveRecipe()">
+        <form @submit.prevent="saveRecipe()" class="form">
         <!-- title -->
         <div class="form-group">
             <label for="title">Title</label>
@@ -32,7 +32,7 @@
         <div class="row">
             <!-- Ingredients -->
             <div class="col-md-4">
-                <h4>Ingredients</h4>
+                <h3>Ingredients</h3>
                 <div v-for="ing in recipe.ingredients" readonly>
                     {{ ing.amount }} {{ ing.measurement }} {{ ing.title }}
                 </div>
@@ -68,7 +68,7 @@
 
             <!-- Steps -->
             <div class="col-md-8">
-                <h4>Method</h4>
+                <h3>Method</h3>
                 <div v-for="m in recipe.method" class="form-group">
                     <label>Description</label>
                     <textarea class="form-control" v-model="m.description"></textarea>
