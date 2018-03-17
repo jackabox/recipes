@@ -29,6 +29,7 @@ import ShoppingList from './components/ShoppingList'
 import Dashboard from './components/Account/Dashboard' 
 import RecipeCreate from './components/Account/RecipeCreate' 
 import Settings from './components/Account/Settings' 
+import Search from './components/Search' 
 
 // routes
 const router = new VueRouter({
@@ -45,14 +46,21 @@ const router = new VueRouter({
             meta: {
                 auth: false
             }
-        }, {
+        },{
+            path: '/search',
+            name: 'search',
+            component: Search,
+            meta: {
+                auth: true
+            }
+        },{
             path: '/recipes',
             name: 'recipes.index',
             component: Recipes,
             meta: {
                 auth: true
             }
-        }, {
+        },{
             path: '/recipes/:slug',
             name: 'recipes.single',
             component: RecipesSingle,

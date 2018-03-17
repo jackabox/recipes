@@ -1181,6 +1181,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Account_RecipeCreate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__components_Account_RecipeCreate__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Account_Settings__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Account_Settings___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__components_Account_Settings__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_Search__ = __webpack_require__(92);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__components_Search___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_16__components_Search__);
 __webpack_require__(14);
 
 
@@ -1213,6 +1215,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.axios.defaults.baseURL = '/api/';
 
 
 
+
 // routes
 var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     mode: 'history',
@@ -1226,6 +1229,13 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
         component: __WEBPACK_IMPORTED_MODULE_7__components_Auth_Login___default.a,
         meta: {
             auth: false
+        }
+    }, {
+        path: '/search',
+        name: 'search',
+        component: __WEBPACK_IMPORTED_MODULE_16__components_Search___default.a,
+        meta: {
+            auth: true
         }
     }, {
         path: '/recipes',
@@ -50865,14 +50875,22 @@ var render = function() {
               _vm._v(" "),
               _c("li", { staticClass: "divider" }),
               _vm._v(" "),
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#" } },
-                  [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
-                  1
-                )
-              ]),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: { name: "search" } } },
+                    [
+                      _c("icon", {
+                        attrs: { src: "/img/zondicons/search.svg" }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
               _c("li", { staticClass: "divider" }),
               _vm._v(" "),
               _c("li", [
@@ -54532,6 +54550,213 @@ module.exports = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 88 */,
+/* 89 */,
+/* 90 */,
+/* 91 */,
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(93)
+/* template */
+var __vue_template__ = __webpack_require__(94)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Search.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-7cdae69f", Component.options)
+  } else {
+    hotAPI.reload("data-v-7cdae69f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 93 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            loading: false,
+            results: true // []
+        };
+    },
+    created: function created() {
+        this.fetchData();
+    },
+
+    methods: {}
+});
+
+/***/ }),
+/* 94 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", { staticClass: "page-title" }, [_vm._v("Search")]),
+    _vm._v(" "),
+    _c("form", { staticClass: "form form--search", attrs: { action: "" } }, [
+      _c("div", { staticClass: "search__box" }, [
+        _c("input", {
+          attrs: {
+            type: "search",
+            role: "search",
+            name: "search",
+            placeholder: "enter a search term"
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          { attrs: { type: "submit" } },
+          [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
+          1
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _vm.results
+      ? _c("div", { staticClass: "results" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _vm._m(5)
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Search Result "),
+      _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Search Result "),
+      _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Search Result "),
+      _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Search Result "),
+      _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Search Result "),
+      _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _vm._v("Search Result "),
+      _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-7cdae69f", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

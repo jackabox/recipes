@@ -9,7 +9,7 @@
                     <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
                     <li><a href="#">Pantry</a></li>
                     <li class="divider"></li>                    
-                    <li><a href="#"><icon src="/img/zondicons/search.svg" /></a>
+                    <li><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></a>
                     <li class="divider"></li>                    
                     <li><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
                     <li class="divider"></li>
