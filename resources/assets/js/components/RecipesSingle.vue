@@ -16,11 +16,6 @@
 
         <div v-if="recipe" class="recipe-single">
             <div class="recipe-single__header">
-                <div class="breadcrumb">
-                    <a href="#">Recipes</a> 
-                    <a href="#">Desserts</a>
-                </div>
-
                 <h1 class="page-title">{{ recipe.title }}</h1>
             </div>
 

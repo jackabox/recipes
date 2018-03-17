@@ -51902,11 +51902,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -52009,8 +52004,6 @@ var render = function() {
     _vm.recipe
       ? _c("div", { staticClass: "recipe-single" }, [
           _c("div", { staticClass: "recipe-single__header" }, [
-            _vm._m(0),
-            _vm._v(" "),
             _c("h1", { staticClass: "page-title" }, [
               _vm._v(_vm._s(_vm.recipe.title))
             ])
@@ -52051,7 +52044,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(1)
+            _vm._m(0)
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "recipe-single-body" }, [
@@ -52138,16 +52131,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "breadcrumb" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Recipes")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Desserts")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
