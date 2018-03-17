@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Recipes</h1>
+        <h1 class="page-title">All Recipes</h1>
 
         <div class="loading" v-if="loading">
             loading...
@@ -18,12 +18,10 @@
 
         <div v-if="recipes" class="recipes">
             <div v-for="recipe in recipes" class="recipes__item">
-                <img src="https://placehold.it/400" alt="">
-                <h2>{{ recipe.title }}</h2>
-                <p>{{ recipe.description }}</p>
-            
-            
-                <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">View Item</router-link>
+                <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">
+                    <div class="recipes__img"><img src="https://source.unsplash.com/400x280/?food" alt=""></div>
+                    <h3>{{ recipe.title }}</h3>
+                </router-link>
             </div>
         </div>
     </div>

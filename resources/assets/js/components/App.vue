@@ -35,6 +35,12 @@
 
         <router-view></router-view>
     </div>
+
+    <footer>
+        <div class="container">
+            &copy; Made By Lune
+        </div>
+    </footer>
 </div>
 </template>
 

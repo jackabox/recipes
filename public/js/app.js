@@ -1141,7 +1141,7 @@ module.exports = (function () {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(81);
+module.exports = __webpack_require__(87);
 
 
 /***/ }),
@@ -1157,29 +1157,29 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_axios__ = __webpack_require__(42);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_vue_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_vue_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Utilities_Icon__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Utilities_Icon__ = __webpack_require__(43);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Utilities_Icon___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_Utilities_Icon__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_App__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_App__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_App___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__components_App__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Auth_Register__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Auth_Register__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_Auth_Register___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6__components_Auth_Register__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Auth_Login__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Auth_Login__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_Auth_Login___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7__components_Auth_Login__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_Home___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8__components_Home__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Recipes__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Recipes__ = __webpack_require__(60);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Recipes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_Recipes__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_NotFound__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_NotFound__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_NotFound___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_NotFound__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_ShoppingList__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_ShoppingList__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_ShoppingList___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_ShoppingList__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Account_Dashboard__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Account_Dashboard__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Account_Dashboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_Account_Dashboard__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Account_RecipeCreate__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Account_RecipeCreate__ = __webpack_require__(74);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_Account_RecipeCreate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_14__components_Account_RecipeCreate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Account_Settings__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Account_Settings__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__components_Account_Settings___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_15__components_Account_Settings__);
 __webpack_require__(14);
 
@@ -1278,10 +1278,10 @@ __WEBPACK_IMPORTED_MODULE_5__components_App___default.a.router = __WEBPACK_IMPOR
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('shopping-list', __WEBPACK_IMPORTED_MODULE_12__components_ShoppingList___default.a);
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('icon', __WEBPACK_IMPORTED_MODULE_4__components_Utilities_Icon___default.a);
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(74), {
-    auth: __webpack_require__(78),
-    http: __webpack_require__(79),
-    router: __webpack_require__(80)
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__webpack_require__(80), {
+    auth: __webpack_require__(84),
+    http: __webpack_require__(85),
+    router: __webpack_require__(86)
 });
 
 // make the app
@@ -49803,3806 +49803,7 @@ var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = __webpack_require__(44)
 /* template */
-var __vue_template__ = __webpack_require__(45)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/App.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8142f38c", Component.options)
-  } else {
-    hotAPI.reload("data-v-8142f38c", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 44 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    created: function created() {
-        // this.$auth.fetch({url: '/api/user', method: 'get'});
-    }
-});
-
-/***/ }),
-/* 45 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("header", { staticClass: "site-header" }, [
-      _c("div", { staticClass: "container" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "site-header__search" }, [
-          _c(
-            "form",
-            { staticClass: "form form--search", attrs: { action: "" } },
-            [
-              _c("input", {
-                attrs: { type: "search", placeholder: "enter a recipe name" }
-              }),
-              _vm._v(" "),
-              _c(
-                "button",
-                { attrs: { type: "submit" } },
-                [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
-                1
-              )
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "nav",
-          { staticClass: "site-navigation" },
-          [
-            _c("ul", [
-              _c("li", [
-                _c(
-                  "a",
-                  { attrs: { href: "#" } },
-                  [
-                    _c("icon", {
-                      attrs: { src: "/img/zondicons/shopping-cart.svg" }
-                    })
-                  ],
-                  1
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "li",
-                [
-                  _c(
-                    "router-link",
-                    { attrs: { to: { name: "recipes.index" } } },
-                    [_vm._v("Recipes")]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _vm.$auth.check()
-                ? _c(
-                    "li",
-                    [
-                      _c(
-                        "router-link",
-                        { attrs: { to: { name: "dashboard" } } },
-                        [_vm._v("Dashboard")]
-                      )
-                    ],
-                    1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              !_vm.$auth.check()
-                ? _c(
-                    "li",
-                    [
-                      _c("router-link", { attrs: { to: { name: "login" } } }, [
-                        _vm._v("Login")
-                      ])
-                    ],
-                    1
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.$auth.check()
-                ? _c("li", [
-                    _c(
-                      "a",
-                      {
-                        attrs: { href: "#" },
-                        on: {
-                          click: function($event) {
-                            $event.preventDefault()
-                            _vm.$auth.logout()
-                          }
-                        }
-                      },
-                      [_vm._v("Logout")]
-                    )
-                  ])
-                : _vm._e()
-            ]),
-            _vm._v(" "),
-            _vm.$auth.check() ? _c("shopping-list") : _vm._e()
-          ],
-          1
-        )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "container" }, [_c("router-view")], 1)
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h1", [_c("img", { attrs: { src: "/img/logo.svg" } })])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
-  }
-}
-
-/***/ }),
-/* 46 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(47)
-/* template */
 var __vue_template__ = __webpack_require__(48)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Auth/Register.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-49f475a3", Component.options)
-  } else {
-    hotAPI.reload("data-v-49f475a3", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 47 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            name: '',
-            email: '',
-            password: '',
-            error: false,
-            errors: {},
-            success: false
-        };
-    },
-
-    methods: {
-        register: function register() {
-            var app = this;
-
-            this.$auth.register({
-                params: {
-                    name: app.name,
-                    email: app.email,
-                    password: app.password
-                },
-                success: function success() {
-                    app.success = true;
-                },
-                error: function error(resp) {
-                    app.error = true;
-                    app.errors = resp.response.data.errors;
-                },
-                redirect: null
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm.error && !_vm.success
-      ? _c("div", { staticClass: "alert alert-danger" }, [
-          _c("p", [
-            _vm._v("There was an error, unable to complete registration.")
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.success
-      ? _c("div", { staticClass: "alert alert-success" }, [
-          _c(
-            "p",
-            [
-              _vm._v("Registration completed. You can now "),
-              _c("router-link", { attrs: { to: { name: "login" } } }, [
-                _vm._v("sign in.")
-              ])
-            ],
-            1
-          )
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    !_vm.success
-      ? _c(
-          "form",
-          {
-            attrs: { autocomplete: "off", method: "post" },
-            on: {
-              submit: function($event) {
-                $event.preventDefault()
-                _vm.register($event)
-              }
-            }
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass: "form-group",
-                class: { "has-error": _vm.error && _vm.errors.name }
-              },
-              [
-                _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.name,
-                      expression: "name"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "text", id: "name", required: "" },
-                  domProps: { value: _vm.name },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.name = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _vm.error && _vm.errors.name
-                  ? _c("span", { staticClass: "help-block" }, [
-                      _vm._v(_vm._s(_vm.errors.name))
-                    ])
-                  : _vm._e()
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "form-group",
-                class: { "has-error": _vm.error && _vm.errors.email }
-              },
-              [
-                _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.email,
-                      expression: "email"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: {
-                    type: "email",
-                    id: "email",
-                    placeholder: "user@example.com",
-                    required: ""
-                  },
-                  domProps: { value: _vm.email },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.email = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _vm.error && _vm.errors.email
-                  ? _c("span", { staticClass: "help-block" }, [
-                      _vm._v(_vm._s(_vm.errors.email))
-                    ])
-                  : _vm._e()
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "form-group",
-                class: { "has-error": _vm.error && _vm.errors.password }
-              },
-              [
-                _c("label", { attrs: { for: "password" } }, [
-                  _vm._v("Password")
-                ]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.password,
-                      expression: "password"
-                    }
-                  ],
-                  staticClass: "form-control",
-                  attrs: { type: "password", id: "password", required: "" },
-                  domProps: { value: _vm.password },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.password = $event.target.value
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _vm.error && _vm.errors.password
-                  ? _c("span", { staticClass: "help-block" }, [
-                      _vm._v(_vm._s(_vm.errors.password))
-                    ])
-                  : _vm._e()
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn btn-default", attrs: { type: "submit" } },
-              [_vm._v("Submit")]
-            )
-          ]
-        )
-      : _vm._e()
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-49f475a3", module.exports)
-  }
-}
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(50)
-/* template */
-var __vue_template__ = __webpack_require__(51)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Auth/Login.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-55f43099", Component.options)
-  } else {
-    hotAPI.reload("data-v-55f43099", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  data: function data() {
-    return {
-      email: null,
-      password: null,
-      error: false
-    };
-  },
-
-  methods: {
-    login: function login() {
-      var app = this;
-
-      this.$auth.login({
-        params: {
-          email: app.email,
-          password: app.password
-        },
-        success: function success() {},
-        error: function error() {},
-        rememberMe: true,
-        redirect: '/',
-        fetchUser: true
-      });
-    }
-  }
-});
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "login-container" }, [
-    _vm.error
-      ? _c("div", { staticClass: "alert alert-danger" }, [
-          _c("p", [
-            _vm._v(
-              "There was an error, unable to sign in with those credentials."
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        staticClass: "form form--login",
-        attrs: { autocomplete: "off", method: "post" },
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            _vm.login($event)
-          }
-        }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.email,
-                expression: "email"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "email",
-              id: "email",
-              placeholder: "user@example.com",
-              required: ""
-            },
-            domProps: { value: _vm.email },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.email = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.password,
-                expression: "password"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "password", id: "password", required: "" },
-            domProps: { value: _vm.password },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.password = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
-          _vm._v("Sign in")
-        ])
-      ]
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-55f43099", module.exports)
-  }
-}
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = null
-/* template */
-var __vue_template__ = __webpack_require__(53)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Home.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6707e3d4", Component.options)
-  } else {
-    hotAPI.reload("data-v-6707e3d4", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("Home")])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6707e3d4", module.exports)
-  }
-}
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(55)
-/* template */
-var __vue_template__ = __webpack_require__(56)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Recipes.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-8d0cc384", Component.options)
-  } else {
-    hotAPI.reload("data-v-8d0cc384", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 55 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            loading: false,
-            recipes: null,
-            errors: null
-        };
-    },
-    created: function created() {
-        this.fetchData();
-    },
-
-    methods: {
-        fetchData: function fetchData() {
-            var _this = this;
-
-            this.error = this.users = null;
-            this.loading = true;
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('v1/recipes').then(function (response) {
-                console.log(response.data);
-
-                _this.loading = false; // loading is done
-                _this.recipes = response.data.data; // set the users from the response
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.error = error.response.data.message || error.message;
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("Recipes")]),
-    _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.recipes
-      ? _c(
-          "div",
-          { staticClass: "recipes" },
-          _vm._l(_vm.recipes, function(recipe) {
-            return _c(
-              "div",
-              { staticClass: "recipes__item" },
-              [
-                _c("img", {
-                  attrs: { src: "https://placehold.it/400", alt: "" }
-                }),
-                _vm._v(" "),
-                _c("h2", [_vm._v(_vm._s(recipe.title))]),
-                _vm._v(" "),
-                _c("p", [_vm._v(_vm._s(recipe.description))]),
-                _vm._v(" "),
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: {
-                        name: "recipes.single",
-                        params: { slug: recipe.slug }
-                      }
-                    }
-                  },
-                  [_vm._v("View Item")]
-                )
-              ],
-              1
-            )
-          })
-        )
-      : _vm._e()
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8d0cc384", module.exports)
-  }
-}
-
-/***/ }),
-/* 57 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(58)
-/* template */
-var __vue_template__ = __webpack_require__(59)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/RecipesSingle.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0a7273b4", Component.options)
-  } else {
-    hotAPI.reload("data-v-0a7273b4", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            slug: this.$route.params.slug,
-            loading: false,
-            recipe: null,
-            errors: null,
-            qty: null,
-            newQty: 1,
-            oldQty: 1,
-            ingredients: {}
-        };
-    },
-    created: function created() {
-        this.fetchData();
-    },
-
-    methods: {
-        fetchData: function fetchData() {
-            var _this = this;
-
-            this.error = this.users = null;
-            this.loading = true;
-            axios.get(route('recipe.single', this.slug)).then(function (response) {
-                console.log(response);
-                _this.loading = false; // loading is done
-                _this.recipe = response.data; // set the users from the response
-                _this.ingredients = response.data.ingredients;
-                _this.oldQty = _this.recipe.serves;
-                _this.qty = _this.recipe.serves;
-
-                // this.qty = this.recipe.serves; // set this to servings field
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.error = error.response.data.message || error.message;
-            });
-        },
-        saveShoppingList: function saveShoppingList() {
-            var data = {
-                ingredients: this.ingredients,
-                recipe_id: this.recipe.id
-            };
-
-            this.$root.$emit('update-shopping-list', data);
-        }
-    },
-    watch: {
-        qty: function qty(newQty, oldQty) {
-            if (newQty) {
-                this.newQty = newQty;
-            }
-
-            if (oldQty) {
-                this.oldQty = oldQty;
-            }
-
-            for (var i = 0; i <= this.ingredients.length; i++) {
-                this.ingredients[i].amount = this.ingredients[i].amount / this.oldQty * this.newQty;
-            }
-        }
-    }
-});
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.recipe
-      ? _c("div", { staticClass: "recipe-single" }, [
-          _c("div", { staticClass: "recipe-single__header" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c("h1", [_vm._v(_vm._s(_vm.recipe.title))])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "recipe-single-lead" }, [
-            _c("div", { staticClass: "recipe-single-lead__info" }, [
-              _c("p", { staticClass: "prep-time" }, [
-                _c("span", [_vm._v(_vm._s(_vm.recipe.prep_time))]),
-                _vm._v(" Prep Time\n                ")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "cook-time" }, [
-                _c("span", [_vm._v(_vm._s(_vm.recipe.cook_time))]),
-                _vm._v(" Cook Time\n                ")
-              ]),
-              _vm._v(" "),
-              _c("h3", [_vm._v("Introduction")]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(_vm.recipe.description))]),
-              _vm._v(" "),
-              _vm._m(1)
-            ]),
-            _vm._v(" "),
-            _vm._m(2)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "recipe-single-body" }, [
-            _c("div", { staticClass: "recipe-single-ingredients" }, [
-              _c("h3", [_vm._v("Ingredients")]),
-              _vm._v(" "),
-              _c("form", { staticClass: "form", attrs: { action: "#" } }, [
-                _c("label", { staticClass: "inline-label" }, [
-                  _vm._v("Serves "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.qty,
-                        expression: "qty"
-                      }
-                    ],
-                    attrs: { type: "number", name: "qty", min: "1" },
-                    domProps: { value: _vm.qty },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.qty = $event.target.value
-                      }
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                {
-                  model: {
-                    value: _vm.ingredients,
-                    callback: function($$v) {
-                      _vm.ingredients = $$v
-                    },
-                    expression: "ingredients"
-                  }
-                },
-                _vm._l(_vm.ingredients, function(i) {
-                  return _c("li", [
-                    _c("b", [
-                      _vm._v(_vm._s(i.amount) + " " + _vm._s(i.measurement))
-                    ]),
-                    _vm._v(" " + _vm._s(i.title))
-                  ])
-                })
-              ),
-              _vm._v(" "),
-              _c("p", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        _vm.saveShoppingList()
-                      }
-                    }
-                  },
-                  [_vm._v("Add To Shopping List")]
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "recipe-single-method" }, [
-              _c("h3", [_vm._v("Method")]),
-              _vm._v(" "),
-              _c(
-                "ol",
-                _vm._l(_vm.recipe.method, function(method) {
-                  return _c("li", [_vm._v(_vm._s(method))])
-                })
-              )
-            ])
-          ])
-        ])
-      : _vm._e()
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "breadcrumb" }, [
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Recipes")]),
-      _vm._v(" "),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Desserts")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "recipe-single-lead__actions" }, [
-      _c("a", { staticClass: "btn", attrs: { href: "#" } }, [
-        _vm._v("Add To Favourites")
-      ]),
-      _vm._v(" "),
-      _c("a", { staticClass: "btn btn--grey", attrs: { href: "#" } }, [
-        _vm._v("PRT")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "recipe-single-lead__image" }, [
-      _c("div", { staticClass: "inner-image" }, [
-        _c("img", {
-          attrs: {
-            src:
-              "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=7b65345dde1da9bc81241c54a4f7ce2d",
-            alt: ""
-          }
-        })
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-0a7273b4", module.exports)
-  }
-}
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = null
-/* template */
-var __vue_template__ = __webpack_require__(61)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/NotFound.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-078b1bb4", Component.options)
-  } else {
-    hotAPI.reload("data-v-078b1bb4", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("404, Not Found")])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-078b1bb4", module.exports)
-  }
-}
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(63)
-/* template */
-var __vue_template__ = __webpack_require__(64)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/ShoppingList.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f2749e46", Component.options)
-  } else {
-    hotAPI.reload("data-v-f2749e46", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 63 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            loading: true,
-            list: null
-        };
-    },
-    created: function created() {
-        console.log('mounted');
-
-        this.$root.$on('update-shopping-list', this.saveShoppingList);
-
-        this.getShoppingList();
-    },
-
-    methods: {
-        getShoppingList: function getShoppingList() {
-            var _this = this;
-
-            axios.get(route('shopping-list')).then(function (response) {
-                _this.loading = false, _this.list = response.data;
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.error = error.response.data.message || error.message;
-            });
-        },
-        saveShoppingList: function saveShoppingList(data) {
-            var _this2 = this;
-
-            axios.post(route('shopping-list.update'), data).then(function (response) {
-                console.log(response);
-                _this2.list = response.data;
-            }).catch(function (error) {
-                _this2.loading = false;
-                _this2.error = error.response.data.message || error.message;
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "shopping-list" }, [
-    _c("h5", [_vm._v("Shopping List")]),
-    _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "ul",
-      _vm._l(_vm.list, function(item) {
-        return _c("li", [
-          _vm._v(
-            _vm._s(item.qty) +
-              _vm._s(item.measurement) +
-              " " +
-              _vm._s(item.ingredient)
-          )
-        ])
-      })
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-f2749e46", module.exports)
-  }
-}
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(66)
-/* template */
-var __vue_template__ = __webpack_require__(67)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Account/Dashboard.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9ba94a2a", Component.options)
-  } else {
-    hotAPI.reload("data-v-9ba94a2a", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 66 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("Dashboard")]),
-    _vm._v(" "),
-    _c("p", [
-      _vm._v(
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus impedit magni magnam cumque repellendus quod!"
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-4" }, [
-        _c("h2", [_vm._v("Add Recipe")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!"
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "p",
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "btn btn-primary",
-                attrs: { to: { name: "dashboard.recipe.add" } }
-              },
-              [_vm._v("Click")]
-            )
-          ],
-          1
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(0),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-4" }, [
-        _c("h2", [_vm._v("Account Settings")]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!"
-          )
-        ]),
-        _vm._v(" "),
-        _c(
-          "p",
-          [
-            _c(
-              "router-link",
-              {
-                staticClass: "btn btn-primary",
-                attrs: { to: { name: "me.settings" } }
-              },
-              [_vm._v("Click")]
-            )
-          ],
-          1
-        )
-      ])
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-4" }, [
-      _c("h2", [_vm._v("Create Collection")]),
-      _vm._v(" "),
-      _c("p", [
-        _vm._v(
-          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!"
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", [
-        _c("a", { staticClass: "btn btn-primary", attrs: { href: "" } }, [
-          _vm._v("Click")
-        ])
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-9ba94a2a", module.exports)
-  }
-}
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(69)
-/* template */
-var __vue_template__ = __webpack_require__(70)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Account/RecipeCreate.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-38e0d9a3", Component.options)
-  } else {
-    hotAPI.reload("data-v-38e0d9a3", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 69 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            recipe: {
-                title: '',
-                description: '',
-                cook_time: '',
-                prep_time: '',
-                serves: '',
-                method: [{
-                    description: ''
-                }],
-                ingredients: []
-            },
-            ingredient: {
-                amount: null,
-                measurement: '',
-                title: ''
-            }
-        };
-    },
-
-    methods: {
-        addIngredient: function addIngredient() {
-            this.recipe.ingredients.push(this.ingredient);
-
-            this.ingredient = {
-                amount: null,
-                measurement: '',
-                title: ''
-            };
-        },
-        addMethodStep: function addMethodStep() {
-            var methodData = {
-                description: ''
-            };
-
-            this.recipe.method.push(methodData);
-        },
-        saveRecipe: function saveRecipe() {
-            console.log('starting save');
-
-            axios.post('v1/recipes/create', {
-                title: this.recipe.title,
-                description: this.recipe.description,
-                cook_time: this.recipe.cook_time,
-                prep_time: this.recipe.prep_time,
-                serves: this.recipe.serves,
-                method: this.recipe.method,
-                ingredients: this.recipe.ingredients
-            }).then(function (response) {
-                console.log(response.data);
-            }).catch(function (error) {
-                console.log(error);
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("Add Recipe")]),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            _vm.saveRecipe()
-          }
-        }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "title" } }, [_vm._v("Title")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.recipe.title,
-                expression: "recipe.title"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "text",
-              placeholder: "Enter a Title",
-              autofocus: ""
-            },
-            domProps: { value: _vm.recipe.title },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.recipe, "title", $event.target.value)
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", [_vm._v("Description")]),
-          _vm._v(" "),
-          _c("textarea", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.recipe.description,
-                expression: "recipe.description"
-              }
-            ],
-            staticClass: "form-control",
-            domProps: { value: _vm.recipe.description },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.recipe, "description", $event.target.value)
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "title" } }, [_vm._v("Cook Time")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.recipe.cook_time,
-                expression: "recipe.cook_time"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "number" },
-            domProps: { value: _vm.recipe.cook_time },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.recipe, "cook_time", $event.target.value)
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "title" } }, [_vm._v("Prep Time")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.recipe.prep_time,
-                expression: "recipe.prep_time"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "number" },
-            domProps: { value: _vm.recipe.prep_time },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.recipe, "prep_time", $event.target.value)
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "title" } }, [_vm._v("Serves")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.recipe.serves,
-                expression: "recipe.serves"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "number" },
-            domProps: { value: _vm.recipe.serves },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.recipe, "serves", $event.target.value)
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c(
-            "div",
-            { staticClass: "col-md-4" },
-            [
-              _c("h4", [_vm._v("Ingredients")]),
-              _vm._v(" "),
-              _vm._l(_vm.recipe.ingredients, function(ing) {
-                return _c("div", { attrs: { readonly: "" } }, [
-                  _vm._v(
-                    "\n                " +
-                      _vm._s(ing.amount) +
-                      " " +
-                      _vm._s(ing.measurement) +
-                      " " +
-                      _vm._s(ing.title) +
-                      "\n            "
-                  )
-                ])
-              }),
-              _vm._v(" "),
-              _c(
-                "form",
-                {
-                  staticClass: "form",
-                  on: {
-                    submit: function($event) {
-                      $event.preventDefault()
-                      _vm.addIngredient()
-                    }
-                  }
-                },
-                [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Quantity")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.ingredient.amount,
-                          expression: "ingredient.amount"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "number", placeholder: "amount" },
-                      domProps: { value: _vm.ingredient.amount },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.ingredient,
-                            "amount",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Measurement")]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.ingredient.measurement,
-                            expression: "ingredient.measurement"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.ingredient,
-                              "measurement",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("None")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "g" } }, [
-                          _vm._v("Grams")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "kg" } }, [
-                          _vm._v("Killograms")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "oz" } }, [
-                          _vm._v("Ounce")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "ml" } }, [
-                          _vm._v("Millilitre")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "ml" } }, [
-                          _vm._v("Centilitre")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "l" } }, [
-                          _vm._v("Litre")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "cups" } }, [
-                          _vm._v("Cups")
-                        ])
-                      ]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("label", [_vm._v("Name")]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.ingredient.title,
-                          expression: "ingredient.title"
-                        }
-                      ],
-                      staticClass: "form-control",
-                      attrs: { type: "text", placeholder: "ingredient name" },
-                      domProps: { value: _vm.ingredient.title },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.ingredient, "title", $event.target.value)
-                        }
-                      }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-submit",
-                      attrs: { type: "submit" }
-                    },
-                    [_vm._v("Add")]
-                  )
-                ]
-              )
-            ],
-            2
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-md-8" },
-            [
-              _c("h4", [_vm._v("Method")]),
-              _vm._v(" "),
-              _vm._l(_vm.recipe.method, function(m) {
-                return _c("div", { staticClass: "form-group" }, [
-                  _c("label", [_vm._v("Description")]),
-                  _vm._v(" "),
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: m.description,
-                        expression: "m.description"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    domProps: { value: m.description },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(m, "description", $event.target.value)
-                      }
-                    }
-                  })
-                ])
-              }),
-              _vm._v(" "),
-              _c("div", [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-submit",
-                    attrs: { type: "submit" },
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        _vm.addMethodStep()
-                      }
-                    }
-                  },
-                  [_vm._v("Add")]
-                )
-              ])
-            ],
-            2
-          )
-        ]),
-        _vm._v(" "),
-        _vm._m(0)
-      ]
-    )
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
-        _vm._v("Lets Go")
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-38e0d9a3", module.exports)
-  }
-}
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(72)
-/* template */
-var __vue_template__ = __webpack_require__(73)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Account/Settings.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5767ecc8", Component.options)
-  } else {
-    hotAPI.reload("data-v-5767ecc8", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 72 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            account: {
-                name: '',
-                email: '',
-                password: ''
-            },
-            password: {
-                old: '',
-                new: ''
-            }
-        };
-    },
-    created: function created() {},
-
-    methods: {
-        updateAccount: function updateAccount() {
-            console.log(this.account);
-        },
-        passwordChange: function passwordChange() {
-            console.log('password update');
-        }
-    }
-});
-
-/***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row" }, [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "col-md-9" }, [
-      _c("h3", [_vm._v("Settings Panel")]),
-      _vm._v(" "),
-      _c("h6", [_vm._v("Account")]),
-      _vm._v(" "),
-      _c(
-        "form",
-        {
-          attrs: { action: "POST", enctype: "multipart/form-data" },
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              _vm.updateAccount($event)
-            }
-          }
-        },
-        [
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _vm._m(4),
-          _vm._v(" "),
-          _vm._m(5)
-        ]
-      ),
-      _vm._v(" "),
-      _c("h6", [_vm._v("Password")]),
-      _vm._v(" "),
-      _c(
-        "form",
-        {
-          attrs: { action: "POST" },
-          on: {
-            submit: function($event) {
-              $event.preventDefault()
-              _vm.passwordChange($event)
-            }
-          }
-        },
-        [_vm._m(6), _vm._v(" "), _vm._m(7), _vm._v(" "), _vm._m(8)]
-      )
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-3" }, [
-      _c("h3", [_vm._v("Sidebar Options")]),
-      _vm._v(" "),
-      _c("ul", [
-        _c("li", [_vm._v("Account Settings")]),
-        _vm._v(" "),
-        _c("li", [_vm._v("Password")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "dropbox" }, [
-      _c("p", [
-        _c("input", { attrs: { type: "file", name: "uploadFieldName" } })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", placeholder: "name" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "text", placeholder: "email" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "password", placeholder: "confirm password" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
-        _vm._v("Save")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "password", placeholder: "old password" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("input", {
-        staticClass: "form-control",
-        attrs: { type: "password", placeholder: "new password" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
-        _vm._v("Save")
-      ])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-5767ecc8", module.exports)
-  }
-}
-
-/***/ }),
-/* 74 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Auth = __webpack_require__(75)();
-
-module.exports = (function () {
-
-    return function install(Vue, options) {
-        
-        var auth = new Auth(Vue, options);
-
-        var ready = auth.ready;
-        var login = auth.login;
-        var fetch = auth.fetch;
-        var logout = auth.logout;
-        var oauth2 = auth.oauth2;
-        var refresh = auth.refresh;
-        var register = auth.register;
-        var impersonate = auth.impersonate;
-        var unimpersonate = auth.unimpersonate;
-
-        Vue.auth = auth;
-
-        Object.defineProperties(Vue.prototype, {
-            $auth: {
-                get: function () {
-                    auth.ready = ready.bind(this);
-                    auth.login = login.bind(this);
-                    auth.fetch = fetch.bind(this);
-                    auth.logout = logout.bind(this);
-                    auth.oauth2 = oauth2.bind(this);
-                    auth.refresh = refresh.bind(this);
-                    auth.register = register.bind(this);
-                    auth.impersonate = impersonate.bind(this);
-                    auth.unimpersonate = unimpersonate.bind(this);
-
-                    return auth;
-                }
-            }
-        });
-    }
-})();
-
-/***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __utils  = __webpack_require__(76),
-    __token  = __webpack_require__(77),
-    __cookie = __webpack_require__(11)
-
-module.exports = function () {
-
-    // Private (used double underscore __).
-
-    var __transitionPrev = null,
-        __transitionThis = null,
-        __transitionRedirectType = null;
-
-    function __duckPunch(methodName, data) {
-        var _this = this,
-            success = data.success;
-
-        data = __utils.extend(this.options[methodName + 'Data'], [data]);
-
-        data.success = function (res) {
-            data.success = success;
-
-            _this.options[methodName + 'Process'].call(_this, res, data);
-        };
-
-        return this.options.http._http.call(this, data);
-    }
-
-    function __bindContext(methodName, data) {
-        var _auth = this.$auth;
-
-        return _auth.options[methodName + 'Perform'].call(_auth, _auth.options.router._bindData.call(_auth, data, this));
-    }
-
-    // Overrideable
-
-    function _checkAuthenticated(cb) {
-        if (this.watch.authenticated === null && __token.get.call(this)) {
-            if ( ! __cookie.exists.call(this)) {
-                this.options.logoutProcess.call(this, null, {});
-
-                this.watch.loaded = true;
-
-                return cb.call(this);
-            }
-
-            this.watch.authenticated = false;
-
-            if (this.options.fetchData.enabled) {
-                this.options.fetchPerform.call(this, {
-                    success: cb,
-                    error: cb,
-                    enabled: true
-                });
-            }
-            else {
-                this.options.fetchProcess.call(this, {}, {});
-                return cb.call(this);
-            }
-        } else {
-            this.watch.loaded = true;
-            return cb.call(this);
-        }
-    }
-
-    function _routerBeforeEach(cb) {
-        var _this = this;
-
-        if (this.watch.authenticated && !__token.get.call(this)) {
-            this.options.logoutProcess.call(this, null, {});
-        }
-
-        if (this.options.refreshData.enabled && ! this.watch.loaded && __token.get.call(this)) {
-            this.options.refreshPerform.call(this, {
-                success: function () {
-                    this.options.checkAuthenticated.call(_this, cb);
-                }
-            });
-
-            return;
-        }
-
-        _checkAuthenticated.call(this, cb);
-    }
-
-    function _transitionEach(transition, routeAuth, cb) {
-        var authRedirect = (routeAuth || '').redirect || this.options.authRedirect,
-            forbiddenRedirect = (routeAuth || '').forbiddenRedirect || (routeAuth || '').redirect || this.options.forbiddenRedirect,
-            notFoundRedirect = (routeAuth || '').redirect || this.options.notFoundRedirect;
-
-        routeAuth = __utils.toArray((routeAuth || '').roles || routeAuth);
-
-        if (routeAuth && (routeAuth === true || routeAuth.constructor === Array || __utils.isObject(routeAuth))) {
-            if ( ! this.check()) {
-                __transitionRedirectType = 401;
-                cb.call(this, authRedirect);
-            }
-            else if ((routeAuth.constructor === Array || __utils.isObject(routeAuth)) && ! __utils.compare(routeAuth, this.watch.data[this.options.rolesVar])) {
-                __transitionRedirectType = 403;
-                cb.call(this, forbiddenRedirect);
-            }
-            else {
-                this.watch.redirect = __transitionRedirectType ? {type: __transitionRedirectType, from: __transitionPrev, to: __transitionThis} : null;
-                __transitionRedirectType = null;
-
-                return cb();
-            }
-        }
-        else if (routeAuth === false && this.check()) {
-            __transitionRedirectType = 404;
-            cb.call(this, notFoundRedirect);
-        }
-        else {
-            this.watch.redirect = __transitionRedirectType ? {type: __transitionRedirectType, from: __transitionPrev, to: __transitionThis} : null;
-            __transitionRedirectType = null;
-
-            return cb();
-        }
-    }
-
-    function _requestIntercept(req) {
-        var token,
-            tokenName;
-
-        if (req.ignoreVueAuth) {
-            return req;
-        }
-
-        if (req.impersonating === false && this.impersonating()) {
-            tokenName = this.options.tokenDefaultName;
-        }
-        
-        token = __token.get.call(this, tokenName);
-
-        if (token) {
-            this.options.auth.request.call(this, req, token);
-        }
-
-        return req;
-    }
-
-    function _responseIntercept(res, req) {
-        var token;
-
-        if (req && req.ignoreVueAuth) {
-            return;
-        }
-
-        _processInvalidToken.call(this, res, __transitionThis);
-
-        token = this.options.auth.response.call(this, res);
-
-        if (token) {
-            __token.set.call(this, null, token);
-        }
-    }
-
-    function _parseUserData(data) {
-        return data.data || {};
-    }
-
-    function _parseOauthState(data) {
-        return JSON.parse(decodeURIComponent(data));
-    }
-
-    function _check(role) {
-        if (this.watch.authenticated === true) {
-            if (role) {
-                return __utils.compare(role, this.watch.data[this.options.rolesVar]);
-            }
-
-            return true;
-        }
-
-        return false;
-    }
-
-    function _tokenExpired () {
-        return ! __token.get.call(this);
-    }
-
-    function _cookieDomain () {
-        return window.location.hostname;
-    }
-
-    function _getUrl () {
-        var port = window.location.port
-
-        return window.location.protocol + '//' + window.location.hostname + (port ? ':' + port : '')
-    }
-
-    function _getAuthMeta (transition) {
-        var auth,
-            authRoutes;
-
-        if (transition.to) {
-            auth = transition.to.auth;
-        } else {
-            authRoutes = transition.matched.filter(function (route) {
-                return route.meta.hasOwnProperty('auth');
-            });
-
-            // matches the nested route, the last one in the list
-            if (authRoutes.length) {
-                auth = authRoutes[authRoutes.length - 1].meta.auth;
-            }
-        }
-
-        return auth;
-    }
-
-    function _setTransitions (transition) {
-        __transitionPrev = __transitionThis;
-        __transitionThis = transition;
-    }
-
-    function _processInvalidToken(res, transition) {
-        var i,
-            auth,
-            query = '',
-            redirect = transition.path;
-
-        // Make sure we also attach any existing
-        // query parameters on the path.
-        if (redirect && transition.query) {
-            for (i in transition.query) {
-                if (transition.query[i]) {
-                    query += '&' + i + '=' + transition.query[i];
-                }
-            }
-
-            redirect += '?' + query.substring(1);
-        }
-
-        if (!this.options.http._invalidToken) {
-            return;
-        }
-
-        if (!this.options.http._invalidToken.call(this, res)) {
-            return;
-        }
-
-        if (transition) {
-            auth = this.options.getAuthMeta(transition);
-        }
-
-        if (auth) {
-            redirect = auth.redirect || this.options.authRedirect;
-        }
-
-        this.options.logoutProcess.call(this, res, {redirect: redirect});
-    }
-
-    function _fetchPerform(data) {
-        var _this = this,
-            error = data.error;
-
-        data.error = function (res) {
-            _this.watch.loaded = true;
-
-            if (error) { error.call(_this, res); }
-        };
-
-        if (this.watch.authenticated !== true && !data.enabled) {
-            _fetchProcess.call(this, {}, data);
-        }
-        else {
-            return __duckPunch.call(this, 'fetch', data);
-        }
-    }
-
-    function _fetchProcess(res, data) {
-        this.watch.authenticated = true;
-        this.watch.data = this.options.parseUserData.call(this, this.options.http._httpData.call(this, res));
-        
-        this.watch.loaded = true;
-
-        if (data.success) { data.success.call(this, res); }
-    }
-
-    function _refreshPerform(data) {
-        return __duckPunch.call(this, 'refresh', data);
-    }
-
-    function _refreshProcess(res, data) {
-        if (data.success) { data.success.call(this, res); }
-    }
-
-    function _registerPerform(data) {
-        return __duckPunch.call(this, 'register', data);
-    }
-
-    function _registerProcess(res, data) {
-        if (data.autoLogin === true) {
-            data = __utils.extend(data, [this.options.loginData, {redirect: data.redirect}]);
-
-            this.options.loginPerform.call(this, data);
-        }
-        else {
-            if (data.success) { data.success.call(this, res); }
-
-            if (data.redirect) {
-                this.options.router._routerGo.call(this, data.redirect);
-            }
-        }
-    }
-
-    function _loginPerform(data) {
-        return __duckPunch.call(this, 'login', data);
-    }
-
-    function _loginProcess(res, data) {
-        var _this = this;
-
-        __cookie.remember.call(this, data.rememberMe);
-
-        this.authenticated = null;
-
-        this.options.fetchPerform.call(this, {
-            enabled: data.fetchUser,
-            success: function () {
-                if (data.success) { data.success.call(this, res); }
-
-                if (data.redirect && _this.options.check.call(_this)) {
-                    _this.options.router._routerGo.call(_this, data.redirect);
-                }
-            }
-        });
-    }
-
-    function _logoutPerform(data) {
-        data = __utils.extend(this.options.logoutData, [data || {}]);
-
-        if (data.makeRequest) {
-            return __duckPunch.call(this, 'logout', data);
-        }
-        else {
-            this.options.logoutProcess.call(this, null, data);
-        }
-    }
-
-    function _logoutProcess(res, data) {
-        __cookie.remove.call(this, 'rememberMe');
-
-        __cookie.remove.call(this, this.options.tokenImpersonateName);
-        __cookie.remove.call(this, this.options.tokenDefaultName);
-
-        __token.remove.call(this, this.options.tokenImpersonateName);
-        __token.remove.call(this, this.options.tokenDefaultName);
-
-        this.watch.authenticated = false;
-        this.watch.data = null;
-
-        if (data.success) { data.success.call(this, res, data); }
-
-        if (data.redirect) {
-            this.options.router._routerGo.call(this, data.redirect);
-        }
-    }
-
-    function _impersonatePerform(data) {
-        var success,
-            token = this.token.call(this); // (admin) token
-
-        data = data || {};
-
-        success = data.success;
-
-        data.success = function () {
-
-            // Reshuffle tokens here...
-            __token.set.call(this, this.options.tokenImpersonateName, this.token.call(this));
-            __token.set.call(this, this.options.tokenDefaultName, token);
-
-            if (success) { success.call(this); }
-        };
-
-        return __duckPunch.call(this, 'impersonate', data);
-    }
-
-    function _impersonateProcess(res, data) {
-        var _this = this;
-
-        this.options.fetchPerform.call(this, {
-            enabled: true,
-            success: function () {
-                if (data.success) { data.success.call(this, res); }
-
-                if (data.redirect && _this.options.check.call(_this)) {
-                    _this.options.router._routerGo.call(_this, data.redirect);
-                }
-            }
-        });
-    }
-
-    function _unimpersonatePerform(data) {
-        data = __utils.extend(this.options.unimpersonateData, [data || {}]);
-
-        if (data.makeRequest) {
-            return __duckPunch.call(this, 'unimpersonate', data);
-        }
-        else {
-            this.options.unimpersonateProcess.call(this, null, data);
-        }
-    }
-
-    function _unimpersonateProcess(res, data) {
-        __token.remove.call(this, this.options.tokenImpersonateName);
-
-        this.options.fetchPerform.call(this, {
-            enabled: true,
-            success: function () {
-                if (data.success) { data.success.call(this, res, data); }
-
-                if (data.redirect) {
-                    this.options.router._routerGo.call(this, data.redirect);
-                }
-            }
-        });
-    }
-
-    function _oauth2Perform(data) {
-        var key,
-            state = {},
-            params = '';
-
-        data = data || {};
-
-        if (data.code === true) {
-            data = __utils.extend(this.options[data.provider + 'Data'], [data]);
-
-            try {
-                if (data.query.state) {
-                    state = this.options.parseOauthState(data.query.state);
-                }
-            }
-            catch (e) {
-                console.error('vue-auth:error There was an issue retrieving the state data.');
-                state = {};
-            }
-
-            data.rememberMe = state.rememberMe === true;
-            data.state = state;
-
-            this.options.loginPerform.call(this, data);
-        } else {
-            data.params = __utils.extend(this.options[data.provider + 'Oauth2Data'].params, [data.params || {}]);
-            data = __utils.extend(this.options[data.provider + 'Oauth2Data'], [data]);
-
-            // Backwards compatibility.
-            data.params.redirect_uri = data.redirect || data.params.redirect_uri;
-            data.params.client_id = data.clientId || data.params.client_id;
-            data.params.response_type = data.response_type || data.params.response_type || 'code';
-            data.params.scope = data.scope || data.params.scope;
-            data.params.state = data.state || data.params.state || {};
-
-            if (typeof data.params.redirect_uri === 'function') {
-                data.params.redirect_uri = data.params.redirect_uri.call(this);
-            }
-
-            data.params.state.rememberMe = data.rememberMe === true;
-            data.params.state = encodeURIComponent(JSON.stringify(data.params.state));
-
-            for (key in data.params) {
-                params += '&' + key + '=' + data.params[key];
-            }
-
-            window.location = data.url + '?' + params;
-        }
-    }
-
-    var defaultOptions = {
-
-        // Variables
-
-        rolesVar:             'roles',
-        tokenImpersonateName: 'impersonate_auth_token',
-        tokenDefaultName:     'default_auth_token',
-        tokenStore:           ['localStorage', 'cookie'],
-
-        // Objects
-
-        authRedirect:       {path: '/login'},
-        forbiddenRedirect:  {path: '/403'},
-        notFoundRedirect:   {path: '/404'},
-
-        registerData:       {url: 'auth/register',      method: 'POST', redirect: '/login'},
-        loginData:          {url: 'auth/login',         method: 'POST', redirect: '/', fetchUser: true},
-        logoutData:         {url: 'auth/logout',        method: 'POST', redirect: '/', makeRequest: false},
-        oauth1Data:         {url: 'auth/login',         method: 'POST'},
-        fetchData:          {url: 'auth/user',          method: 'GET', enabled: true},
-        refreshData:        {url: 'auth/refresh',       method: 'GET', enabled: true, interval: 30},
-        impersonateData:    {url: 'auth/impersonate',   method: 'POST', redirect: '/'},
-        unimpersonateData:  {url: 'auth/unimpersonate', method: 'POST', redirect: '/admin', makeRequest: false},
-
-        facebookData:       {url: 'auth/facebook',      method: 'POST', redirect: '/'},
-        googleData:         {url: 'auth/google',        method: 'POST', redirect: '/'},
-
-        facebookOauth2Data: {
-            url: 'https://www.facebook.com/v2.5/dialog/oauth',
-            params: {
-                client_id: '',
-                redirect_uri: function () { return this.options.getUrl() + '/login/facebook'; },
-                scope: 'email'
-            }
-        },
-        googleOauth2Data: {
-            url: 'https://accounts.google.com/o/oauth2/auth',
-            params: {
-                client_id: '',
-                redirect_uri: function () { return this.options.getUrl() + '/login/google'; },
-                scope: 'https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
-            }
-        },
-
-        // Internal
-
-        getUrl:             _getUrl,
-        cookieDomain:       _cookieDomain,
-        parseUserData:      _parseUserData,
-        parseOauthState:    _parseOauthState,
-        tokenExpired:       _tokenExpired,
-        check:              _check,
-        checkAuthenticated: _checkAuthenticated,
-        getAuthMeta:        _getAuthMeta,
-        setTransitions:     _setTransitions,
-
-        readyCallback:      null,
-
-        transitionEach:     _transitionEach,
-        routerBeforeEach:   _routerBeforeEach,
-        requestIntercept:   _requestIntercept,
-        responseIntercept:  _responseIntercept,
-
-        // Contextual
-
-        registerPerform:    _registerPerform,
-        registerProcess:    _registerProcess,
-
-        loginPerform:       _loginPerform,
-        loginProcess:       _loginProcess,
-
-        logoutPerform:      _logoutPerform,
-        logoutProcess:      _logoutProcess,
-
-        fetchPerform:       _fetchPerform,
-        fetchProcess:       _fetchProcess,
-
-        refreshPerform:     _refreshPerform,
-        refreshProcess:     _refreshProcess,
-
-        impersonatePerform:  _impersonatePerform,
-        impersonateProcess:  _impersonateProcess,
-
-        unimpersonatePerform: _unimpersonatePerform,
-        unimpersonateProcess: _unimpersonateProcess,
-
-        oauth2Perform:      _oauth2Perform
-    };
-
-    function Auth(Vue, options) {
-        var i, ii,
-            msg,
-            _this = this,
-            drivers = ['auth', 'http', 'router'];
-
-        this.currentToken = null;
-
-        this.options = __utils.extend(defaultOptions, [options || {}]);
-        this.options.Vue = Vue;
-
-        this.watch = new this.options.Vue({
-            data: function () {
-                return {
-                    data: null,
-                    loaded: false,
-                    redirect: null,
-                    authenticated: null
-                };
-            },
-
-            watch: {
-                loaded: function (val) {
-                    if (val === true && _this.options.readyCallback) {
-                        _this.options.readyCallback();
-                    }
-                }
-            }
-        });
-
-        // Check drivers.
-        for (i = 0, ii = drivers.length; i < ii; i++) {
-            if ( ! this.options[drivers[i]]) {
-                console.error('Error (@websanova/vue-auth): "' + drivers[i] + '" driver must be set.');
-                return;
-            }
-
-            if (this.options[drivers[i]]._init) {
-                msg = this.options[drivers[i]]._init.call(this);
-
-                if (msg) {
-                    console.error('Error (@websanova/vue-auth): ' + msg);
-                    return;
-                }
-            }
-        }
-
-        // Set refresh interval.
-        if (this.options.refreshData.interval && this.options.refreshData.interval > 0) {
-            setInterval(function () {
-                if (this.options.refreshData.enabled && !this.options.tokenExpired.call(this)) {
-                    this.options.refreshPerform.call(this, {});
-                }
-            }.bind(this), this.options.refreshData.interval * 1000 * 60); // In minutes.
-        }
-
-        // Init interceptors.
-        this.options.router._beforeEach.call(this, this.options.routerBeforeEach, this.options.transitionEach);
-        this.options.http._interceptor.call(this, this.options.requestIntercept, this.options.responseIntercept);
-    }
-
-    Auth.prototype.ready = function (cb) {
-        if (cb !== undefined) {
-            this.$auth.options.readyCallback = cb.bind(this);
-        }
-
-        return this.$auth.watch.loaded;
-    };
-
-    Auth.prototype.redirect = function () {
-        return this.watch.redirect;
-    };
-
-    Auth.prototype.user = function (data) {
-        if (data) {
-            this.watch.data = data;
-        }
-
-        return this.watch.data || {};
-    };
-
-    Auth.prototype.check = function (role) {
-        return this.options.check.call(this, role);
-    };
-
-    Auth.prototype.impersonating = function () {
-        this.watch.data; // To fire watch
-
-        return __token.get.call(this, this.options.tokenImpersonateName) ? true : false;
-    };
-
-    Auth.prototype.token = function (name, token) {
-        if (token) {
-            __token.set.call(this, name, token);
-        }
-
-        return __token.get.call(this, name);
-    };
-
-    Auth.prototype.fetch = function (data) {
-        return __bindContext.call(this, 'fetch', data);
-    };
-
-    Auth.prototype.refresh = function (data) {
-        return __bindContext.call(this, 'refresh', data);
-    };
-
-    Auth.prototype.register = function (data) {
-        return __bindContext.call(this, 'register', data);
-    };
-
-    Auth.prototype.login = function (data) {
-        return __bindContext.call(this, 'login', data);
-    };
-
-    Auth.prototype.logout = function (data) {
-        return __bindContext.call(this, 'logout', data);
-    };
-
-    Auth.prototype.impersonate = function (data) {
-        return __bindContext.call(this, 'impersonate', data);
-    };
-
-    Auth.prototype.unimpersonate = function (data) {
-        return __bindContext.call(this, 'unimpersonate', data);
-    };
-
-    Auth.prototype.oauth2 = function (data) {
-        return __bindContext.call(this, 'oauth2', data);
-    }
-
-    Auth.prototype.enableImpersonate = function () {
-        if (this.impersonating()) {
-            this.currentToken = null;
-        }
-    };
-
-    Auth.prototype.disableImpersonate = function () {
-        if (this.impersonating()) {
-            this.currentToken = this.options.tokenDefaultName;
-        }
-    }; 
-
-    return Auth;
-};
-
-
-/***/ }),
-/* 76 */
-/***/ (function(module, exports) {
-
-module.exports = (function (){
-
-    function isObject(val) {
-        if (val !== null && typeof val === 'object' && val.constructor !== Array ) {
-            return true;
-        }
-
-        return false;
-    }
-
-    function toArray(val) {
-        return (typeof val) === 'string' || (typeof val) === 'number' ? [val] : val;
-    }
-
-    function extend(mainObj, appendObj) {
-        var i, ii, key, data = {};
-
-        for (key in mainObj) {
-            if (isObject(mainObj[key]) && mainObj[key].constructor.name !== 'FormData') {
-                data[key] = extend(mainObj[key], {});
-            }
-            else {
-                data[key] = mainObj[key];
-            }
-        }
-
-        for (i = 0, ii = appendObj.length; i < ii; i++) {
-            for (key in appendObj[i]) {
-                if (isObject(appendObj[i][key]) && appendObj[i][key].constructor.name !== 'FormData') {
-                    data[key] = extend(mainObj[key] || {}, [appendObj[i][key]]);
-                }
-                else  {
-                    data[key] = appendObj[i][key];
-                }
-            }
-        }
-
-        return data;
-    }
-
-    function compare(one, two) {
-        var i, ii, key;
-
-        if (Object.prototype.toString.call(one) === '[object Object]' && Object.prototype.toString.call(two) === '[object Object]') {
-            for (key in one) {
-                if (compare(one[key], two[key])) {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        one = toArray(one);
-        two = toArray(two);
-
-        if (!one || !two || one.constructor !== Array || two.constructor !== Array) {
-            return false;
-        }
-
-        for (i = 0, ii = one.length; i < ii; i++) {
-            if (two.indexOf(one[i]) >= 0) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
-    return {
-        extend: extend,
-        toArray: toArray,
-        isObject: isObject,
-        compare: compare
-    };
-})();
-
-
-/***/ }),
-/* 77 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __cookie = __webpack_require__(11);
-
-module.exports = (function () {
-
-    function tokenName(name) {
-        name = name || this.currentToken;
-        
-        if (name) {
-            return name;
-        }
-
-        if (this.impersonating.call(this)) {
-            return this.options.tokenImpersonateName;
-        }
-
-        return this.options.tokenDefaultName;
-    }
-
-    function isLocalStorageSupported() {
-        try {
-            if (!window.localStorage || !window.sessionStorage) {
-                throw 'exception';
-            }
-
-            localStorage.setItem('storage_test', 1);
-            localStorage.removeItem('storage_test');
-            
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
-    function isCookieSupported() {
-        return true;
-    }
-
-    function processToken(action, name, token) {
-        var i, ii,
-            args = [tokenName.call(this, name)];
-
-        if (token) {
-            args.push(token);
-        }
-
-        for (i = 0, ii = this.options.tokenStore.length; i < ii; i++) {
-            if (this.options.tokenStore[i] === 'localStorage' && isLocalStorageSupported()) {
-                return localStorage[action + 'Item'](args[0], args[1]);
-            }
-
-            else if (this.options.tokenStore[i] === 'cookie' && isCookieSupported()) {
-                return __cookie[action].apply(this, args);
-            }
-        }
-    }
-
-    return {
-        get: function (name) {
-            return processToken.call(this, 'get', name);
-        },
-
-        set: function (name, token) {
-            return processToken.call(this, 'set', name, token);
-        },
-
-        remove: function (name) {
-            return processToken.call(this, 'remove', name);
-        },
-
-        expiring: function () {
-            return false;
-        }
-    }
-
-})();
-
-/***/ }),
-/* 78 */
-/***/ (function(module, exports) {
-
-module.exports = {
-    
-    request: function (req, token) {
-        this.options.http._setHeaders.call(this, req, {Authorization: 'Bearer ' + token});
-    },
-    
-    response: function (res) {
-        var headers = this.options.http._getHeaders.call(this, res),
-            token = headers.Authorization || headers.authorization;
-
-        if (token) {
-            token = token.split(/Bearer\:?\s?/i);
-            
-            return token[token.length > 1 ? 1 : 0].trim();
-        }
-    }
-};
-
-/***/ }),
-/* 79 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  _init: function () {
-      if ( ! this.options.Vue.axios) {
-          return 'axios.js : Vue.axios must be set.'
-      }
-  },
-
-  _interceptor: function (req, res) {
-    var _this = this;
-
-    if (req) {
-      this.options.Vue.axios.interceptors.request.use(function (request) {
-        req.call(_this, request);
-        return request;
-      }, function (error) {
-        req.call(_this, error.request);
-        return Promise.reject(error);
-      })
-    }
-
-    if (res) {
-      this.options.Vue.axios.interceptors.response.use(function (response) {
-        res.call(_this, response);
-        return response;
-      }, function (error) {
-        if (error && error.response) {
-          res.call(_this, error.response);
-        }
-        
-        return Promise.reject(error);
-      })
-    }
-  },
-
-  _invalidToken: function (res) {
-    if (res.status === 401) {
-      return true;
-    }
-  },
-
-  _httpData: function (res) {
-    return res.data || {};
-  },
-
-  _http: function (data) {
-    var http = this.options.Vue.axios(data);
-
-    http.then(data.success, data.error);
-
-    return http;
-  },
-
-  _getHeaders: function (res) {
-    return res.headers;
-  },
-
-  _setHeaders: function (req, headers) {
-    req.headers.common = Object.assign({}, req.headers.common, headers);
-  }
-}
-
-
-/***/ }),
-/* 80 */
-/***/ (function(module, exports) {
-
-module.exports = {
-
-    _init: function () {
-        if ( ! this.options.Vue.router) {
-            return 'vue-router.2.x.js : Vue.router must be set.';
-        }
-    },
-
-    _bindData: function (data, ctx) {
-        var error, success;
-
-        data = data || {};
-
-        error = data.error;
-        success = data.success;
-
-        data.query = ctx.$route.query || {};
-
-        if (data.success) { data.success = function (res) { success.call(ctx, res); } }
-        if (data.error) { data.error = function (res) { error.call(ctx, res); } }
-
-        return data;
-    },
-
-    _beforeEach: function (routerBeforeEach, transitionEach) {
-        var _this = this;
-
-        this.options.Vue.router.beforeEach(function (transition, location, next) {
-            _this.options.setTransitions.call(this, transition);
-            
-            routerBeforeEach.call(_this, function () {
-                var auth = _this.options.getAuthMeta(transition);
-
-                transitionEach.call(_this, transition, auth, function (redirect) {
-                    if (!redirect) {
-                        (next || transition.next)();
-                        return;
-                    }
-
-                    // router v2.x
-                    if (next) {
-                        next(redirect);
-                    } else {
-                        this.options.router._routerReplace.call(this, redirect);
-                    }
-                });
-            });
-        })
-    },
-
-    _routerReplace: function (data) {
-        var router = this.options.Vue.router;
-
-        router.replace.call(router, data);
-    },
-
-    _routerGo: function (data) {
-        var router = this.options.Vue.router;
-
-        (router.push || router.go).call(router, data);
-    }
-
-};
-
-/***/ }),
-/* 81 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(87)
-/* template */
-var __vue_template__ = __webpack_require__(91)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -53641,12 +49842,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 87 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(45);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
 
 
@@ -53716,14 +49917,14 @@ var cache = new Map();
 });
 
 /***/ }),
-/* 88 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(89);
+module.exports = __webpack_require__(46);
 
 
 /***/ }),
-/* 89 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -53748,7 +49949,7 @@ var oldRuntime = hadRuntime && g.regeneratorRuntime;
 // Force reevalutation of runtime.js.
 g.regeneratorRuntime = undefined;
 
-module.exports = __webpack_require__(90);
+module.exports = __webpack_require__(47);
 
 if (hadRuntime) {
   // Restore the original runtime.
@@ -53764,7 +49965,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 90 */
+/* 47 */
 /***/ (function(module, exports) {
 
 /**
@@ -54497,7 +50698,7 @@ if (hadRuntime) {
 
 
 /***/ }),
-/* 91 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -54515,6 +50716,3820 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-63091116", module.exports)
   }
 }
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(50)
+/* template */
+var __vue_template__ = __webpack_require__(51)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/App.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8142f38c", Component.options)
+  } else {
+    hotAPI.reload("data-v-8142f38c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 50 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    created: function created() {
+        // this.$auth.fetch({url: '/api/user', method: 'get'});
+    }
+});
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("header", { staticClass: "site-header" }, [
+      _c("div", { staticClass: "container" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "site-header__search" }, [
+          _c(
+            "form",
+            { staticClass: "form form--search", attrs: { action: "" } },
+            [
+              _c("input", {
+                attrs: { type: "search", placeholder: "enter a recipe name" }
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                { attrs: { type: "submit" } },
+                [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
+                1
+              )
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "nav",
+          { staticClass: "site-navigation" },
+          [
+            _c("ul", [
+              _c("li", [
+                _c(
+                  "a",
+                  { attrs: { href: "#" } },
+                  [
+                    _c("icon", {
+                      attrs: { src: "/img/zondicons/shopping-cart.svg" }
+                    })
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: { name: "recipes.index" } } },
+                    [_vm._v("Recipes")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c(
+                    "li",
+                    [
+                      _c(
+                        "router-link",
+                        { attrs: { to: { name: "dashboard" } } },
+                        [_vm._v("Dashboard")]
+                      )
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.$auth.check()
+                ? _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: { name: "login" } } }, [
+                        _vm._v("Login")
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c("li", [
+                    _c(
+                      "a",
+                      {
+                        attrs: { href: "#" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            _vm.$auth.logout()
+                          }
+                        }
+                      },
+                      [_vm._v("Logout")]
+                    )
+                  ])
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _vm.$auth.check() ? _c("shopping-list") : _vm._e()
+          ],
+          1
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [_c("router-view")], 1),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", [_c("img", { attrs: { src: "/img/logo.svg" } })])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", [
+      _c("div", { staticClass: "container" }, [
+        _vm._v("\n            © Made By Lune\n        ")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8142f38c", module.exports)
+  }
+}
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(53)
+/* template */
+var __vue_template__ = __webpack_require__(54)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Auth/Register.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-49f475a3", Component.options)
+  } else {
+    hotAPI.reload("data-v-49f475a3", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            name: '',
+            email: '',
+            password: '',
+            error: false,
+            errors: {},
+            success: false
+        };
+    },
+
+    methods: {
+        register: function register() {
+            var app = this;
+
+            this.$auth.register({
+                params: {
+                    name: app.name,
+                    email: app.email,
+                    password: app.password
+                },
+                success: function success() {
+                    app.success = true;
+                },
+                error: function error(resp) {
+                    app.error = true;
+                    app.errors = resp.response.data.errors;
+                },
+                redirect: null
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.error && !_vm.success
+      ? _c("div", { staticClass: "alert alert-danger" }, [
+          _c("p", [
+            _vm._v("There was an error, unable to complete registration.")
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.success
+      ? _c("div", { staticClass: "alert alert-success" }, [
+          _c(
+            "p",
+            [
+              _vm._v("Registration completed. You can now "),
+              _c("router-link", { attrs: { to: { name: "login" } } }, [
+                _vm._v("sign in.")
+              ])
+            ],
+            1
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.success
+      ? _c(
+          "form",
+          {
+            attrs: { autocomplete: "off", method: "post" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                _vm.register($event)
+              }
+            }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "form-group",
+                class: { "has-error": _vm.error && _vm.errors.name }
+              },
+              [
+                _c("label", { attrs: { for: "name" } }, [_vm._v("Name")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name,
+                      expression: "name"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text", id: "name", required: "" },
+                  domProps: { value: _vm.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.error && _vm.errors.name
+                  ? _c("span", { staticClass: "help-block" }, [
+                      _vm._v(_vm._s(_vm.errors.name))
+                    ])
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "form-group",
+                class: { "has-error": _vm.error && _vm.errors.email }
+              },
+              [
+                _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.email,
+                      expression: "email"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "email",
+                    id: "email",
+                    placeholder: "user@example.com",
+                    required: ""
+                  },
+                  domProps: { value: _vm.email },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.email = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.error && _vm.errors.email
+                  ? _c("span", { staticClass: "help-block" }, [
+                      _vm._v(_vm._s(_vm.errors.email))
+                    ])
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "form-group",
+                class: { "has-error": _vm.error && _vm.errors.password }
+              },
+              [
+                _c("label", { attrs: { for: "password" } }, [
+                  _vm._v("Password")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.password,
+                      expression: "password"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "password", id: "password", required: "" },
+                  domProps: { value: _vm.password },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.password = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _vm.error && _vm.errors.password
+                  ? _c("span", { staticClass: "help-block" }, [
+                      _vm._v(_vm._s(_vm.errors.password))
+                    ])
+                  : _vm._e()
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btn-default", attrs: { type: "submit" } },
+              [_vm._v("Submit")]
+            )
+          ]
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-49f475a3", module.exports)
+  }
+}
+
+/***/ }),
+/* 55 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(56)
+/* template */
+var __vue_template__ = __webpack_require__(57)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Auth/Login.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-55f43099", Component.options)
+  } else {
+    hotAPI.reload("data-v-55f43099", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 56 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      email: null,
+      password: null,
+      error: false
+    };
+  },
+
+  methods: {
+    login: function login() {
+      var app = this;
+
+      this.$auth.login({
+        params: {
+          email: app.email,
+          password: app.password
+        },
+        success: function success() {},
+        error: function error() {},
+        rememberMe: true,
+        redirect: '/',
+        fetchUser: true
+      });
+    }
+  }
+});
+
+/***/ }),
+/* 57 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "login-container" }, [
+    _vm.error
+      ? _c("div", { staticClass: "alert alert-danger" }, [
+          _c("p", [
+            _vm._v(
+              "There was an error, unable to sign in with those credentials."
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        staticClass: "form form--login",
+        attrs: { autocomplete: "off", method: "post" },
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            _vm.login($event)
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.email,
+                expression: "email"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "email",
+              id: "email",
+              placeholder: "user@example.com",
+              required: ""
+            },
+            domProps: { value: _vm.email },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.email = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.password,
+                expression: "password"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "password", id: "password", required: "" },
+            domProps: { value: _vm.password },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.password = $event.target.value
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+          _vm._v("Sign in")
+        ])
+      ]
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-55f43099", module.exports)
+  }
+}
+
+/***/ }),
+/* 58 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(59)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Home.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-6707e3d4", Component.options)
+  } else {
+    hotAPI.reload("data-v-6707e3d4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 59 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("p", [_vm._v("Home")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-6707e3d4", module.exports)
+  }
+}
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(61)
+/* template */
+var __vue_template__ = __webpack_require__(62)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Recipes.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8d0cc384", Component.options)
+  } else {
+    hotAPI.reload("data-v-8d0cc384", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 61 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            loading: false,
+            recipes: null,
+            errors: null
+        };
+    },
+    created: function created() {
+        this.fetchData();
+    },
+
+    methods: {
+        fetchData: function fetchData() {
+            var _this = this;
+
+            this.error = this.users = null;
+            this.loading = true;
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('v1/recipes').then(function (response) {
+                console.log(response.data);
+
+                _this.loading = false; // loading is done
+                _this.recipes = response.data.data; // set the users from the response
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", { staticClass: "page-title" }, [_vm._v("All Recipes")]),
+    _vm._v(" "),
+    _vm.loading
+      ? _c("div", { staticClass: "loading" }, [
+          _vm._v("\n        loading...\n    ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "error" }, [
+          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
+          _c("p", [
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.fetchData($event)
+                  }
+                }
+              },
+              [_vm._v("\n                Try Again\n            ")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.recipes
+      ? _c(
+          "div",
+          { staticClass: "recipes" },
+          _vm._l(_vm.recipes, function(recipe) {
+            return _c(
+              "div",
+              { staticClass: "recipes__item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "recipes.single",
+                        params: { slug: recipe.slug }
+                      }
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "recipes__img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://source.unsplash.com/400x280/?food",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v(_vm._s(recipe.title))])
+                  ]
+                )
+              ],
+              1
+            )
+          })
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8d0cc384", module.exports)
+  }
+}
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(64)
+/* template */
+var __vue_template__ = __webpack_require__(65)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/RecipesSingle.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0a7273b4", Component.options)
+  } else {
+    hotAPI.reload("data-v-0a7273b4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            slug: this.$route.params.slug,
+            loading: false,
+            recipe: null,
+            errors: null,
+            qty: null,
+            newQty: 1,
+            oldQty: 1,
+            ingredients: {}
+        };
+    },
+    created: function created() {
+        this.fetchData();
+    },
+
+    methods: {
+        fetchData: function fetchData() {
+            var _this = this;
+
+            this.error = this.users = null;
+            this.loading = true;
+            axios.get(route('recipe.single', this.slug)).then(function (response) {
+                console.log(response);
+                _this.loading = false; // loading is done
+                _this.recipe = response.data; // set the users from the response
+                _this.ingredients = response.data.ingredients;
+                _this.oldQty = _this.recipe.serves;
+                _this.qty = _this.recipe.serves;
+
+                // this.qty = this.recipe.serves; // set this to servings field
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
+            });
+        },
+        saveShoppingList: function saveShoppingList() {
+            var data = {
+                ingredients: this.ingredients,
+                recipe_id: this.recipe.id
+            };
+
+            this.$root.$emit('update-shopping-list', data);
+        }
+    },
+    watch: {
+        qty: function qty(newQty, oldQty) {
+            if (newQty) {
+                this.newQty = newQty;
+            }
+
+            if (oldQty) {
+                this.oldQty = oldQty;
+            }
+
+            for (var i = 0; i <= this.ingredients.length; i++) {
+                this.ingredients[i].amount = this.ingredients[i].amount / this.oldQty * this.newQty;
+            }
+        }
+    }
+});
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.loading
+      ? _c("div", { staticClass: "loading" }, [
+          _vm._v("\n        loading...\n    ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "error" }, [
+          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
+          _c("p", [
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.fetchData($event)
+                  }
+                }
+              },
+              [_vm._v("\n                Try Again\n            ")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.recipe
+      ? _c("div", { staticClass: "recipe-single" }, [
+          _c("div", { staticClass: "recipe-single__header" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("h1", [_vm._v(_vm._s(_vm.recipe.title))])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipe-single-lead" }, [
+            _c("div", { staticClass: "recipe-single-lead__info" }, [
+              _c("p", { staticClass: "prep-time" }, [
+                _c("span", [_vm._v(_vm._s(_vm.recipe.prep_time))]),
+                _vm._v(" Prep Time\n                ")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "cook-time" }, [
+                _c("span", [_vm._v(_vm._s(_vm.recipe.cook_time))]),
+                _vm._v(" Cook Time\n                ")
+              ]),
+              _vm._v(" "),
+              _c("h3", [_vm._v("Introduction")]),
+              _vm._v(" "),
+              _c("p", [_vm._v(_vm._s(_vm.recipe.description))]),
+              _vm._v(" "),
+              _vm._m(1)
+            ]),
+            _vm._v(" "),
+            _vm._m(2)
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "recipe-single-body" }, [
+            _c("div", { staticClass: "recipe-single-ingredients" }, [
+              _c("h3", [_vm._v("Ingredients")]),
+              _vm._v(" "),
+              _c("form", { staticClass: "form", attrs: { action: "#" } }, [
+                _c("label", { staticClass: "inline-label" }, [
+                  _vm._v("Serves "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.qty,
+                        expression: "qty"
+                      }
+                    ],
+                    attrs: { type: "number", name: "qty", min: "1" },
+                    domProps: { value: _vm.qty },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.qty = $event.target.value
+                      }
+                    }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                {
+                  model: {
+                    value: _vm.ingredients,
+                    callback: function($$v) {
+                      _vm.ingredients = $$v
+                    },
+                    expression: "ingredients"
+                  }
+                },
+                _vm._l(_vm.ingredients, function(i) {
+                  return _c("li", [
+                    _c("b", [
+                      _vm._v(_vm._s(i.amount) + " " + _vm._s(i.measurement))
+                    ]),
+                    _vm._v(" " + _vm._s(i.title))
+                  ])
+                })
+              ),
+              _vm._v(" "),
+              _c("p", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "btn",
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.saveShoppingList()
+                      }
+                    }
+                  },
+                  [_vm._v("Add To Shopping List")]
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "recipe-single-method" }, [
+              _c("h3", [_vm._v("Method")]),
+              _vm._v(" "),
+              _c(
+                "ol",
+                _vm._l(_vm.recipe.method, function(method) {
+                  return _c("li", [_vm._v(_vm._s(method))])
+                })
+              )
+            ])
+          ])
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "breadcrumb" }, [
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Recipes")]),
+      _vm._v(" "),
+      _c("a", { attrs: { href: "#" } }, [_vm._v("Desserts")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "recipe-single-lead__actions" }, [
+      _c("a", { staticClass: "btn", attrs: { href: "#" } }, [
+        _vm._v("Add To Favourites")
+      ]),
+      _vm._v(" "),
+      _c("a", { staticClass: "btn btn--grey", attrs: { href: "#" } }, [
+        _vm._v("PRT")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "recipe-single-lead__image" }, [
+      _c("div", { staticClass: "inner-image" }, [
+        _c("img", {
+          attrs: {
+            src:
+              "https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=7b65345dde1da9bc81241c54a4f7ce2d",
+            alt: ""
+          }
+        })
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0a7273b4", module.exports)
+  }
+}
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = null
+/* template */
+var __vue_template__ = __webpack_require__(67)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/NotFound.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-078b1bb4", Component.options)
+  } else {
+    hotAPI.reload("data-v-078b1bb4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("p", [_vm._v("404, Not Found")])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-078b1bb4", module.exports)
+  }
+}
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(69)
+/* template */
+var __vue_template__ = __webpack_require__(70)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/ShoppingList.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-f2749e46", Component.options)
+  } else {
+    hotAPI.reload("data-v-f2749e46", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 69 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            loading: true,
+            list: null
+        };
+    },
+    created: function created() {
+        console.log('mounted');
+
+        this.$root.$on('update-shopping-list', this.saveShoppingList);
+
+        this.getShoppingList();
+    },
+
+    methods: {
+        getShoppingList: function getShoppingList() {
+            var _this = this;
+
+            axios.get(route('shopping-list')).then(function (response) {
+                _this.loading = false, _this.list = response.data;
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
+            });
+        },
+        saveShoppingList: function saveShoppingList(data) {
+            var _this2 = this;
+
+            axios.post(route('shopping-list.update'), data).then(function (response) {
+                console.log(response);
+                _this2.list = response.data;
+            }).catch(function (error) {
+                _this2.loading = false;
+                _this2.error = error.response.data.message || error.message;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "shopping-list" }, [
+    _c("h5", [_vm._v("Shopping List")]),
+    _vm._v(" "),
+    _vm.loading
+      ? _c("div", { staticClass: "loading" }, [
+          _vm._v("\n        loading...\n    ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "ul",
+      _vm._l(_vm.list, function(item) {
+        return _c("li", [
+          _vm._v(
+            _vm._s(item.qty) +
+              _vm._s(item.measurement) +
+              " " +
+              _vm._s(item.ingredient)
+          )
+        ])
+      })
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-f2749e46", module.exports)
+  }
+}
+
+/***/ }),
+/* 71 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(72)
+/* template */
+var __vue_template__ = __webpack_require__(73)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Account/Dashboard.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9ba94a2a", Component.options)
+  } else {
+    hotAPI.reload("data-v-9ba94a2a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 72 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", [_vm._v("Dashboard")]),
+    _vm._v(" "),
+    _c("p", [
+      _vm._v(
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus impedit magni magnam cumque repellendus quod!"
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("h2", [_vm._v("Add Recipe")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!"
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "p",
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { to: { name: "dashboard.recipe.add" } }
+              },
+              [_vm._v("Click")]
+            )
+          ],
+          1
+        )
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("h2", [_vm._v("Account Settings")]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v(
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!"
+          )
+        ]),
+        _vm._v(" "),
+        _c(
+          "p",
+          [
+            _c(
+              "router-link",
+              {
+                staticClass: "btn btn-primary",
+                attrs: { to: { name: "me.settings" } }
+              },
+              [_vm._v("Click")]
+            )
+          ],
+          1
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-4" }, [
+      _c("h2", [_vm._v("Create Collection")]),
+      _vm._v(" "),
+      _c("p", [
+        _vm._v(
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!"
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", [
+        _c("a", { staticClass: "btn btn-primary", attrs: { href: "" } }, [
+          _vm._v("Click")
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-9ba94a2a", module.exports)
+  }
+}
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(75)
+/* template */
+var __vue_template__ = __webpack_require__(76)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Account/RecipeCreate.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-38e0d9a3", Component.options)
+  } else {
+    hotAPI.reload("data-v-38e0d9a3", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            recipe: {
+                title: '',
+                description: '',
+                cook_time: '',
+                prep_time: '',
+                serves: '',
+                method: [{
+                    description: ''
+                }],
+                ingredients: []
+            },
+            ingredient: {
+                amount: null,
+                measurement: '',
+                title: ''
+            }
+        };
+    },
+
+    methods: {
+        addIngredient: function addIngredient() {
+            this.recipe.ingredients.push(this.ingredient);
+
+            this.ingredient = {
+                amount: null,
+                measurement: '',
+                title: ''
+            };
+        },
+        addMethodStep: function addMethodStep() {
+            var methodData = {
+                description: ''
+            };
+
+            this.recipe.method.push(methodData);
+        },
+        saveRecipe: function saveRecipe() {
+            console.log('starting save');
+
+            axios.post('v1/recipes/create', {
+                title: this.recipe.title,
+                description: this.recipe.description,
+                cook_time: this.recipe.cook_time,
+                prep_time: this.recipe.prep_time,
+                serves: this.recipe.serves,
+                method: this.recipe.method,
+                ingredients: this.recipe.ingredients
+            }).then(function (response) {
+                console.log(response.data);
+            }).catch(function (error) {
+                console.log(error);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 76 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", [_vm._v("Add Recipe")]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            _vm.saveRecipe()
+          }
+        }
+      },
+      [
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "title" } }, [_vm._v("Title")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.recipe.title,
+                expression: "recipe.title"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: {
+              type: "text",
+              placeholder: "Enter a Title",
+              autofocus: ""
+            },
+            domProps: { value: _vm.recipe.title },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.recipe, "title", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", [_vm._v("Description")]),
+          _vm._v(" "),
+          _c("textarea", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.recipe.description,
+                expression: "recipe.description"
+              }
+            ],
+            staticClass: "form-control",
+            domProps: { value: _vm.recipe.description },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.recipe, "description", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "title" } }, [_vm._v("Cook Time")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.recipe.cook_time,
+                expression: "recipe.cook_time"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "number" },
+            domProps: { value: _vm.recipe.cook_time },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.recipe, "cook_time", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "title" } }, [_vm._v("Prep Time")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.recipe.prep_time,
+                expression: "recipe.prep_time"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "number" },
+            domProps: { value: _vm.recipe.prep_time },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.recipe, "prep_time", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group" }, [
+          _c("label", { attrs: { for: "title" } }, [_vm._v("Serves")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.recipe.serves,
+                expression: "recipe.serves"
+              }
+            ],
+            staticClass: "form-control",
+            attrs: { type: "number" },
+            domProps: { value: _vm.recipe.serves },
+            on: {
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.recipe, "serves", $event.target.value)
+              }
+            }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c(
+            "div",
+            { staticClass: "col-md-4" },
+            [
+              _c("h4", [_vm._v("Ingredients")]),
+              _vm._v(" "),
+              _vm._l(_vm.recipe.ingredients, function(ing) {
+                return _c("div", { attrs: { readonly: "" } }, [
+                  _vm._v(
+                    "\n                " +
+                      _vm._s(ing.amount) +
+                      " " +
+                      _vm._s(ing.measurement) +
+                      " " +
+                      _vm._s(ing.title) +
+                      "\n            "
+                  )
+                ])
+              }),
+              _vm._v(" "),
+              _c(
+                "form",
+                {
+                  staticClass: "form",
+                  on: {
+                    submit: function($event) {
+                      $event.preventDefault()
+                      _vm.addIngredient()
+                    }
+                  }
+                },
+                [
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Quantity")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.ingredient.amount,
+                          expression: "ingredient.amount"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "number", placeholder: "amount" },
+                      domProps: { value: _vm.ingredient.amount },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.ingredient,
+                            "amount",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Measurement")]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.ingredient.measurement,
+                            expression: "ingredient.measurement"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.ingredient,
+                              "measurement",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("None")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "g" } }, [
+                          _vm._v("Grams")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "kg" } }, [
+                          _vm._v("Killograms")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "oz" } }, [
+                          _vm._v("Ounce")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "ml" } }, [
+                          _vm._v("Millilitre")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "ml" } }, [
+                          _vm._v("Centilitre")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "l" } }, [
+                          _vm._v("Litre")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "cups" } }, [
+                          _vm._v("Cups")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "form-group" }, [
+                    _c("label", [_vm._v("Name")]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.ingredient.title,
+                          expression: "ingredient.title"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "text", placeholder: "ingredient name" },
+                      domProps: { value: _vm.ingredient.title },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.ingredient, "title", $event.target.value)
+                        }
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-submit",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Add")]
+                  )
+                ]
+              )
+            ],
+            2
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-md-8" },
+            [
+              _c("h4", [_vm._v("Method")]),
+              _vm._v(" "),
+              _vm._l(_vm.recipe.method, function(m) {
+                return _c("div", { staticClass: "form-group" }, [
+                  _c("label", [_vm._v("Description")]),
+                  _vm._v(" "),
+                  _c("textarea", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: m.description,
+                        expression: "m.description"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    domProps: { value: m.description },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(m, "description", $event.target.value)
+                      }
+                    }
+                  })
+                ])
+              }),
+              _vm._v(" "),
+              _c("div", [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-submit",
+                    attrs: { type: "submit" },
+                    on: {
+                      click: function($event) {
+                        $event.preventDefault()
+                        _vm.addMethodStep()
+                      }
+                    }
+                  },
+                  [_vm._v("Add")]
+                )
+              ])
+            ],
+            2
+          )
+        ]),
+        _vm._v(" "),
+        _vm._m(0)
+      ]
+    )
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+        _vm._v("Lets Go")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-38e0d9a3", module.exports)
+  }
+}
+
+/***/ }),
+/* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(78)
+/* template */
+var __vue_template__ = __webpack_require__(79)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Account/Settings.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5767ecc8", Component.options)
+  } else {
+    hotAPI.reload("data-v-5767ecc8", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 78 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            account: {
+                name: '',
+                email: '',
+                password: ''
+            },
+            password: {
+                old: '',
+                new: ''
+            }
+        };
+    },
+    created: function created() {},
+
+    methods: {
+        updateAccount: function updateAccount() {
+            console.log(this.account);
+        },
+        passwordChange: function passwordChange() {
+            console.log('password update');
+        }
+    }
+});
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "col-md-9" }, [
+      _c("h3", [_vm._v("Settings Panel")]),
+      _vm._v(" "),
+      _c("h6", [_vm._v("Account")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: { action: "POST", enctype: "multipart/form-data" },
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              _vm.updateAccount($event)
+            }
+          }
+        },
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _vm._m(3),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _vm._m(5)
+        ]
+      ),
+      _vm._v(" "),
+      _c("h6", [_vm._v("Password")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          attrs: { action: "POST" },
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              _vm.passwordChange($event)
+            }
+          }
+        },
+        [_vm._m(6), _vm._v(" "), _vm._m(7), _vm._v(" "), _vm._m(8)]
+      )
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "col-md-3" }, [
+      _c("h3", [_vm._v("Sidebar Options")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_vm._v("Account Settings")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("Password")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "dropbox" }, [
+      _c("p", [
+        _c("input", { attrs: { type: "file", name: "uploadFieldName" } })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "name" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "text", placeholder: "email" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "password", placeholder: "confirm password" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+        _vm._v("Save")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "password", placeholder: "old password" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("input", {
+        staticClass: "form-control",
+        attrs: { type: "password", placeholder: "new password" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+        _vm._v("Save")
+      ])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-5767ecc8", module.exports)
+  }
+}
+
+/***/ }),
+/* 80 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Auth = __webpack_require__(81)();
+
+module.exports = (function () {
+
+    return function install(Vue, options) {
+        
+        var auth = new Auth(Vue, options);
+
+        var ready = auth.ready;
+        var login = auth.login;
+        var fetch = auth.fetch;
+        var logout = auth.logout;
+        var oauth2 = auth.oauth2;
+        var refresh = auth.refresh;
+        var register = auth.register;
+        var impersonate = auth.impersonate;
+        var unimpersonate = auth.unimpersonate;
+
+        Vue.auth = auth;
+
+        Object.defineProperties(Vue.prototype, {
+            $auth: {
+                get: function () {
+                    auth.ready = ready.bind(this);
+                    auth.login = login.bind(this);
+                    auth.fetch = fetch.bind(this);
+                    auth.logout = logout.bind(this);
+                    auth.oauth2 = oauth2.bind(this);
+                    auth.refresh = refresh.bind(this);
+                    auth.register = register.bind(this);
+                    auth.impersonate = impersonate.bind(this);
+                    auth.unimpersonate = unimpersonate.bind(this);
+
+                    return auth;
+                }
+            }
+        });
+    }
+})();
+
+/***/ }),
+/* 81 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __utils  = __webpack_require__(82),
+    __token  = __webpack_require__(83),
+    __cookie = __webpack_require__(11)
+
+module.exports = function () {
+
+    // Private (used double underscore __).
+
+    var __transitionPrev = null,
+        __transitionThis = null,
+        __transitionRedirectType = null;
+
+    function __duckPunch(methodName, data) {
+        var _this = this,
+            success = data.success;
+
+        data = __utils.extend(this.options[methodName + 'Data'], [data]);
+
+        data.success = function (res) {
+            data.success = success;
+
+            _this.options[methodName + 'Process'].call(_this, res, data);
+        };
+
+        return this.options.http._http.call(this, data);
+    }
+
+    function __bindContext(methodName, data) {
+        var _auth = this.$auth;
+
+        return _auth.options[methodName + 'Perform'].call(_auth, _auth.options.router._bindData.call(_auth, data, this));
+    }
+
+    // Overrideable
+
+    function _checkAuthenticated(cb) {
+        if (this.watch.authenticated === null && __token.get.call(this)) {
+            if ( ! __cookie.exists.call(this)) {
+                this.options.logoutProcess.call(this, null, {});
+
+                this.watch.loaded = true;
+
+                return cb.call(this);
+            }
+
+            this.watch.authenticated = false;
+
+            if (this.options.fetchData.enabled) {
+                this.options.fetchPerform.call(this, {
+                    success: cb,
+                    error: cb,
+                    enabled: true
+                });
+            }
+            else {
+                this.options.fetchProcess.call(this, {}, {});
+                return cb.call(this);
+            }
+        } else {
+            this.watch.loaded = true;
+            return cb.call(this);
+        }
+    }
+
+    function _routerBeforeEach(cb) {
+        var _this = this;
+
+        if (this.watch.authenticated && !__token.get.call(this)) {
+            this.options.logoutProcess.call(this, null, {});
+        }
+
+        if (this.options.refreshData.enabled && ! this.watch.loaded && __token.get.call(this)) {
+            this.options.refreshPerform.call(this, {
+                success: function () {
+                    this.options.checkAuthenticated.call(_this, cb);
+                }
+            });
+
+            return;
+        }
+
+        _checkAuthenticated.call(this, cb);
+    }
+
+    function _transitionEach(transition, routeAuth, cb) {
+        var authRedirect = (routeAuth || '').redirect || this.options.authRedirect,
+            forbiddenRedirect = (routeAuth || '').forbiddenRedirect || (routeAuth || '').redirect || this.options.forbiddenRedirect,
+            notFoundRedirect = (routeAuth || '').redirect || this.options.notFoundRedirect;
+
+        routeAuth = __utils.toArray((routeAuth || '').roles || routeAuth);
+
+        if (routeAuth && (routeAuth === true || routeAuth.constructor === Array || __utils.isObject(routeAuth))) {
+            if ( ! this.check()) {
+                __transitionRedirectType = 401;
+                cb.call(this, authRedirect);
+            }
+            else if ((routeAuth.constructor === Array || __utils.isObject(routeAuth)) && ! __utils.compare(routeAuth, this.watch.data[this.options.rolesVar])) {
+                __transitionRedirectType = 403;
+                cb.call(this, forbiddenRedirect);
+            }
+            else {
+                this.watch.redirect = __transitionRedirectType ? {type: __transitionRedirectType, from: __transitionPrev, to: __transitionThis} : null;
+                __transitionRedirectType = null;
+
+                return cb();
+            }
+        }
+        else if (routeAuth === false && this.check()) {
+            __transitionRedirectType = 404;
+            cb.call(this, notFoundRedirect);
+        }
+        else {
+            this.watch.redirect = __transitionRedirectType ? {type: __transitionRedirectType, from: __transitionPrev, to: __transitionThis} : null;
+            __transitionRedirectType = null;
+
+            return cb();
+        }
+    }
+
+    function _requestIntercept(req) {
+        var token,
+            tokenName;
+
+        if (req.ignoreVueAuth) {
+            return req;
+        }
+
+        if (req.impersonating === false && this.impersonating()) {
+            tokenName = this.options.tokenDefaultName;
+        }
+        
+        token = __token.get.call(this, tokenName);
+
+        if (token) {
+            this.options.auth.request.call(this, req, token);
+        }
+
+        return req;
+    }
+
+    function _responseIntercept(res, req) {
+        var token;
+
+        if (req && req.ignoreVueAuth) {
+            return;
+        }
+
+        _processInvalidToken.call(this, res, __transitionThis);
+
+        token = this.options.auth.response.call(this, res);
+
+        if (token) {
+            __token.set.call(this, null, token);
+        }
+    }
+
+    function _parseUserData(data) {
+        return data.data || {};
+    }
+
+    function _parseOauthState(data) {
+        return JSON.parse(decodeURIComponent(data));
+    }
+
+    function _check(role) {
+        if (this.watch.authenticated === true) {
+            if (role) {
+                return __utils.compare(role, this.watch.data[this.options.rolesVar]);
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    function _tokenExpired () {
+        return ! __token.get.call(this);
+    }
+
+    function _cookieDomain () {
+        return window.location.hostname;
+    }
+
+    function _getUrl () {
+        var port = window.location.port
+
+        return window.location.protocol + '//' + window.location.hostname + (port ? ':' + port : '')
+    }
+
+    function _getAuthMeta (transition) {
+        var auth,
+            authRoutes;
+
+        if (transition.to) {
+            auth = transition.to.auth;
+        } else {
+            authRoutes = transition.matched.filter(function (route) {
+                return route.meta.hasOwnProperty('auth');
+            });
+
+            // matches the nested route, the last one in the list
+            if (authRoutes.length) {
+                auth = authRoutes[authRoutes.length - 1].meta.auth;
+            }
+        }
+
+        return auth;
+    }
+
+    function _setTransitions (transition) {
+        __transitionPrev = __transitionThis;
+        __transitionThis = transition;
+    }
+
+    function _processInvalidToken(res, transition) {
+        var i,
+            auth,
+            query = '',
+            redirect = transition.path;
+
+        // Make sure we also attach any existing
+        // query parameters on the path.
+        if (redirect && transition.query) {
+            for (i in transition.query) {
+                if (transition.query[i]) {
+                    query += '&' + i + '=' + transition.query[i];
+                }
+            }
+
+            redirect += '?' + query.substring(1);
+        }
+
+        if (!this.options.http._invalidToken) {
+            return;
+        }
+
+        if (!this.options.http._invalidToken.call(this, res)) {
+            return;
+        }
+
+        if (transition) {
+            auth = this.options.getAuthMeta(transition);
+        }
+
+        if (auth) {
+            redirect = auth.redirect || this.options.authRedirect;
+        }
+
+        this.options.logoutProcess.call(this, res, {redirect: redirect});
+    }
+
+    function _fetchPerform(data) {
+        var _this = this,
+            error = data.error;
+
+        data.error = function (res) {
+            _this.watch.loaded = true;
+
+            if (error) { error.call(_this, res); }
+        };
+
+        if (this.watch.authenticated !== true && !data.enabled) {
+            _fetchProcess.call(this, {}, data);
+        }
+        else {
+            return __duckPunch.call(this, 'fetch', data);
+        }
+    }
+
+    function _fetchProcess(res, data) {
+        this.watch.authenticated = true;
+        this.watch.data = this.options.parseUserData.call(this, this.options.http._httpData.call(this, res));
+        
+        this.watch.loaded = true;
+
+        if (data.success) { data.success.call(this, res); }
+    }
+
+    function _refreshPerform(data) {
+        return __duckPunch.call(this, 'refresh', data);
+    }
+
+    function _refreshProcess(res, data) {
+        if (data.success) { data.success.call(this, res); }
+    }
+
+    function _registerPerform(data) {
+        return __duckPunch.call(this, 'register', data);
+    }
+
+    function _registerProcess(res, data) {
+        if (data.autoLogin === true) {
+            data = __utils.extend(data, [this.options.loginData, {redirect: data.redirect}]);
+
+            this.options.loginPerform.call(this, data);
+        }
+        else {
+            if (data.success) { data.success.call(this, res); }
+
+            if (data.redirect) {
+                this.options.router._routerGo.call(this, data.redirect);
+            }
+        }
+    }
+
+    function _loginPerform(data) {
+        return __duckPunch.call(this, 'login', data);
+    }
+
+    function _loginProcess(res, data) {
+        var _this = this;
+
+        __cookie.remember.call(this, data.rememberMe);
+
+        this.authenticated = null;
+
+        this.options.fetchPerform.call(this, {
+            enabled: data.fetchUser,
+            success: function () {
+                if (data.success) { data.success.call(this, res); }
+
+                if (data.redirect && _this.options.check.call(_this)) {
+                    _this.options.router._routerGo.call(_this, data.redirect);
+                }
+            }
+        });
+    }
+
+    function _logoutPerform(data) {
+        data = __utils.extend(this.options.logoutData, [data || {}]);
+
+        if (data.makeRequest) {
+            return __duckPunch.call(this, 'logout', data);
+        }
+        else {
+            this.options.logoutProcess.call(this, null, data);
+        }
+    }
+
+    function _logoutProcess(res, data) {
+        __cookie.remove.call(this, 'rememberMe');
+
+        __cookie.remove.call(this, this.options.tokenImpersonateName);
+        __cookie.remove.call(this, this.options.tokenDefaultName);
+
+        __token.remove.call(this, this.options.tokenImpersonateName);
+        __token.remove.call(this, this.options.tokenDefaultName);
+
+        this.watch.authenticated = false;
+        this.watch.data = null;
+
+        if (data.success) { data.success.call(this, res, data); }
+
+        if (data.redirect) {
+            this.options.router._routerGo.call(this, data.redirect);
+        }
+    }
+
+    function _impersonatePerform(data) {
+        var success,
+            token = this.token.call(this); // (admin) token
+
+        data = data || {};
+
+        success = data.success;
+
+        data.success = function () {
+
+            // Reshuffle tokens here...
+            __token.set.call(this, this.options.tokenImpersonateName, this.token.call(this));
+            __token.set.call(this, this.options.tokenDefaultName, token);
+
+            if (success) { success.call(this); }
+        };
+
+        return __duckPunch.call(this, 'impersonate', data);
+    }
+
+    function _impersonateProcess(res, data) {
+        var _this = this;
+
+        this.options.fetchPerform.call(this, {
+            enabled: true,
+            success: function () {
+                if (data.success) { data.success.call(this, res); }
+
+                if (data.redirect && _this.options.check.call(_this)) {
+                    _this.options.router._routerGo.call(_this, data.redirect);
+                }
+            }
+        });
+    }
+
+    function _unimpersonatePerform(data) {
+        data = __utils.extend(this.options.unimpersonateData, [data || {}]);
+
+        if (data.makeRequest) {
+            return __duckPunch.call(this, 'unimpersonate', data);
+        }
+        else {
+            this.options.unimpersonateProcess.call(this, null, data);
+        }
+    }
+
+    function _unimpersonateProcess(res, data) {
+        __token.remove.call(this, this.options.tokenImpersonateName);
+
+        this.options.fetchPerform.call(this, {
+            enabled: true,
+            success: function () {
+                if (data.success) { data.success.call(this, res, data); }
+
+                if (data.redirect) {
+                    this.options.router._routerGo.call(this, data.redirect);
+                }
+            }
+        });
+    }
+
+    function _oauth2Perform(data) {
+        var key,
+            state = {},
+            params = '';
+
+        data = data || {};
+
+        if (data.code === true) {
+            data = __utils.extend(this.options[data.provider + 'Data'], [data]);
+
+            try {
+                if (data.query.state) {
+                    state = this.options.parseOauthState(data.query.state);
+                }
+            }
+            catch (e) {
+                console.error('vue-auth:error There was an issue retrieving the state data.');
+                state = {};
+            }
+
+            data.rememberMe = state.rememberMe === true;
+            data.state = state;
+
+            this.options.loginPerform.call(this, data);
+        } else {
+            data.params = __utils.extend(this.options[data.provider + 'Oauth2Data'].params, [data.params || {}]);
+            data = __utils.extend(this.options[data.provider + 'Oauth2Data'], [data]);
+
+            // Backwards compatibility.
+            data.params.redirect_uri = data.redirect || data.params.redirect_uri;
+            data.params.client_id = data.clientId || data.params.client_id;
+            data.params.response_type = data.response_type || data.params.response_type || 'code';
+            data.params.scope = data.scope || data.params.scope;
+            data.params.state = data.state || data.params.state || {};
+
+            if (typeof data.params.redirect_uri === 'function') {
+                data.params.redirect_uri = data.params.redirect_uri.call(this);
+            }
+
+            data.params.state.rememberMe = data.rememberMe === true;
+            data.params.state = encodeURIComponent(JSON.stringify(data.params.state));
+
+            for (key in data.params) {
+                params += '&' + key + '=' + data.params[key];
+            }
+
+            window.location = data.url + '?' + params;
+        }
+    }
+
+    var defaultOptions = {
+
+        // Variables
+
+        rolesVar:             'roles',
+        tokenImpersonateName: 'impersonate_auth_token',
+        tokenDefaultName:     'default_auth_token',
+        tokenStore:           ['localStorage', 'cookie'],
+
+        // Objects
+
+        authRedirect:       {path: '/login'},
+        forbiddenRedirect:  {path: '/403'},
+        notFoundRedirect:   {path: '/404'},
+
+        registerData:       {url: 'auth/register',      method: 'POST', redirect: '/login'},
+        loginData:          {url: 'auth/login',         method: 'POST', redirect: '/', fetchUser: true},
+        logoutData:         {url: 'auth/logout',        method: 'POST', redirect: '/', makeRequest: false},
+        oauth1Data:         {url: 'auth/login',         method: 'POST'},
+        fetchData:          {url: 'auth/user',          method: 'GET', enabled: true},
+        refreshData:        {url: 'auth/refresh',       method: 'GET', enabled: true, interval: 30},
+        impersonateData:    {url: 'auth/impersonate',   method: 'POST', redirect: '/'},
+        unimpersonateData:  {url: 'auth/unimpersonate', method: 'POST', redirect: '/admin', makeRequest: false},
+
+        facebookData:       {url: 'auth/facebook',      method: 'POST', redirect: '/'},
+        googleData:         {url: 'auth/google',        method: 'POST', redirect: '/'},
+
+        facebookOauth2Data: {
+            url: 'https://www.facebook.com/v2.5/dialog/oauth',
+            params: {
+                client_id: '',
+                redirect_uri: function () { return this.options.getUrl() + '/login/facebook'; },
+                scope: 'email'
+            }
+        },
+        googleOauth2Data: {
+            url: 'https://accounts.google.com/o/oauth2/auth',
+            params: {
+                client_id: '',
+                redirect_uri: function () { return this.options.getUrl() + '/login/google'; },
+                scope: 'https://www.googleapis.com/auth/plus.me https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
+            }
+        },
+
+        // Internal
+
+        getUrl:             _getUrl,
+        cookieDomain:       _cookieDomain,
+        parseUserData:      _parseUserData,
+        parseOauthState:    _parseOauthState,
+        tokenExpired:       _tokenExpired,
+        check:              _check,
+        checkAuthenticated: _checkAuthenticated,
+        getAuthMeta:        _getAuthMeta,
+        setTransitions:     _setTransitions,
+
+        readyCallback:      null,
+
+        transitionEach:     _transitionEach,
+        routerBeforeEach:   _routerBeforeEach,
+        requestIntercept:   _requestIntercept,
+        responseIntercept:  _responseIntercept,
+
+        // Contextual
+
+        registerPerform:    _registerPerform,
+        registerProcess:    _registerProcess,
+
+        loginPerform:       _loginPerform,
+        loginProcess:       _loginProcess,
+
+        logoutPerform:      _logoutPerform,
+        logoutProcess:      _logoutProcess,
+
+        fetchPerform:       _fetchPerform,
+        fetchProcess:       _fetchProcess,
+
+        refreshPerform:     _refreshPerform,
+        refreshProcess:     _refreshProcess,
+
+        impersonatePerform:  _impersonatePerform,
+        impersonateProcess:  _impersonateProcess,
+
+        unimpersonatePerform: _unimpersonatePerform,
+        unimpersonateProcess: _unimpersonateProcess,
+
+        oauth2Perform:      _oauth2Perform
+    };
+
+    function Auth(Vue, options) {
+        var i, ii,
+            msg,
+            _this = this,
+            drivers = ['auth', 'http', 'router'];
+
+        this.currentToken = null;
+
+        this.options = __utils.extend(defaultOptions, [options || {}]);
+        this.options.Vue = Vue;
+
+        this.watch = new this.options.Vue({
+            data: function () {
+                return {
+                    data: null,
+                    loaded: false,
+                    redirect: null,
+                    authenticated: null
+                };
+            },
+
+            watch: {
+                loaded: function (val) {
+                    if (val === true && _this.options.readyCallback) {
+                        _this.options.readyCallback();
+                    }
+                }
+            }
+        });
+
+        // Check drivers.
+        for (i = 0, ii = drivers.length; i < ii; i++) {
+            if ( ! this.options[drivers[i]]) {
+                console.error('Error (@websanova/vue-auth): "' + drivers[i] + '" driver must be set.');
+                return;
+            }
+
+            if (this.options[drivers[i]]._init) {
+                msg = this.options[drivers[i]]._init.call(this);
+
+                if (msg) {
+                    console.error('Error (@websanova/vue-auth): ' + msg);
+                    return;
+                }
+            }
+        }
+
+        // Set refresh interval.
+        if (this.options.refreshData.interval && this.options.refreshData.interval > 0) {
+            setInterval(function () {
+                if (this.options.refreshData.enabled && !this.options.tokenExpired.call(this)) {
+                    this.options.refreshPerform.call(this, {});
+                }
+            }.bind(this), this.options.refreshData.interval * 1000 * 60); // In minutes.
+        }
+
+        // Init interceptors.
+        this.options.router._beforeEach.call(this, this.options.routerBeforeEach, this.options.transitionEach);
+        this.options.http._interceptor.call(this, this.options.requestIntercept, this.options.responseIntercept);
+    }
+
+    Auth.prototype.ready = function (cb) {
+        if (cb !== undefined) {
+            this.$auth.options.readyCallback = cb.bind(this);
+        }
+
+        return this.$auth.watch.loaded;
+    };
+
+    Auth.prototype.redirect = function () {
+        return this.watch.redirect;
+    };
+
+    Auth.prototype.user = function (data) {
+        if (data) {
+            this.watch.data = data;
+        }
+
+        return this.watch.data || {};
+    };
+
+    Auth.prototype.check = function (role) {
+        return this.options.check.call(this, role);
+    };
+
+    Auth.prototype.impersonating = function () {
+        this.watch.data; // To fire watch
+
+        return __token.get.call(this, this.options.tokenImpersonateName) ? true : false;
+    };
+
+    Auth.prototype.token = function (name, token) {
+        if (token) {
+            __token.set.call(this, name, token);
+        }
+
+        return __token.get.call(this, name);
+    };
+
+    Auth.prototype.fetch = function (data) {
+        return __bindContext.call(this, 'fetch', data);
+    };
+
+    Auth.prototype.refresh = function (data) {
+        return __bindContext.call(this, 'refresh', data);
+    };
+
+    Auth.prototype.register = function (data) {
+        return __bindContext.call(this, 'register', data);
+    };
+
+    Auth.prototype.login = function (data) {
+        return __bindContext.call(this, 'login', data);
+    };
+
+    Auth.prototype.logout = function (data) {
+        return __bindContext.call(this, 'logout', data);
+    };
+
+    Auth.prototype.impersonate = function (data) {
+        return __bindContext.call(this, 'impersonate', data);
+    };
+
+    Auth.prototype.unimpersonate = function (data) {
+        return __bindContext.call(this, 'unimpersonate', data);
+    };
+
+    Auth.prototype.oauth2 = function (data) {
+        return __bindContext.call(this, 'oauth2', data);
+    }
+
+    Auth.prototype.enableImpersonate = function () {
+        if (this.impersonating()) {
+            this.currentToken = null;
+        }
+    };
+
+    Auth.prototype.disableImpersonate = function () {
+        if (this.impersonating()) {
+            this.currentToken = this.options.tokenDefaultName;
+        }
+    }; 
+
+    return Auth;
+};
+
+
+/***/ }),
+/* 82 */
+/***/ (function(module, exports) {
+
+module.exports = (function (){
+
+    function isObject(val) {
+        if (val !== null && typeof val === 'object' && val.constructor !== Array ) {
+            return true;
+        }
+
+        return false;
+    }
+
+    function toArray(val) {
+        return (typeof val) === 'string' || (typeof val) === 'number' ? [val] : val;
+    }
+
+    function extend(mainObj, appendObj) {
+        var i, ii, key, data = {};
+
+        for (key in mainObj) {
+            if (isObject(mainObj[key]) && mainObj[key].constructor.name !== 'FormData') {
+                data[key] = extend(mainObj[key], {});
+            }
+            else {
+                data[key] = mainObj[key];
+            }
+        }
+
+        for (i = 0, ii = appendObj.length; i < ii; i++) {
+            for (key in appendObj[i]) {
+                if (isObject(appendObj[i][key]) && appendObj[i][key].constructor.name !== 'FormData') {
+                    data[key] = extend(mainObj[key] || {}, [appendObj[i][key]]);
+                }
+                else  {
+                    data[key] = appendObj[i][key];
+                }
+            }
+        }
+
+        return data;
+    }
+
+    function compare(one, two) {
+        var i, ii, key;
+
+        if (Object.prototype.toString.call(one) === '[object Object]' && Object.prototype.toString.call(two) === '[object Object]') {
+            for (key in one) {
+                if (compare(one[key], two[key])) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        one = toArray(one);
+        two = toArray(two);
+
+        if (!one || !two || one.constructor !== Array || two.constructor !== Array) {
+            return false;
+        }
+
+        for (i = 0, ii = one.length; i < ii; i++) {
+            if (two.indexOf(one[i]) >= 0) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    return {
+        extend: extend,
+        toArray: toArray,
+        isObject: isObject,
+        compare: compare
+    };
+})();
+
+
+/***/ }),
+/* 83 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __cookie = __webpack_require__(11);
+
+module.exports = (function () {
+
+    function tokenName(name) {
+        name = name || this.currentToken;
+        
+        if (name) {
+            return name;
+        }
+
+        if (this.impersonating.call(this)) {
+            return this.options.tokenImpersonateName;
+        }
+
+        return this.options.tokenDefaultName;
+    }
+
+    function isLocalStorageSupported() {
+        try {
+            if (!window.localStorage || !window.sessionStorage) {
+                throw 'exception';
+            }
+
+            localStorage.setItem('storage_test', 1);
+            localStorage.removeItem('storage_test');
+            
+            return true;
+        } catch (e) {
+            return false;
+        }
+    }
+
+    function isCookieSupported() {
+        return true;
+    }
+
+    function processToken(action, name, token) {
+        var i, ii,
+            args = [tokenName.call(this, name)];
+
+        if (token) {
+            args.push(token);
+        }
+
+        for (i = 0, ii = this.options.tokenStore.length; i < ii; i++) {
+            if (this.options.tokenStore[i] === 'localStorage' && isLocalStorageSupported()) {
+                return localStorage[action + 'Item'](args[0], args[1]);
+            }
+
+            else if (this.options.tokenStore[i] === 'cookie' && isCookieSupported()) {
+                return __cookie[action].apply(this, args);
+            }
+        }
+    }
+
+    return {
+        get: function (name) {
+            return processToken.call(this, 'get', name);
+        },
+
+        set: function (name, token) {
+            return processToken.call(this, 'set', name, token);
+        },
+
+        remove: function (name) {
+            return processToken.call(this, 'remove', name);
+        },
+
+        expiring: function () {
+            return false;
+        }
+    }
+
+})();
+
+/***/ }),
+/* 84 */
+/***/ (function(module, exports) {
+
+module.exports = {
+    
+    request: function (req, token) {
+        this.options.http._setHeaders.call(this, req, {Authorization: 'Bearer ' + token});
+    },
+    
+    response: function (res) {
+        var headers = this.options.http._getHeaders.call(this, res),
+            token = headers.Authorization || headers.authorization;
+
+        if (token) {
+            token = token.split(/Bearer\:?\s?/i);
+            
+            return token[token.length > 1 ? 1 : 0].trim();
+        }
+    }
+};
+
+/***/ }),
+/* 85 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  _init: function () {
+      if ( ! this.options.Vue.axios) {
+          return 'axios.js : Vue.axios must be set.'
+      }
+  },
+
+  _interceptor: function (req, res) {
+    var _this = this;
+
+    if (req) {
+      this.options.Vue.axios.interceptors.request.use(function (request) {
+        req.call(_this, request);
+        return request;
+      }, function (error) {
+        req.call(_this, error.request);
+        return Promise.reject(error);
+      })
+    }
+
+    if (res) {
+      this.options.Vue.axios.interceptors.response.use(function (response) {
+        res.call(_this, response);
+        return response;
+      }, function (error) {
+        if (error && error.response) {
+          res.call(_this, error.response);
+        }
+        
+        return Promise.reject(error);
+      })
+    }
+  },
+
+  _invalidToken: function (res) {
+    if (res.status === 401) {
+      return true;
+    }
+  },
+
+  _httpData: function (res) {
+    return res.data || {};
+  },
+
+  _http: function (data) {
+    var http = this.options.Vue.axios(data);
+
+    http.then(data.success, data.error);
+
+    return http;
+  },
+
+  _getHeaders: function (res) {
+    return res.headers;
+  },
+
+  _setHeaders: function (req, headers) {
+    req.headers.common = Object.assign({}, req.headers.common, headers);
+  }
+}
+
+
+/***/ }),
+/* 86 */
+/***/ (function(module, exports) {
+
+module.exports = {
+
+    _init: function () {
+        if ( ! this.options.Vue.router) {
+            return 'vue-router.2.x.js : Vue.router must be set.';
+        }
+    },
+
+    _bindData: function (data, ctx) {
+        var error, success;
+
+        data = data || {};
+
+        error = data.error;
+        success = data.success;
+
+        data.query = ctx.$route.query || {};
+
+        if (data.success) { data.success = function (res) { success.call(ctx, res); } }
+        if (data.error) { data.error = function (res) { error.call(ctx, res); } }
+
+        return data;
+    },
+
+    _beforeEach: function (routerBeforeEach, transitionEach) {
+        var _this = this;
+
+        this.options.Vue.router.beforeEach(function (transition, location, next) {
+            _this.options.setTransitions.call(this, transition);
+            
+            routerBeforeEach.call(_this, function () {
+                var auth = _this.options.getAuthMeta(transition);
+
+                transitionEach.call(_this, transition, auth, function (redirect) {
+                    if (!redirect) {
+                        (next || transition.next)();
+                        return;
+                    }
+
+                    // router v2.x
+                    if (next) {
+                        next(redirect);
+                    } else {
+                        this.options.router._routerReplace.call(this, redirect);
+                    }
+                });
+            });
+        })
+    },
+
+    _routerReplace: function (data) {
+        var router = this.options.Vue.router;
+
+        router.replace.call(router, data);
+    },
+
+    _routerGo: function (data) {
+        var router = this.options.Vue.router;
+
+        (router.push || router.go).call(router, data);
+    }
+
+};
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

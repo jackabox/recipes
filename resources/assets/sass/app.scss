@@ -11,6 +11,7 @@
 @import 'base/typography';
 
 @import 'layout/header';
+@import 'layout/footer';
 @import 'layout/grid';
 @import 'layout/forms';
 
@@ -18,6 +19,7 @@
 @import 'component/icon';
 @import 'component/shopping-list';
 
+@import 'pages/page';
 @import 'pages/recipes';
 @import 'pages/recipe.single';
 @import 'pages/login';

@@ -1,0 +1,11 @@
+.page-title {
+    margin-bottom: 40px;
+
+    &:after {
+        display: block;
+        content: '';
+        width: 50px;
+        height: 3px;
+        background-color: $primary;
+    }
+}
