@@ -53,7 +53,7 @@ class RecipeController extends Controller
         $recipe->prep_time = $request->prep_time;
         $recipe->user_id = auth()->id();
         // $recipe->serves = $request->serves;
-        $recipe->ingredients = json_encode($request->ingredients);
+        // $recipe->ingredients = json_encode($request->ingredients);
         $recipe->method = json_encode($request->method);
         $recipe->save();
 

@@ -51952,7 +51952,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.oldQty = _this.recipe.serves;
                 _this.qty = _this.recipe.serves;
 
-                // this.qty = this.recipe.serves; // set this to servings field
+                console.log(_this.ingredients);
             }).catch(function (error) {
                 _this.loading = false;
                 _this.error = error.response.data.message || error.message;
@@ -52097,21 +52097,16 @@ var render = function() {
               _vm._v(" "),
               _c(
                 "ul",
-                {
-                  model: {
-                    value: _vm.ingredients,
-                    callback: function($$v) {
-                      _vm.ingredients = $$v
-                    },
-                    expression: "ingredients"
-                  }
-                },
-                _vm._l(_vm.ingredients, function(i) {
-                  return _c("li", [
+                _vm._l(_vm.ingredients, function(ingredient, index) {
+                  return _c("li", { key: index }, [
                     _c("b", [
-                      _vm._v(_vm._s(i.quantity) + " " + _vm._s(i.measurement))
+                      _vm._v(
+                        _vm._s(ingredient.quantity) +
+                          " " +
+                          _vm._s(ingredient.measurement)
+                      )
                     ]),
-                    _vm._v(" " + _vm._s(i.title))
+                    _vm._v(" " + _vm._s(ingredient.title))
                   ])
                 })
               ),
@@ -52139,7 +52134,7 @@ var render = function() {
               _c(
                 "ol",
                 _vm._l(_vm.recipe.method, function(method) {
-                  return _c("li", [_vm._v(_vm._s(method))])
+                  return _c("li", { key: method.id }, [_vm._v(_vm._s(method))])
                 })
               )
             ])

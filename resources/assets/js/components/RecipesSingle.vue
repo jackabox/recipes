@@ -52,8 +52,8 @@
                         <label class="inline-label">Serves <input type="number" name="qty" v-model="qty" min="1"></label>
                     </form>
 
-                    <ul v-model="ingredients">
-                        <li v-for="i in ingredients"><b>{{ i.quantity }} {{ i.measurement }}</b> {{ i.title }}</li>
+                    <ul>
+                        <li v-for="(ingredient, index) in ingredients" :key="index"><b>{{ ingredient.quantity }} {{ ingredient.measurement }}</b> {{ ingredient.title }}</li>
                     </ul>
 
                     <p><a class="btn" @click.prevent="saveShoppingList()">Add To Shopping List</a></p>                    
@@ -62,7 +62,7 @@
                 <div class="recipe-single-method">
                     <h3>Method</h3>
                     <ol>
-                        <li v-for="method in recipe.method">{{ method }}</li>
+                        <li v-for="method in recipe.method" :key="method.id">{{ method }}</li>
                     </ol>
                 </div>
             </div>
@@ -100,8 +100,8 @@
                         this.ingredients = response.data.ingredients;
                         this.oldQty = this.recipe.serves;
                         this.qty = this.recipe.serves;
-                        
-                        // this.qty = this.recipe.serves; // set this to servings field
+
+                        console.log(this.ingredients)
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
@@ -117,7 +117,7 @@
             }
         },
         watch: {
-            qty(newQty, oldQty) {
+            qty(newQty, oldQty) {         
                 if (newQty) {
                     this.newQty = newQty;
                 }
