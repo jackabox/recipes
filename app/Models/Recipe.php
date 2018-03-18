@@ -9,6 +9,11 @@ class Recipe extends Model
 {
     use Sluggable;
 
+    public function tags() 
+    {
+        return $this->hasMany(RecipeTag::class);
+    }
+
     public function getIngredientsAttribute($value)
     {
         return json_decode($value);
