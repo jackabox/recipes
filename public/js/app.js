@@ -51752,7 +51752,7 @@ var render = function() {
           _vm._l(_vm.recipes, function(recipe) {
             return _c(
               "div",
-              { staticClass: "recipes__item" },
+              { key: recipe.id, staticClass: "recipes__item" },
               [
                 _c(
                   "router-link",
@@ -53548,6 +53548,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -53590,45 +53597,49 @@ var render = function() {
   return _c("div", [
     _c("h1", { staticClass: "page-title" }, [_vm._v("Search")]),
     _vm._v(" "),
-    _c("form", { staticClass: "form form--search", attrs: { action: "" } }, [
-      _c("div", { staticClass: "search__box" }, [
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.term,
-              expression: "term"
-            }
-          ],
-          attrs: {
-            type: "search",
-            role: "search",
-            placeholder: "enter a search term"
-          },
-          domProps: { value: _vm.term },
-          on: {
-            keyup: function($event) {
-              $event.preventDefault()
-              _vm.search($event)
-            },
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+    _c(
+      "form",
+      { staticClass: "form form--search", attrs: { action: "#", prevent: "" } },
+      [
+        _c("div", { staticClass: "search__box" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.term,
+                expression: "term"
               }
-              _vm.term = $event.target.value
+            ],
+            attrs: {
+              type: "search",
+              role: "search",
+              placeholder: "enter a search term"
+            },
+            domProps: { value: _vm.term },
+            on: {
+              keyup: function($event) {
+                $event.preventDefault()
+                _vm.search($event)
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.term = $event.target.value
+              }
             }
-          }
-        }),
-        _vm._v(" "),
-        _c(
-          "button",
-          { attrs: { type: "submit" } },
-          [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
-          1
-        )
-      ])
-    ]),
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            { attrs: { type: "submit" } },
+            [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
+            1
+          )
+        ])
+      ]
+    ),
     _vm._v(" "),
     _vm.results
       ? _c(
@@ -53637,17 +53648,44 @@ var render = function() {
           [
             _c("h2", [_vm._v("Search Results")]),
             _vm._v(" "),
-            _vm._l(_vm.results, function(result) {
-              return _c("p", [
-                _vm._v(
-                  "\r\n            " +
-                    _vm._s(result.title) +
-                    "\r\n\r\n            "
-                ),
-                _c("span", { class: "tag " + result.type }, [
-                  _vm._v(_vm._s(result.type))
-                ])
-              ])
+            _vm._l(_vm.results, function(result, index) {
+              return _c(
+                "p",
+                { key: index },
+                [
+                  result.type === "recipe"
+                    ? _c(
+                        "router-link",
+                        {
+                          attrs: {
+                            to: {
+                              name: "recipes.single",
+                              params: { slug: result.slug }
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\r\n                " +
+                              _vm._s(result.title) +
+                              "\r\n            "
+                          )
+                        ]
+                      )
+                    : _c("router-link", { attrs: { to: { name: "home" } } }, [
+                        _vm._v(
+                          "\r\n                " +
+                            _vm._s(result.title) +
+                            "                \r\n            "
+                        )
+                      ]),
+                  _vm._v(" "),
+                  _c("span", { class: "tag " + result.type }, [
+                    _vm._v(_vm._s(result.type))
+                  ])
+                ],
+                1
+              )
             })
           ],
           2

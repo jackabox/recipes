@@ -2,7 +2,7 @@
 <div>
     <h1 class="page-title">Search</h1>
 
-    <form action="" class="form form--search" >
+    <form action="#" class="form form--search" prevent>
         <div class="search__box">
             <input type="search" role="search" @keyup.prevent="search"  v-model="term" placeholder="enter a search term">
             <button type="submit"><icon src="/img/zondicons/search.svg"/></button>
@@ -11,8 +11,15 @@
 
     <div class="search__results" v-if="results">
         <h2>Search Results</h2>
-        <p v-for="result in results">
-            {{ result.title }}
+        <p v-for="(result, index) in results" :key="index">
+            <router-link v-if="result.type === 'recipe'" :to="{ name: 'recipes.single', params: { slug: result.slug }}">
+                {{ result.title }}
+            </router-link>
+                    
+            <router-link v-else :to="{ name: 'home' }">
+                {{ result.title }}                
+            </router-link>
+            
 
             <span :class="'tag ' + result.type">{{ result.type }}</span>
         </p>

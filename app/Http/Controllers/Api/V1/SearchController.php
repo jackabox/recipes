@@ -21,7 +21,7 @@ class SearchController extends Controller
         });
 
         $search->each(function($item) {
-            $item->type = 'Recipe';
+            $item->type = 'recipe';
         });
 
         $ingredients = $ingredients->unique('title');

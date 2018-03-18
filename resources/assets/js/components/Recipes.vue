@@ -17,7 +17,7 @@
         </div>
 
         <div v-if="recipes" class="recipes">
-            <div v-for="recipe in recipes" class="recipes__item">
+            <div v-for="recipe in recipes" class="recipes__item" :key="recipe.id">
                 <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">
                     <div class="recipes__img"><img src="https://source.unsplash.com/400x280/?food" alt=""></div>
                     <h3>{{ recipe.title }}</h3>
