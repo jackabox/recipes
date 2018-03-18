@@ -59,10 +59,10 @@ class RecipeController extends Controller
 
         foreach ($request->ingredients as $ingredient) {
             RecipeIngredient::create([
-                'recipe_id' = $recipe->id,
-                'quantity' = $ingredient->quantity,
-                'measuyrement' = $ingredient->measurement,
-                'title' = $ingredient->title,
+                'recipe_id' => $recipe->id,
+                'quantity' => $ingredient->quantity,
+                'measuyrement' => $ingredient->measurement,
+                'title' => $ingredient->title,
             ]);
         }
 
