@@ -25,3 +25,24 @@
         }
     }
 }
+
+.search__results {
+    p {
+        position: relative;
+        border-bottom: 1px solid hsla(0,0,0,0.04);
+        font-size: 2rem;
+        color: hsla(0,0,0,0.6);
+        padding: 1.2rem 0;
+    }
+    
+    .tag {
+        position: absolute;
+        right: 0;
+        font-size: 1.3rem;
+        padding: 5px 8px;
+        text-transform: uppercase;
+        color: $primary;
+        border: 1px solid $primary;
+        border-radius: 4px;
+    }
+}

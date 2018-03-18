@@ -9,13 +9,14 @@
         </div>
     </form>
 
-    <div class="results" v-if="results">
-        <p>Search Result <span class="tag recipe">Categories</span></p>
-        <p>Search Result <span class="tag recipe">Recipe</span></p>
-        <p>Search Result <span class="tag recipe">Categories</span></p>
-        <p>Search Result <span class="tag recipe">Recipe</span></p>
-        <p>Search Result <span class="tag recipe">Recipe</span></p>
-        <p>Search Result <span class="tag recipe">Categories</span></p>
+    <div class="search__results" v-if="results">
+        <h2>Search Results</h2>
+        <p>Breakfast <span class="tag recipe">Categories</span></p>
+        <p>Chocolate Cake <span class="tag recipe">Recipe</span></p>
+        <p>Brunch <span class="tag recipe">Categories</span></p>
+        <p>Chocolate Heaven Pudding <span class="tag recipe">Recipe</span></p>
+        <p>Chocolate Brioche <span class="tag recipe">Recipe</span></p>
+        <p>Pudding <span class="tag recipe">Categories</span></p>
     </div>
 </div>
 </template>

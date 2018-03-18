@@ -54630,6 +54630,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -54677,7 +54678,9 @@ var render = function() {
     ]),
     _vm._v(" "),
     _vm.results
-      ? _c("div", { staticClass: "results" }, [
+      ? _c("div", { staticClass: "search__results" }, [
+          _c("h2", [_vm._v("Search Results")]),
+          _vm._v(" "),
           _vm._m(0),
           _vm._v(" "),
           _vm._m(1),
@@ -54699,7 +54702,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("Search Result "),
+      _vm._v("Breakfast "),
       _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
     ])
   },
@@ -54708,7 +54711,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("Search Result "),
+      _vm._v("Chocolate Cake "),
       _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
     ])
   },
@@ -54717,7 +54720,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("Search Result "),
+      _vm._v("Brunch "),
       _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
     ])
   },
@@ -54726,7 +54729,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("Search Result "),
+      _vm._v("Chocolate Heaven Pudding "),
       _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
     ])
   },
@@ -54735,7 +54738,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("Search Result "),
+      _vm._v("Chocolate Brioche "),
       _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
     ])
   },
@@ -54744,7 +54747,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", [
-      _vm._v("Search Result "),
+      _vm._v("Pudding "),
       _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
     ])
   }

@@ -532,6 +532,25 @@ footer {
   height: auto;
 }
 
+.search__results p {
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.6);
+  padding: 1.2rem 0;
+}
+
+.search__results .tag {
+  position: absolute;
+  right: 0;
+  font-size: 1.3rem;
+  padding: 5px 8px;
+  text-transform: uppercase;
+  color: #796EC6;
+  border: 1px solid #796EC6;
+  border-radius: 4px;
+}
+
 .page-title {
   margin-bottom: 40px;
 }
