@@ -14,9 +14,9 @@ class Recipe extends Model
         return $this->hasMany(RecipeTag::class);
     }
 
-    public function getIngredientsAttribute($value)
+    public function ingredients() 
     {
-        return json_decode($value);
+        return $this->hasMany(RecipeIngredient::class);
     }
 
     public function getMethodAttribute($value)

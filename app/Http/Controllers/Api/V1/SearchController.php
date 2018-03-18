@@ -23,7 +23,7 @@ class SearchController extends Controller
             $item->type = 'category';
         });
 
-        $ingredients = Recipe::where('ingredients->title', 'LIKE', '%' . $request->input('term') . '%')->take(10)->get();
+        $ingredients = Recipe::where('ingredients->title', 'LIKE', '%' . $request->input('term') . '%')->get();
 
         $ingredients->each(function($item) {
             $item->type = 'ingredient';

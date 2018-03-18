@@ -22,14 +22,11 @@ class CreateRecipesTable extends Migration
             $table->mediumInteger('serves');
             $table->mediumInteger('cook_time');
             $table->mediumInteger('prep_time');
-            $table->json('ingredients');
+            // $table->json('ingredients');
             $table->json('method');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
-
-            $table->string('ingredient_title')->virtualAs('ingredients->>"$.title"');
-            $table->index('ingredient_title');
         });
     }
 

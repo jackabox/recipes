@@ -16,19 +16,9 @@ use Faker\Generator as FakerGen;
 $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
     $faker->addProvider(new Faker\Provider\Lorem($faker));
 
-    $ingredients = $faker->numberBetween(4, 15);
     $method = $faker->numberBetween(1, 8);
 
-    $ingredient_list = [];
     $method_list = [];
-
-    for ($i = 0; $i < $ingredients; $i++) {
-        $ingredient_list[] =  [
-            'amount' => $faker->numberBetween(1, 150),
-            'measurement' => $faker->randomElement(['g','ml','l','tbsp','tsp','']),
-            'title'  => $faker->word
-        ];
-    }
 
     for ($i = 0; $i < $method; $i++) {
         $method_list[$i] = $faker->paragraph();
@@ -41,7 +31,6 @@ $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
         'serves'        => $faker->numberBetween(1, 6),
         'cook_time'     => $faker->numberBetween(5, 180),
         'prep_time'     => $faker->numberBetween(5, 180),
-        'ingredients'   => json_encode($ingredient_list),
         'method'        => json_encode($method_list)
     ];
 });
