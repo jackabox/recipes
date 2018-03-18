@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTagsTable extends Migration
+class CreateRecipeTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,14 @@ class CreateTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('tags', function (Blueprint $table) {
+        Schema::create('recipe_tags', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->unique();
-            $table->string('slug');
+            $table->unsignedInteger('recipe_id');
+            $table->unsignedInteger('tag_id');
             $table->timestamps();
+
+            $table->foreign('tag_id')->references('id')->on('tags');
+            $table->foreign('recipe_id')->references('id')->on('recipes');
         });
     }
 
@@ -28,6 +31,6 @@ class CreateTagsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tags');
+        Schema::dropIfExists('recipe_tags');
     }
 }
