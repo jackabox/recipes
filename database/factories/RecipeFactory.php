@@ -25,7 +25,7 @@ $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
     for ($i = 0; $i < $ingredients; $i++) {
         $ingredient_list[] =  [
             'amount' => $faker->numberBetween(1, 150),
-            'measurement' => str_random(1),
+            'measurement' => $faker->randomElement(['g','ml','l','tbsp','tsp','']),
             'title'  => $faker->word
         ];
     }
