@@ -21,6 +21,8 @@ class RecipeController extends Controller
 
     public function show(Request $request, Recipe $recipe)
     {
+        $recipe->load('ingredients');
+
         return response()->json($recipe);
     }
 

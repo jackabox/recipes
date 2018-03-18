@@ -51978,7 +51978,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
 
             for (var i = 0; i <= this.ingredients.length; i++) {
-                this.ingredients[i].amount = this.ingredients[i].amount / this.oldQty * this.newQty;
+                this.ingredients[i].quantity = this.ingredients[i].quantity / this.oldQty * this.newQty;
             }
         }
     }
@@ -52109,7 +52109,7 @@ var render = function() {
                 _vm._l(_vm.ingredients, function(i) {
                   return _c("li", [
                     _c("b", [
-                      _vm._v(_vm._s(i.amount) + " " + _vm._s(i.measurement))
+                      _vm._v(_vm._s(i.quantity) + " " + _vm._s(i.measurement))
                     ]),
                     _vm._v(" " + _vm._s(i.title))
                   ])

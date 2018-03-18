@@ -53,7 +53,7 @@
                     </form>
 
                     <ul v-model="ingredients">
-                        <li v-for="i in ingredients"><b>{{ i.amount }} {{ i.measurement }}</b> {{ i.title }}</li>
+                        <li v-for="i in ingredients"><b>{{ i.quantity }} {{ i.measurement }}</b> {{ i.title }}</li>
                     </ul>
 
                     <p><a class="btn" @click.prevent="saveShoppingList()">Add To Shopping List</a></p>                    
@@ -127,7 +127,7 @@
                 }
 
                 for(var i = 0; i <= this.ingredients.length; i++){
-                    this.ingredients[i].amount = this.ingredients[i].amount / this.oldQty * this.newQty;
+                    this.ingredients[i].quantity = this.ingredients[i].quantity / this.oldQty * this.newQty;
                 }
             }
         }
