@@ -27,6 +27,9 @@ class CreateRecipesTable extends Migration
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');
+
+            $table->string('ingredient_title')->virtualAs('ingredients->>"$.title"');
+            $table->index('ingredient_title');
         });
     }
 

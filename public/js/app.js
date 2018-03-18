@@ -53548,20 +53548,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             loading: false,
-            results: true // []
+            results: false, // []
+            term: null
         };
     },
     created: function created() {
-        this.fetchData();
+        // this.fetchData();
     },
 
-    methods: {}
+    methods: {
+        search: function search() {
+            var _this = this;
+
+            var data = {
+                term: this.term
+            };
+
+            console.log(this.term);
+
+            axios.post(route('search'), data).then(function (response) {
+                _this.results = response.data;
+                console.log(response.data);
+            });
+        }
+    }
 });
 
 /***/ }),
@@ -53578,11 +53593,31 @@ var render = function() {
     _c("form", { staticClass: "form form--search", attrs: { action: "" } }, [
       _c("div", { staticClass: "search__box" }, [
         _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.term,
+              expression: "term"
+            }
+          ],
           attrs: {
             type: "search",
             role: "search",
-            name: "search",
             placeholder: "enter a search term"
+          },
+          domProps: { value: _vm.term },
+          on: {
+            keyup: function($event) {
+              $event.preventDefault()
+              _vm.search($event)
+            },
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.term = $event.target.value
+            }
           }
         }),
         _vm._v(" "),
@@ -53596,80 +53631,31 @@ var render = function() {
     ]),
     _vm._v(" "),
     _vm.results
-      ? _c("div", { staticClass: "search__results" }, [
-          _c("h2", [_vm._v("Search Results")]),
-          _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2),
-          _vm._v(" "),
-          _vm._m(3),
-          _vm._v(" "),
-          _vm._m(4),
-          _vm._v(" "),
-          _vm._m(5)
-        ])
+      ? _c(
+          "div",
+          { staticClass: "search__results" },
+          [
+            _c("h2", [_vm._v("Search Results")]),
+            _vm._v(" "),
+            _vm._l(_vm.results, function(result) {
+              return _c("p", [
+                _vm._v(
+                  "\r\n            " +
+                    _vm._s(result.title) +
+                    "\r\n\r\n            "
+                ),
+                _c("span", { class: "tag " + result.type }, [
+                  _vm._v(_vm._s(result.type))
+                ])
+              ])
+            })
+          ],
+          2
+        )
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Breakfast "),
-      _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Chocolate Cake "),
-      _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Brunch "),
-      _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Chocolate Heaven Pudding "),
-      _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Chocolate Brioche "),
-      _c("span", { staticClass: "tag recipe" }, [_vm._v("Recipe")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _vm._v("Pudding "),
-      _c("span", { staticClass: "tag recipe" }, [_vm._v("Categories")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
