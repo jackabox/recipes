@@ -34,13 +34,13 @@
             <div class="col-md-4">
                 <h3>Ingredients</h3>
                 <div v-for="ing in recipe.ingredients" readonly>
-                    {{ ing.amount }} {{ ing.measurement }} {{ ing.title }}
+                    {{ ing.quantity }} {{ ing.measurement }} {{ ing.title }}
                 </div>
 
                 <form class="form" @submit.prevent="addIngredient()">
                     <div class="form-group">
                         <label>Quantity</label>
-                        <input type="number" class="form-control" placeholder="amount" v-model="ingredient.amount">
+                        <input type="number" class="form-control" placeholder="amount" v-model="ingredient.quantity">
                     </div>
 
                     <div class="form-group">
@@ -103,7 +103,7 @@ export default {
                 ingredients: []
             },
             ingredient: {
-                amount: null,
+                quantity: null,
                 measurement: '',
                 title: ''
             }
@@ -114,7 +114,7 @@ export default {
             this.recipe.ingredients.push(this.ingredient)
 
             this.ingredient = {
-                amount: null,
+                quantity: null,
                 measurement: '',
                 title: ''
             }

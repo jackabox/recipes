@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Recipe;
 use Validator;
+use App\Models\RecipeIngredient;
 
 class RecipeController extends Controller
 {
@@ -53,9 +54,17 @@ class RecipeController extends Controller
         $recipe->prep_time = $request->prep_time;
         $recipe->user_id = auth()->id();
         // $recipe->serves = $request->serves;
-        // $recipe->ingredients = json_encode($request->ingredients);
         $recipe->method = json_encode($request->method);
         $recipe->save();
+
+        foreach ($request->ingredients as $ingredient) {
+            RecipeIngredient::create([
+                'recipe_id' = $recipe->id,
+                'quantity' = $ingredient->quantity,
+                'measuyrement' = $ingredient->measurement,
+                'title' = $ingredient->title,
+            ]);
+        }
 
         return response()->json([
             'status' => 200,

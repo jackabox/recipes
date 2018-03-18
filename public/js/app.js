@@ -52732,7 +52732,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 ingredients: []
             },
             ingredient: {
-                amount: null,
+                quantity: null,
                 measurement: '',
                 title: ''
             }
@@ -52744,7 +52744,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.recipe.ingredients.push(this.ingredient);
 
             this.ingredient = {
-                amount: null,
+                quantity: null,
                 measurement: '',
                 title: ''
             };
@@ -52943,7 +52943,7 @@ var render = function() {
                 return _c("div", { attrs: { readonly: "" } }, [
                   _vm._v(
                     "\n                " +
-                      _vm._s(ing.amount) +
+                      _vm._s(ing.quantity) +
                       " " +
                       _vm._s(ing.measurement) +
                       " " +
@@ -52973,13 +52973,13 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.ingredient.amount,
-                          expression: "ingredient.amount"
+                          value: _vm.ingredient.quantity,
+                          expression: "ingredient.quantity"
                         }
                       ],
                       staticClass: "form-control",
                       attrs: { type: "number", placeholder: "amount" },
-                      domProps: { value: _vm.ingredient.amount },
+                      domProps: { value: _vm.ingredient.quantity },
                       on: {
                         input: function($event) {
                           if ($event.target.composing) {
@@ -52987,7 +52987,7 @@ var render = function() {
                           }
                           _vm.$set(
                             _vm.ingredient,
-                            "amount",
+                            "quantity",
                             $event.target.value
                           )
                         }
