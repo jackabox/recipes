@@ -15,7 +15,9 @@
             <router-link v-if="result.type === 'recipe'" :to="{ name: 'recipes.single', params: { slug: result.slug }}">
                 {{ result.title }}
             </router-link>
-                    
+            <router-link v-else-if="result.type === 'category'" :to="{ name: 'category.show', params: { slug: result.slug }}">
+                {{ result.title }}
+            </router-link>                    
             <router-link v-else :to="{ name: 'home' }">
                 {{ result.title }}                
             </router-link>

@@ -7,12 +7,13 @@
             <nav class="site-navigation">
                 <ul>
                     <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
+                    <li><router-link :to="{ name: 'categories' }">Categories</router-link></li>                   
                     <li><a href="#">Pantry</a></li>
-                    <li class="divider"></li>                    
-                    <li><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></a>
-                    <li class="divider"></li>                    
-                    <li><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
-                    <li class="divider"></li>
+                    <li class="divider" v-if="$auth.check()"></li>                    
+                    <li v-if="$auth.check()"><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></a>
+                    <li class="divider" v-if="$auth.check()"></li>                    
+                    <li v-if="$auth.check()"><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
+                    <li class="divider" v-if="$auth.check()"></li>
                     <li class="account" v-if="$auth.check()">
                         <img class="profile-pic" src="https://placehold.it/40" alt="">
                         <a href="#">Jack</a>
