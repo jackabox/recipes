@@ -26,6 +26,7 @@ import Recipes from './components/Recipes'
 import RecipesSingle from './components/RecipesSingle'
 import Categories from './components/Categories'
 import Category from './components/Category'
+import Pantry from './components/Pantry'
 import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
 import Dashboard from './components/Account/Dashboard' 
@@ -80,6 +81,13 @@ const router = new VueRouter({
             path: '/category/:slug',
             name: 'category.show',
             component: Category,
+            meta: {
+                auth: true
+            }
+        },{
+            path: '/pantry',
+            name: 'pantry',
+            component: Pantry,
             meta: {
                 auth: true
             }
