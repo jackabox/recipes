@@ -1,18 +1,22 @@
 .site-header {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
     z-index: 20;
+    transition: .3s all ease-in-out;
+
+    &.fixed {
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);        
+    }
 
     .container {
         display: flex;
         flex-flow: row;
         align-items: center;
-        padding: 20px 0;
+        padding: 16px 0;
         justify-content: space-between;
     }
 
@@ -21,6 +25,13 @@
         padding: 0;
         line-height: 1;
         flex-basis: 10%;
+        margin: 0;
+        font-size: 0;
+
+        img {
+            width: 36px;
+            height: auto;
+        }
     }
 }
 
@@ -52,7 +63,7 @@
         }
 
         a {
-            padding: 40px 0;
+            padding: 20px 0;
             line-height: 20px;
         }
     }
