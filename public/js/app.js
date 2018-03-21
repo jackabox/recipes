@@ -51800,6 +51800,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -51900,7 +51909,33 @@ var render = function() {
                       })
                     ]),
                     _vm._v(" "),
-                    _c("h3", [_vm._v(_vm._s(recipe.title))])
+                    _c("div", { staticClass: "recipes__desc" }, [
+                      _c("h3", [_vm._v(_vm._s(recipe.title))]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("em", [_vm._v("by")]),
+                        _vm._v(" "),
+                        _c("a", { attrs: { href: "#" } }, [
+                          _vm._v("Jack Whiting")
+                        ])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "recipes__meta" },
+                      [
+                        _c("icon", {
+                          attrs: { src: "/img/zondicons/time.svg" }
+                        }),
+                        _vm._v(
+                          " " +
+                            _vm._s(recipe.prep_time + recipe.cook_time) +
+                            " mins\n                "
+                        )
+                      ],
+                      1
+                    )
                   ]
                 )
               ],
@@ -52787,7 +52822,7 @@ exports = module.exports = __webpack_require__(75)(false);
 
 
 // module
-exports.push([module.i, "\n.pantry[data-v-19b0d5f5] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n      -ms-flex-direction: column;\n          flex-direction: column;\n  -ms-flex-wrap: wrap;\n      flex-wrap: wrap;\n}\n.pantry-group[data-v-19b0d5f5] {\n  border: 3px solid black;\n  padding: 0 20px 20px;\n  margin-bottom: 20px;\n  width: 32%;\n}\n.pantry-group h4[data-v-19b0d5f5] {\n    margin-bottom: 2rem;\n}\n.pantry-group__items[data-v-19b0d5f5] {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.pantry-group__items span[data-v-19b0d5f5] {\n    color: #796EC6;\n    text-transform: uppercase;\n    font-size: 1.2rem;\n    float: right;\n}\n", ""]);
+exports.push([module.i, "\n.pantry[data-v-19b0d5f5] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: row wrap;\n      flex-wrap: row wrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.pantry-group[data-v-19b0d5f5] {\n  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);\n  background: #fff;\n  padding: 0 20px 20px;\n  margin-bottom: 20px;\n  width: 32%;\n}\n.pantry-group h4[data-v-19b0d5f5] {\n    margin-bottom: 2rem;\n}\n.pantry-group__items[data-v-19b0d5f5] {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.pantry-group__items span[data-v-19b0d5f5] {\n    color: #796EC6;\n    text-transform: uppercase;\n    font-size: 1.2rem;\n    float: right;\n}\n", ""]);
 
 // exports
 
@@ -53170,6 +53205,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -53231,6 +53273,14 @@ var staticRenderFns = [
             _c("li", [_vm._v("Cocoa powder")]),
             _vm._v(" "),
             _c("li", [_vm._v("Vanilla Extract")])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "pantry-group" }, [
+          _c("h4", { staticClass: "pantry-group__title" }, [_vm._v("Name")]),
+          _vm._v(" "),
+          _c("ol", { staticClass: "pantry-group__items" }, [
+            _c("li", [_vm._v("Flour "), _c("span", [_vm._v("must have")])])
           ])
         ])
       ])

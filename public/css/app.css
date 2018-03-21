@@ -594,12 +594,8 @@ footer p {
           box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-}
-
-.recipes__item h3 {
-  padding: 15px 20px;
-  font-size: 1.8rem;
-  font-weight: normal;
+  padding-bottom: 40px;
+  position: relative;
 }
 
 .recipes__item:hover,
@@ -615,6 +611,38 @@ footer p {
 .recipes__img img {
   max-width: 100%;
   height: auto;
+}
+
+.recipes__desc {
+  padding: 10px 20px;
+}
+
+.recipes__desc h3 {
+  padding: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.recipes__desc p {
+  font-size: 1.4rem;
+}
+
+.recipes__meta {
+  padding: 10px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.3rem;
+}
+
+.recipes__meta .icon {
+  margin-top: 3px;
+  margin-right: 5px;
+  fill: rgba(0, 0, 0, 0.6);
 }
 
 .recipe-single {

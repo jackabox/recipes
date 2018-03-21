@@ -23,6 +23,13 @@
                     <li>Vanilla Extract</li>
                 </ol>
             </div>
+
+             <div class="pantry-group">
+                <h4 class="pantry-group__title">Name</h4>
+                <ol class="pantry-group__items">
+                    <li>Flour <span>must have</span></li>
+                </ol>
+            </div>
         </div>
     </section>
 </template>
@@ -46,12 +53,15 @@ export default {
 <style lang="scss" scoped>
     .pantry {
         display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: row wrap;
+        justify-content: space-between;
     }
 
     .pantry-group {
-        border: 3px solid black;
+        // border: 3px solid black;
+        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);        
+        
+        background: #fff;
         padding: 0 20px 20px;
         margin-bottom: 20px;
         width: 32%;

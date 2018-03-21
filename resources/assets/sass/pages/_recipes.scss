@@ -14,12 +14,8 @@
     background-color: #fff;
     box-shadow: $box-shadow;
     transition: all .3s ease;
-
-    h3 {
-        padding: 15px 20px;
-        font-size: 1.8rem;
-        font-weight: normal;
-    }
+    padding-bottom: 40px;
+    position: relative;
 
     &:hover,
     &:focus {
@@ -33,5 +29,36 @@
     img {
         max-width: 100%;
         height: auto;
+    }
+}
+
+.recipes__desc {
+    padding: 10px 20px;
+
+    h3 {
+        padding: 0;
+        font-size: 1.6rem;
+        font-weight: 600;
+    } 
+
+    p {
+        font-size: 1.4rem;
+    }
+}
+
+.recipes__meta {
+    padding: 10px 20px;
+    border-top: 1px solid hsla(0,0,0,0.04);    
+    margin-top: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0; right: 0;
+    color: hsla(0,0,0,0.6);
+    font-size: 1.3rem;
+
+    .icon {
+        margin-top: 3px;
+        margin-right: 5px;
+        fill: hsla(0,0,0,0.6);
     }
 }
