@@ -34,23 +34,11 @@ export default {
         return {
             loading: true
         }
-    },
-    created() {
-
-    },
-    methods: {
-
     }
 }
 </script>
 
 <style lang="scss" scoped>
-    .intro-message {
-        max-width: 800px;
-        font-size: 1.8rem;
-        margin-bottom: 60px;
-    }
-
     .pantry-group {
         background: #fff;
         padding: 0 20px 20px;

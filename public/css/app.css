@@ -496,7 +496,7 @@ footer p {
   height: auto;
 }
 
-.shopping-list {
+.shopping-list-mini {
   background: white;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -506,7 +506,7 @@ footer p {
   display: none;
 }
 
-.shopping-list h5 {
+.shopping-list-mini h5 {
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 600;
@@ -515,7 +515,7 @@ footer p {
   letter-spacing: 1px;
 }
 
-.shopping-list ul {
+.shopping-list-mini ul {
   padding: 15px;
   list-style: none;
 }
@@ -803,5 +803,11 @@ footer p {
 .box-shadow {
   -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
           box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.intro-message {
+  max-width: 800px;
+  font-size: 1.8rem;
+  margin-bottom: 60px;
 }
 

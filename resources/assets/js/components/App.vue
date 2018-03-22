@@ -9,10 +9,14 @@
                     <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
                     <li><router-link :to="{ name: 'categories' }">Categories</router-link></li>                   
                     <li><router-link :to="{ name: 'pantry' }">Pantry</router-link></li>
+                    <li class="divider"></li>                    
+                    <li><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></li>
+
                     <li class="divider" v-if="$auth.check()"></li>                    
-                    <li v-if="$auth.check()"><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></li>
-                    <li class="divider" v-if="$auth.check()"></li>                    
-                    <li v-if="$auth.check()"><a href="#"><icon src="/img/zondicons/shopping-cart.svg" /></a></li>
+                    <li v-if="$auth.check()">
+                       <router-link :to="{ name: 'shopping-list' }"><icon src="/img/zondicons/shopping-cart.svg" /></router-link>
+                    </li>
+
                     <li class="divider" v-if="$auth.check()"></li>
                     <li class="account" v-if="$auth.check()">
                         <img class="profile-pic" src="https://placehold.it/40" alt="">
@@ -27,7 +31,7 @@
                     </li>
                 </ul>
 
-                <shopping-list v-if="$auth.check()"></shopping-list>                        
+      
             </nav>
         </div>
     </header>
@@ -37,11 +41,6 @@
     </div>
 
     <footer class="footer">
-        <!-- <div class="footer container">
-            <div class="footer-col">
-                Recipes
-            </div>
-        </div> -->
         <p class="footer__links">
             <span v-if="!$auth.check()">
                 <router-link :to="{ name: 'login' }">Login</router-link>
@@ -61,30 +60,30 @@
 </template>
 
 <script>
-    export default {
-        data () {
-            return {
-                scrolled: false
+export default {
+    data () {
+        return {
+            scrolled: false
+        }
+    },
+    created () {
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed () {
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+    methods: {
+        handleScroll () {
+            let el = this.$el.getElementsByClassName('site-header')[0]                
+            this.scrolled = window.scrollY;
+        }
+    },
+    computed: {
+        scrollTop() {
+            if (this.scrolled >= 80) {
+                return 'fixed'
             }
-        },
-        created () {
-            window.addEventListener('scroll', this.handleScroll);
-        },
-        destroyed () {
-            window.removeEventListener('scroll', this.handleScroll);
-        },
-        methods: {
-            handleScroll () {
-                let el = this.$el.getElementsByClassName('site-header')[0]                
-                this.scrolled = window.scrollY;
-            }
-        },
-        computed: {
-            scrollTop() {
-                if (this.scrolled >= 80) {
-                    return 'fixed'
-                }
-            }
-        },
+        }
     }
+}
 </script>

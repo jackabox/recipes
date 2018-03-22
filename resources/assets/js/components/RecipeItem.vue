@@ -16,11 +16,12 @@
 </template>
 
 <script>
-    export default {
-        props: ['recipe'],
-
-        created() {
-
-        }
+export default {
+    props: ['recipe'],
+    data() {
+        return {
+            loading: true
+        };
     }
+}
 </script>

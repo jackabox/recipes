@@ -22,7 +22,6 @@
                 {{ result.title }}                
             </router-link>
             
-
             <span :class="'tag ' + result.type">{{ result.type }}</span>
         </p>
     </div>
@@ -39,7 +38,7 @@ export default {
         };
     },
     created() {
-        // this.fetchData();
+        this.search();
     },
     methods: {
         search() {

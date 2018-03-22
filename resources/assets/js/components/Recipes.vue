@@ -27,7 +27,7 @@
     
     export default {
         components: {
-            'recipe-item': RecipeItem,
+            'recipe-item': RecipeItem
         },
         data() {
             return {
@@ -46,8 +46,6 @@
                 axios
                     .get('v1/recipes')
                     .then(response => {
-                        console.log(response.data);
-
                         this.loading = false; // loading is done
                         this.recipes = response.data.data; // set the users from the response
                     }).catch(error => {
