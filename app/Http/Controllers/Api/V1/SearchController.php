@@ -17,7 +17,7 @@ class SearchController extends Controller
         $ingredients = RecipeIngredient::where('title', 'LIKE', '%' . $request->input('term') . '%')->get();
 
         $tags->each(function($item) {
-            $item->type = 'category';
+            $item->type = 'tag';
         });
 
         $search->each(function($item) {

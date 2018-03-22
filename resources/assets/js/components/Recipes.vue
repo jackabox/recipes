@@ -17,28 +17,18 @@
         </div>
 
         <div v-if="recipes" class="recipes">
-            <div v-for="recipe in recipes" class="recipes__item" :key="recipe.id">
-                <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">
-                    <div class="recipes__img">
-                        <img src="https://source.unsplash.com/400x280/?food" alt="">
-                    </div>
-                    <div class="recipes__desc">
-                        <h3>{{ recipe.title }}</h3>
-                        <p><em>by</em> <a href="#">Jack Whiting</a></p>
-                    </div>
-                    <div class="recipes__meta">
-                        <icon src="/img/zondicons/time.svg"></icon> {{ recipe.prep_time + recipe.cook_time }} mins
-                    </div>
-                </router-link>
-            </div>
+            <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>
         </div>
     </div>
 </template>
 
 <script>
-    import axios from 'axios';
+    import RecipeItem from '../components/RecipeItem.vue'
     
     export default {
+        components: {
+            'recipe-item': RecipeItem,
+        },
         data() {
             return {
                 loading: false,

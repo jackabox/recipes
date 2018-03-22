@@ -54,7 +54,7 @@ export default {
     .pantry-group {
         background: #fff;
         padding: 0 20px 20px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
 
         h4 {
             margin-bottom: 2rem;

@@ -17,12 +17,7 @@
         </div>
 
         <div v-if="recipes" class="recipes">
-            <div v-for="recipe in recipes" class="recipes__item" :key="recipe.id">
-                <router-link :to="{ name: 'recipes.single', params: { slug: recipe.slug }}">
-                    <div class="recipes__img"><img src="https://source.unsplash.com/400x280/?food" alt=""></div>
-                    <h3>{{ recipe.title }}</h3>
-                </router-link>
-            </div>
+            <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>
         </div>
         <div v-else>
             No recipes
@@ -32,8 +27,12 @@
 
 <script>
     import axios from 'axios';
+    import RecipeItem from '../components/RecipeItem.vue'
     
     export default {
+        components: {
+            'recipe-item': RecipeItem,
+        },
         data() {
             return {
                 slug: this.$route.params.slug,
@@ -42,6 +41,7 @@
                 errors: null,
             };
         },
+        
         created() {
             this.fetchData();
         },

@@ -7,7 +7,7 @@
             <nav class="site-navigation">
                 <ul>
                     <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
-                    <li><router-link :to="{ name: 'tags' }">Tags</router-link></li>                   
+                    <li><router-link :to="{ name: 'categories' }">Categories</router-link></li>                   
                     <li><router-link :to="{ name: 'pantry' }">Pantry</router-link></li>
                     <li class="divider" v-if="$auth.check()"></li>                    
                     <li v-if="$auth.check()"><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></li>
