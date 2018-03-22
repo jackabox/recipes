@@ -39,7 +39,6 @@ export default {
                 .then(response => {
                     this.loading = false,
                     this.list = response.data
-                    console.log(response.data);
                 }).catch(error => {
                     this.loading = false;
                     this.error = error.response.data.message || error.message;

@@ -24,7 +24,7 @@ class ShoppingListController extends Controller
         return response()->json($list);
     }
 
-    public function add(Request $request)
+    public function update(Request $request)
     {
         $recipe_id = $request->input('recipe_id');
         $user_id = auth()->id();
@@ -37,6 +37,7 @@ class ShoppingListController extends Controller
             $item->measurement = $ingredient['measurement'];
             $item->ingredient = $ingredient['title'];
             $item->expires_on = Carbon::now()->addWeeks(2);
+            $item->bought = 0;
             $item->save();
         }
     

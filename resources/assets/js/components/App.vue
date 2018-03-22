@@ -29,9 +29,7 @@
                     <li v-if="!$auth.check()">
                         <router-link :to="{ name: 'login' }">Login</router-link>
                     </li>
-                </ul>
-
-      
+                </ul>      
             </nav>
         </div>
     </header>

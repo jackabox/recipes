@@ -92,6 +92,13 @@ const router = new VueRouter({
                 auth: true
             }
         },{
+            path: '/shopping-list',
+            name: 'shopping-list',
+            component: ShoppingList,
+            meta: {
+                auth: true
+            }
+        },{
             path: '/me/settings',
             name: 'me.settings',
             component: Settings,
@@ -126,7 +133,7 @@ const router = new VueRouter({
 Vue.router = router
 App.router = Vue.router
 
-Vue.component('shopping-list', ShoppingList)
+// Vue.component('shopping-list', ShoppingList)
 Vue.component('icon', Icon)
 
 Vue.use(require('@websanova/vue-auth'), {
