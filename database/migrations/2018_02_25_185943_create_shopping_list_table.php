@@ -20,6 +20,7 @@ class CreateShoppingListTable extends Migration
             $table->bigInteger('quantity');
             $table->string('measurement', 10)->nullable(true);
             $table->string('ingredient');
+            $table->boolean('bought');
             $table->timestamp('expires_on')->nullable(true);
             $table->timestamps();
 
