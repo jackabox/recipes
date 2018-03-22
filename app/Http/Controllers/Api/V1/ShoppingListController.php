@@ -43,8 +43,13 @@ class ShoppingListController extends Controller
         return $this->get();
     }
 
-    public function delete(Request $request, $id)
+    public function deleteItem(Request $request)
     {
         return respoonse()->json('Delete Item Method');
+    }
+
+    public function changeItem(Request $request)
+    {
+        return respoonse()->json('Change Item Method');
     }
 }
