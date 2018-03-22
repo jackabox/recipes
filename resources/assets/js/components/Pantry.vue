@@ -1,9 +1,10 @@
 <template>
     <section>
         <h1 class="page-title">Pantry</h1>
+        <p class="intro-message">Whenever you are cooking food, you are going to need a few basics. Whether that's a simple thing as salt (which you'll find in most recipes) or maybe flour if your a baker at heart. Below is a list of our personal recommendations for your pantry, along with the top ingredients in our recipes.</p>
 
         <div class="pantry">
-            <div class="pantry-group">
+            <div class="pantry-group box-shadow">
                 <h4 class="pantry-group__title">Basics</h4>
                 <ol class="pantry-group__items">
                     <li>Sea Salt <span>must have</span></li>
@@ -13,7 +14,7 @@
                 </ol>
             </div>
 
-            <div class="pantry-group">
+            <div class="pantry-group box-shadow">
                 <h4 class="pantry-group__title">Baking</h4>
                 <ol class="pantry-group__items">
                     <li>Flour <span>must have</span></li>
@@ -21,13 +22,6 @@
                     <li>Baking Powder</li>
                     <li>Cocoa powder</li>
                     <li>Vanilla Extract</li>
-                </ol>
-            </div>
-
-             <div class="pantry-group">
-                <h4 class="pantry-group__title">Name</h4>
-                <ol class="pantry-group__items">
-                    <li>Flour <span>must have</span></li>
                 </ol>
             </div>
         </div>
@@ -51,20 +45,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .pantry {
-        display: flex;
-        flex-wrap: row wrap;
-        justify-content: space-between;
+    .intro-message {
+        max-width: 800px;
+        font-size: 1.8rem;
+        margin-bottom: 60px;
     }
 
     .pantry-group {
-        // border: 3px solid black;
-        box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);        
-        
         background: #fff;
         padding: 0 20px 20px;
         margin-bottom: 20px;
-        width: 32%;
 
         h4 {
             margin-bottom: 2rem;
@@ -79,7 +69,7 @@ export default {
         span {
             color: #796EC6;
             text-transform: uppercase;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             float: right;
         }
     }

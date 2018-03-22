@@ -24,8 +24,8 @@ import Login from './components/Auth/Login'
 import Home from './components/Home'
 import Recipes from './components/Recipes'
 import RecipesSingle from './components/RecipesSingle'
-import Categories from './components/Categories'
-import Category from './components/Category'
+import Tags from './components/Tags'
+import Tag from './components/Tag'
 import Pantry from './components/Pantry'
 import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
@@ -71,16 +71,16 @@ const router = new VueRouter({
                 auth: true
             }
         },{
-            path: '/categories/',
-            name: 'categories',
-            component: Categories,
+            path: '/tags/',
+            name: 'tags',
+            component: Tags,
             meta: {
                 auth: true
             }
         },{
-            path: '/category/:slug',
-            name: 'category.show',
-            component: Category,
+            path: '/tag/:slug',
+            name: 'tag.show',
+            component: Tag,
             meta: {
                 auth: true
             }

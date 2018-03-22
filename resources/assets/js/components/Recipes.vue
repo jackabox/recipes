@@ -29,7 +29,6 @@
                     <div class="recipes__meta">
                         <icon src="/img/zondicons/time.svg"></icon> {{ recipe.prep_time + recipe.cook_time }} mins
                     </div>
-                    
                 </router-link>
             </div>
         </div>

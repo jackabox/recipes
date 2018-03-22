@@ -17,7 +17,7 @@ class RecipeController extends Controller
 
     public function index() 
     {
-        return response()->json(Recipe::latest()->paginate());
+        return response()->json(Recipe::latest()->paginate(12));
     }
 
     public function show(Request $request, Recipe $recipe)

@@ -1171,10 +1171,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_Recipes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__components_Recipes__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Categories__ = __webpack_require__(66);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Categories___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_Categories__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Category__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Category___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_Category__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Tags__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_Tags___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_11__components_Tags__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Tag__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_Tag___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_12__components_Tag__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Pantry__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_Pantry___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_13__components_Pantry__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__components_NotFound__ = __webpack_require__(80);
@@ -1261,16 +1261,16 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
             auth: true
         }
     }, {
-        path: '/categories/',
-        name: 'categories',
-        component: __WEBPACK_IMPORTED_MODULE_11__components_Categories___default.a,
+        path: '/tags/',
+        name: 'tags',
+        component: __WEBPACK_IMPORTED_MODULE_11__components_Tags___default.a,
         meta: {
             auth: true
         }
     }, {
-        path: '/category/:slug',
-        name: 'category.show',
-        component: __WEBPACK_IMPORTED_MODULE_12__components_Category___default.a,
+        path: '/tag/:slug',
+        name: 'tag.show',
+        component: __WEBPACK_IMPORTED_MODULE_12__components_Tag___default.a,
         meta: {
             auth: true
         }
@@ -50942,8 +50942,8 @@ var render = function() {
               _c(
                 "li",
                 [
-                  _c("router-link", { attrs: { to: { name: "categories" } } }, [
-                    _vm._v("Categories")
+                  _c("router-link", { attrs: { to: { name: "tags" } } }, [
+                    _vm._v("Tags")
                   ])
                 ],
                 1
@@ -51808,7 +51808,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -52332,411 +52331,12 @@ if (false) {
 }
 
 /***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(67)
-/* template */
-var __vue_template__ = __webpack_require__(68)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Categories.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-09142593", Component.options)
-  } else {
-    hotAPI.reload("data-v-09142593", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 67 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            slug: this.$route.params.slug,
-            loading: false,
-            categories: null,
-            errors: null
-        };
-    },
-    created: function created() {
-        this.fetchData();
-    },
-
-    methods: {
-        fetchData: function fetchData() {
-            var _this = this;
-
-            this.error = this.users = null;
-            this.loading = true;
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(route('category')).then(function (response) {
-                console.log(response.data);
-
-                _this.loading = false; // loading is done
-                _this.categories = response.data;
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.error = error.response.data.message || error.message;
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "page-title" }, [_vm._v("Categories")]),
-    _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.categories
-      ? _c(
-          "div",
-          { staticClass: "recipes" },
-          _vm._l(_vm.categories, function(category) {
-            return _c(
-              "div",
-              { key: category.id, staticClass: "recipes__item" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: {
-                        name: "category.show",
-                        params: { slug: category.slug }
-                      }
-                    }
-                  },
-                  [_c("h3", [_vm._v(_vm._s(category.title))])]
-                )
-              ],
-              1
-            )
-          })
-        )
-      : _vm._e()
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-09142593", module.exports)
-  }
-}
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(0)
-/* script */
-var __vue_script__ = __webpack_require__(70)
-/* template */
-var __vue_template__ = __webpack_require__(71)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Category.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-02ec8735", Component.options)
-  } else {
-    hotAPI.reload("data-v-02ec8735", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 70 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            slug: this.$route.params.slug,
-            loading: false,
-            recipes: null,
-            errors: null
-        };
-    },
-    created: function created() {
-        this.fetchData();
-    },
-
-    methods: {
-        fetchData: function fetchData() {
-            var _this = this;
-
-            this.error = this.users = null;
-            this.loading = true;
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(route('category.show', this.slug)).then(function (response) {
-                console.log(response.data);
-
-                _this.loading = false; // loading is done
-                _this.recipes = response.data.data; // set the users from the response
-            }).catch(function (error) {
-                _this.loading = false;
-                _this.error = error.response.data.message || error.message;
-            });
-        }
-    }
-});
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "page-title" }, [_vm._v("Category")]),
-    _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
-          ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.recipes
-      ? _c(
-          "div",
-          { staticClass: "recipes" },
-          _vm._l(_vm.recipes, function(recipe) {
-            return _c(
-              "div",
-              { key: recipe.id, staticClass: "recipes__item" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: {
-                        name: "recipes.single",
-                        params: { slug: recipe.slug }
-                      }
-                    }
-                  },
-                  [
-                    _c("div", { staticClass: "recipes__img" }, [
-                      _c("img", {
-                        attrs: {
-                          src: "https://source.unsplash.com/400x280/?food",
-                          alt: ""
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("h3", [_vm._v(_vm._s(recipe.title))])
-                  ]
-                )
-              ],
-              1
-            )
-          })
-        )
-      : _c("div", [_vm._v("\n        No recipes\n    ")])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-02ec8735", module.exports)
-  }
-}
-
-/***/ }),
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -52822,7 +52422,7 @@ exports = module.exports = __webpack_require__(75)(false);
 
 
 // module
-exports.push([module.i, "\n.pantry[data-v-19b0d5f5] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -ms-flex-wrap: row wrap;\n      flex-wrap: row wrap;\n  -webkit-box-pack: justify;\n      -ms-flex-pack: justify;\n          justify-content: space-between;\n}\n.pantry-group[data-v-19b0d5f5] {\n  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);\n          box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);\n  background: #fff;\n  padding: 0 20px 20px;\n  margin-bottom: 20px;\n  width: 32%;\n}\n.pantry-group h4[data-v-19b0d5f5] {\n    margin-bottom: 2rem;\n}\n.pantry-group__items[data-v-19b0d5f5] {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.pantry-group__items span[data-v-19b0d5f5] {\n    color: #796EC6;\n    text-transform: uppercase;\n    font-size: 1.2rem;\n    float: right;\n}\n", ""]);
+exports.push([module.i, "\n.intro-message[data-v-19b0d5f5] {\n  max-width: 800px;\n  font-size: 1.8rem;\n  margin-bottom: 60px;\n}\n.pantry-group[data-v-19b0d5f5] {\n  background: #fff;\n  padding: 0 20px 20px;\n  margin-bottom: 20px;\n}\n.pantry-group h4[data-v-19b0d5f5] {\n    margin-bottom: 2rem;\n}\n.pantry-group__items[data-v-19b0d5f5] {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.pantry-group__items span[data-v-19b0d5f5] {\n    color: #796EC6;\n    text-transform: uppercase;\n    font-size: 1.4rem;\n    float: right;\n}\n", ""]);
 
 // exports
 
@@ -53206,12 +52806,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -53242,8 +52836,14 @@ var staticRenderFns = [
     return _c("section", [
       _c("h1", { staticClass: "page-title" }, [_vm._v("Pantry")]),
       _vm._v(" "),
+      _c("p", { staticClass: "intro-message" }, [
+        _vm._v(
+          "Whenever you are cooking food, you are going to need a few basics. Whether that's a simple thing as salt (which you'll find in most recipes) or maybe flour if your a baker at heart. Below is a list of our personal recommendations for your pantry, along with the top ingredients in our recipes."
+        )
+      ]),
+      _vm._v(" "),
       _c("div", { staticClass: "pantry" }, [
-        _c("div", { staticClass: "pantry-group" }, [
+        _c("div", { staticClass: "pantry-group box-shadow" }, [
           _c("h4", { staticClass: "pantry-group__title" }, [_vm._v("Basics")]),
           _vm._v(" "),
           _c("ol", { staticClass: "pantry-group__items" }, [
@@ -53260,7 +52860,7 @@ var staticRenderFns = [
           ])
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "pantry-group" }, [
+        _c("div", { staticClass: "pantry-group box-shadow" }, [
           _c("h4", { staticClass: "pantry-group__title" }, [_vm._v("Baking")]),
           _vm._v(" "),
           _c("ol", { staticClass: "pantry-group__items" }, [
@@ -53273,14 +52873,6 @@ var staticRenderFns = [
             _c("li", [_vm._v("Cocoa powder")]),
             _vm._v(" "),
             _c("li", [_vm._v("Vanilla Extract")])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "pantry-group" }, [
-          _c("h4", { staticClass: "pantry-group__title" }, [_vm._v("Name")]),
-          _vm._v(" "),
-          _c("ol", { staticClass: "pantry-group__items" }, [
-            _c("li", [_vm._v("Flour "), _c("span", [_vm._v("must have")])])
           ])
         ])
       ])
@@ -55922,6 +55514,414 @@ module.exports = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 105 */,
+/* 106 */,
+/* 107 */,
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(109)
+/* template */
+var __vue_template__ = __webpack_require__(110)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Tags.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-8609bf60", Component.options)
+  } else {
+    hotAPI.reload("data-v-8609bf60", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 109 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            slug: this.$route.params.slug,
+            loading: false,
+            categories: null,
+            errors: null
+        };
+    },
+    created: function created() {
+        this.fetchData();
+    },
+
+    methods: {
+        fetchData: function fetchData() {
+            var _this = this;
+
+            this.error = this.users = null;
+            this.loading = true;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(route('category')).then(function (response) {
+                console.log(response.data);
+
+                _this.loading = false; // loading is done
+                _this.categories = response.data;
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", { staticClass: "page-title" }, [_vm._v("Categories")]),
+    _vm._v(" "),
+    _vm.loading
+      ? _c("div", { staticClass: "loading" }, [
+          _vm._v("\n        loading...\n    ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "error" }, [
+          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
+          _c("p", [
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.fetchData($event)
+                  }
+                }
+              },
+              [_vm._v("\n                Try Again\n            ")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.categories
+      ? _c(
+          "div",
+          { staticClass: "recipes" },
+          _vm._l(_vm.categories, function(category) {
+            return _c(
+              "div",
+              { key: category.id, staticClass: "recipes__item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "category.show",
+                        params: { slug: category.slug }
+                      }
+                    }
+                  },
+                  [_c("h3", [_vm._v(_vm._s(category.title))])]
+                )
+              ],
+              1
+            )
+          })
+        )
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8609bf60", module.exports)
+  }
+}
+
+/***/ }),
+/* 111 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(112)
+/* template */
+var __vue_template__ = __webpack_require__(113)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Tag.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-db45319a", Component.options)
+  } else {
+    hotAPI.reload("data-v-db45319a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 112 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            slug: this.$route.params.slug,
+            loading: false,
+            recipes: null,
+            errors: null
+        };
+    },
+    created: function created() {
+        this.fetchData();
+    },
+
+    methods: {
+        fetchData: function fetchData() {
+            var _this = this;
+
+            this.error = this.users = null;
+            this.loading = true;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get(route('category.show', this.slug)).then(function (response) {
+                console.log(response.data);
+
+                _this.loading = false; // loading is done
+                _this.recipes = response.data.data; // set the users from the response
+            }).catch(function (error) {
+                _this.loading = false;
+                _this.error = error.response.data.message || error.message;
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("h1", { staticClass: "page-title" }, [_vm._v("Category")]),
+    _vm._v(" "),
+    _vm.loading
+      ? _c("div", { staticClass: "loading" }, [
+          _vm._v("\n        loading...\n    ")
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "error" }, [
+          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
+          _c("p", [
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    $event.preventDefault()
+                    _vm.fetchData($event)
+                  }
+                }
+              },
+              [_vm._v("\n                Try Again\n            ")]
+            )
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.recipes
+      ? _c(
+          "div",
+          { staticClass: "recipes" },
+          _vm._l(_vm.recipes, function(recipe) {
+            return _c(
+              "div",
+              { key: recipe.id, staticClass: "recipes__item" },
+              [
+                _c(
+                  "router-link",
+                  {
+                    attrs: {
+                      to: {
+                        name: "recipes.single",
+                        params: { slug: recipe.slug }
+                      }
+                    }
+                  },
+                  [
+                    _c("div", { staticClass: "recipes__img" }, [
+                      _c("img", {
+                        attrs: {
+                          src: "https://source.unsplash.com/400x280/?food",
+                          alt: ""
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("h3", [_vm._v(_vm._s(recipe.title))])
+                  ]
+                )
+              ],
+              1
+            )
+          })
+        )
+      : _c("div", [_vm._v("\n        No recipes\n    ")])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-db45319a", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -24,3 +24,7 @@
 @import 'pages/recipes';
 @import 'pages/recipe.single';
 @import 'pages/login';
+
+.box-shadow {
+    box-shadow: $box-shadow;
+}

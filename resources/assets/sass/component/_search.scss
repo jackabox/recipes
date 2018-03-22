@@ -2,16 +2,15 @@
     position: relative;
     
     input {
-        padding-right: 40px;
+        padding: 15px 40px 15px 15px;
         width: 100%;
-        background: hsla(0,0,0,0.04);
-        box-shadow: none;
+        font-size: 2rem;
     }
 
     button {
         position: absolute;
         right: 5px;
-        top: 12px;
+        top: 19px;
         border: 0;
         background: 0;
 

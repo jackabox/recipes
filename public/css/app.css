@@ -525,17 +525,15 @@ footer p {
 }
 
 .search__box input {
-  padding-right: 40px;
+  padding: 15px 40px 15px 15px;
   width: 100%;
-  background: rgba(0, 0, 0, 0.04);
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  font-size: 2rem;
 }
 
 .search__box button {
   position: absolute;
   right: 5px;
-  top: 12px;
+  top: 19px;
   border: 0;
   background: 0;
 }
@@ -800,5 +798,10 @@ footer p {
 .login-container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
 }
 
