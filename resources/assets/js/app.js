@@ -45,52 +45,31 @@ const router = new VueRouter({
         }, {
             path: '/login',
             name: 'login',
-            component: Login,
-            meta: {
-                auth: false
-            }
+            component: Login
         },{
             path: '/search',
             name: 'search',
-            component: Search,
-            meta: {
-                auth: false
-            }
+            component: Search
         },{
             path: '/recipes',
             name: 'recipes.index',
-            component: Recipes,
-            meta: {
-                auth: false
-            }
+            component: Recipes
         },{
             path: '/recipe/:slug',
             name: 'recipes.single',
-            component: RecipesSingle,
-            meta: {
-                auth: false
-            }
+            component: RecipesSingle
         },{
             path: '/categories/',
             name: 'categories',
-            component: Categories,
-            meta: {
-                auth: false
-            }
+            component: Categories
         },{
             path: '/category/:slug',
             name: 'category.show',
-            component: Category,
-            meta: {
-                auth: false
-            }
+            component: Category
         },{
             path: '/pantry',
             name: 'pantry',
-            component: Pantry,
-            meta: {
-                auth: false
-            }
+            component: Pantry
         },{
             path: '/shopping-list',
             name: 'shopping-list',
@@ -122,10 +101,7 @@ const router = new VueRouter({
         }, {
             path: '*',
             name: '404',
-            component: NotFound,
-            meta: {
-                auth: false
-            }
+            component: NotFound
         }
     ]
 });
