@@ -10,11 +10,12 @@
         </div>
 
         <ul class="shopping-list">
-            <li v-for="item in list" :key="item.index">
+            <li v-for="(item, index) in list" :key="index" v-bind:class="isBought(item)">
                 <b>{{ item.qty }}{{ item.measurement }}</b> {{ item.ingredient }}
-
+                
                 <div class="actions">
-                    <icon src="/img/zondicons/checkmark.svg" class="actions__tick" @click="changeIngredientStatus(item)" />
+                    <a href="#" @click="changeIngredientStatus(item, index)"><icon src="/img/zondicons/checkmark.svg" class="actions__tick" /></a>
+
                     <icon src="/img/zondicons/close.svg" class="actions__cross" @click="removeIngredient(item)" />
                 </div>
             </li>
@@ -59,8 +60,30 @@ export default {
                     this.error = error.response.data.message || error.message;
                 });
         },
-        changeIngredientStatus(data) {
-            console.log('ok')
+        changeIngredientStatus(data, index) {
+            console.log(data);
+
+            let status = (data.bought === 1 ? 0 : 1)
+
+            let params = {
+                status: status,
+                ingredient: data.ingredient
+            }
+
+            console.log(index);
+
+            axios
+                .patch(route('shopping-list.item.update'), params)
+                .then(response => {
+                    console.log(response)
+                    this.list[index].bought = status;
+                }).catch(error => {
+                    this.loading = false;
+                    this.error = error.response.data.message || error.message;
+                });
+        },
+        isBought(item) {
+            return (item.bought === 1 ? 'bought' : '')
         },
         removeIngredient(data) {
             console.log('ok')
@@ -83,7 +106,7 @@ export default {
             position: relative;
             transition: .2s all ease-in-out;
             
-            &.checked {
+            &.bought {
                 text-decoration: line-through;
             }
         }

@@ -1592,52 +1592,31 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     }, {
         path: '/login',
         name: 'login',
-        component: __WEBPACK_IMPORTED_MODULE_7__components_Auth_Login___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_7__components_Auth_Login___default.a
     }, {
         path: '/search',
         name: 'search',
-        component: __WEBPACK_IMPORTED_MODULE_19__components_Search___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_19__components_Search___default.a
     }, {
         path: '/recipes',
         name: 'recipes.index',
-        component: __WEBPACK_IMPORTED_MODULE_9__components_Recipes___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_9__components_Recipes___default.a
     }, {
         path: '/recipe/:slug',
         name: 'recipes.single',
-        component: __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle___default.a
     }, {
         path: '/categories/',
         name: 'categories',
-        component: __WEBPACK_IMPORTED_MODULE_11__components_Categories___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_11__components_Categories___default.a
     }, {
         path: '/category/:slug',
         name: 'category.show',
-        component: __WEBPACK_IMPORTED_MODULE_12__components_Category___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_12__components_Category___default.a
     }, {
         path: '/pantry',
         name: 'pantry',
-        component: __WEBPACK_IMPORTED_MODULE_13__components_Pantry___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_13__components_Pantry___default.a
     }, {
         path: '/shopping-list',
         name: 'shopping-list',
@@ -1669,10 +1648,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     }, {
         path: '*',
         name: '404',
-        component: __WEBPACK_IMPORTED_MODULE_14__components_NotFound___default.a,
-        meta: {
-            auth: false
-        }
+        component: __WEBPACK_IMPORTED_MODULE_14__components_NotFound___default.a
     }]
 });
 
@@ -53577,7 +53553,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, "\n.shopping-list[data-v-f2749e46] {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.shopping-list li[data-v-f2749e46] {\n    border-bottom: 1px solid rgba(0, 0, 0, 0.04);\n    font-size: 1.8rem;\n    padding: 1.2rem 0;\n    position: relative;\n    -webkit-transition: .2s all ease-in-out;\n    transition: .2s all ease-in-out;\n}\n.shopping-list li.checked[data-v-f2749e46] {\n      text-decoration: line-through;\n}\n.shopping-list .actions[data-v-f2749e46] {\n    position: absolute;\n    right: 0;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n.shopping-list .actions .icon[data-v-f2749e46] {\n      margin-left: 20px;\n      width: 18px;\n      -webkit-transition: .3s all ease-in-out;\n      transition: .3s all ease-in-out;\n      fill: rgba(0, 0, 0, 0.3);\n      cursor: pointer;\n}\n.shopping-list .actions__tick[data-v-f2749e46]:hover {\n      fill: #6FCF97;\n}\n.shopping-list .actions__cross[data-v-f2749e46]:hover {\n      fill: #CC5353;\n}\n", ""]);
+exports.push([module.i, "\n.shopping-list[data-v-f2749e46] {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n}\n.shopping-list li[data-v-f2749e46] {\n    border-bottom: 1px solid rgba(0, 0, 0, 0.04);\n    font-size: 1.8rem;\n    padding: 1.2rem 0;\n    position: relative;\n    -webkit-transition: .2s all ease-in-out;\n    transition: .2s all ease-in-out;\n}\n.shopping-list li.bought[data-v-f2749e46] {\n      text-decoration: line-through;\n}\n.shopping-list .actions[data-v-f2749e46] {\n    position: absolute;\n    right: 0;\n    top: 50%;\n    -webkit-transform: translateY(-50%);\n            transform: translateY(-50%);\n}\n.shopping-list .actions .icon[data-v-f2749e46] {\n      margin-left: 20px;\n      width: 18px;\n      -webkit-transition: .3s all ease-in-out;\n      transition: .3s all ease-in-out;\n      fill: rgba(0, 0, 0, 0.3);\n      cursor: pointer;\n}\n.shopping-list .actions__tick[data-v-f2749e46]:hover {\n      fill: #6FCF97;\n}\n.shopping-list .actions__cross[data-v-f2749e46]:hover {\n      fill: #CC5353;\n}\n", ""]);
 
 // exports
 
@@ -53588,6 +53564,7 @@ exports.push([module.i, "\n.shopping-list[data-v-f2749e46] {\n  list-style: none
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
 //
 //
 //
@@ -53649,8 +53626,30 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this2.error = error.response.data.message || error.message;
             });
         },
-        changeIngredientStatus: function changeIngredientStatus(data) {
-            console.log('ok');
+        changeIngredientStatus: function changeIngredientStatus(data, index) {
+            var _this3 = this;
+
+            console.log(data);
+
+            var status = data.bought === 1 ? 0 : 1;
+
+            var params = {
+                status: status,
+                ingredient: data.ingredient
+            };
+
+            console.log(index);
+
+            axios.patch(route('shopping-list.item.update'), params).then(function (response) {
+                console.log(response);
+                _this3.list[index].bought = status;
+            }).catch(function (error) {
+                _this3.loading = false;
+                _this3.error = error.response.data.message || error.message;
+            });
+        },
+        isBought: function isBought(item) {
+            return item.bought === 1 ? 'bought' : '';
         },
         removeIngredient: function removeIngredient(data) {
             console.log('ok');
@@ -53679,23 +53678,36 @@ var render = function() {
       _c(
         "ul",
         { staticClass: "shopping-list" },
-        _vm._l(_vm.list, function(item) {
-          return _c("li", { key: item.index }, [
+        _vm._l(_vm.list, function(item, index) {
+          return _c("li", { key: index, class: _vm.isBought(item) }, [
             _c("b", [_vm._v(_vm._s(item.qty) + _vm._s(item.measurement))]),
-            _vm._v(" " + _vm._s(item.ingredient) + "\n\n                "),
+            _vm._v(
+              " " +
+                _vm._s(item.ingredient) +
+                "\n                \n                "
+            ),
             _c(
               "div",
               { staticClass: "actions" },
               [
-                _c("icon", {
-                  staticClass: "actions__tick",
-                  attrs: { src: "/img/zondicons/checkmark.svg" },
-                  on: {
-                    click: function($event) {
-                      _vm.changeIngredientStatus(item)
+                _c(
+                  "a",
+                  {
+                    attrs: { href: "#" },
+                    on: {
+                      click: function($event) {
+                        _vm.changeIngredientStatus(item, index)
+                      }
                     }
-                  }
-                }),
+                  },
+                  [
+                    _c("icon", {
+                      staticClass: "actions__tick",
+                      attrs: { src: "/img/zondicons/checkmark.svg" }
+                    })
+                  ],
+                  1
+                ),
                 _vm._v(" "),
                 _c("icon", {
                   staticClass: "actions__cross",

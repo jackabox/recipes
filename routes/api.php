@@ -39,6 +39,8 @@ Route::prefix('v1')->namespace('Api\V1')->group(function() {
 
     Route::get('/shopping-list', 'ShoppingListController@get')->name('shopping-list');
     Route::post('/shopping-list/update', 'ShoppingListController@update')->name('shopping-list.update');
+    Route::patch('/shopping-list/item/update', 'ShoppingListController@changeItem')->name('shopping-list.item.update');
+    Route::delete('/shopping-list/item/delete', 'ShoppingListController@deleteItem')->name('shopping-list.item.delete');
 
     # Search
     Route::post('search', 'SearchController@get')->name('search');

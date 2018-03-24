@@ -16,9 +16,9 @@ class ShoppingListController extends Controller
 
     public function get()
     {
-        $list = ShoppingList::selectRaw('sum(quantity) as qty, ingredient, measurement')
+        $list = ShoppingList::selectRaw('sum(quantity) as qty, ingredient, measurement, bought')
             ->where('user_id', auth()->id())
-            ->groupBy('ingredient', 'measurement')
+            ->groupBy('ingredient', 'measurement', 'bought')
             ->get();
     
         return response()->json($list);
@@ -46,11 +46,14 @@ class ShoppingListController extends Controller
 
     public function deleteItem(Request $request)
     {
-        return respoonse()->json('Delete Item Method');
+        $items = ShoppingList::where('ingredient', $request->ingredient)->delete();
+        return response()->json('Item Updated');
+        
     }
 
     public function changeItem(Request $request)
     {
-        return respoonse()->json('Change Item Method');
+        $items = ShoppingList::where('ingredient', $request->ingredient)->update(['bought' => $request->status]);
+        return response()->json('Item Updated');
     }
 }
