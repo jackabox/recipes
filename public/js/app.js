@@ -52489,6 +52489,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -52588,59 +52590,52 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
+    _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v(_vm._s(_vm.recipe.title))])
+    ]),
+    _vm._v(" "),
     _vm.recipe
-      ? _c("div", { staticClass: "recipe-single" }, [
-          _c("div", { staticClass: "recipe-single__header" }, [
-            _c("h1", { staticClass: "page-title" }, [
-              _vm._v(_vm._s(_vm.recipe.title))
-            ])
-          ]),
+      ? _c("div", { staticClass: "container recipe-single" }, [
+          _vm._m(0),
           _vm._v(" "),
-          _c("div", { staticClass: "recipe-single-lead" }, [
-            _c("div", { staticClass: "recipe-single-lead__info" }, [
-              _c("p", { staticClass: "prep-time" }, [
-                _c("span", [_vm._v(_vm._s(_vm.recipe.prep_time))]),
-                _vm._v(" Prep Time\n                ")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "cook-time" }, [
-                _c("span", [_vm._v(_vm._s(_vm.recipe.cook_time))]),
-                _vm._v(" Cook Time\n                ")
-              ]),
-              _vm._v(" "),
-              _c("h3", [_vm._v("Introduction")]),
-              _vm._v(" "),
-              _c("p", [_vm._v(_vm._s(_vm.recipe.description))]),
-              _vm._v(" "),
-              _c("div", { staticClass: "recipe-single-lead__actions" }, [
-                _c(
-                  "a",
-                  { staticClass: "btn", attrs: { href: "#" } },
-                  [_c("icon", { attrs: { src: "/img/zondicons/heart.svg" } })],
-                  1
-                ),
+          _c("div", { staticClass: "recipe-single__inner" }, [
+            _c("div", { staticClass: "recipe-single-sidebar" }, [
+              _c("div", { staticClass: "recipe-single__prep-cook" }, [
+                _c("p", { staticClass: "prep-time" }, [
+                  _c("span", [_vm._v(_vm._s(_vm.recipe.prep_time))]),
+                  _vm._v(" Prep Time\n                    ")
+                ]),
                 _vm._v(" "),
-                _c(
-                  "a",
-                  { staticClass: "btn btn--grey", attrs: { href: "#" } },
-                  [
-                    _c("icon", { attrs: { src: "/img/zondicons/printer.svg" } })
-                  ],
-                  1
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _vm._m(0)
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "recipe-single-body" }, [
-            _c("div", { staticClass: "recipe-single-ingredients" }, [
+                _c("p", { staticClass: "cook-time" }, [
+                  _c("span", [_vm._v(_vm._s(_vm.recipe.cook_time))]),
+                  _vm._v(" Cook Time\n                    ")
+                ])
+              ]),
+              _vm._v(" "),
               _c("h3", [_vm._v("Ingredients")]),
               _vm._v(" "),
-              _c("form", { staticClass: "form", attrs: { action: "#" } }, [
-                _c("label", { staticClass: "inline-label" }, [
-                  _vm._v("Serves "),
+              _c("div", { staticClass: "recipe-single__ingredients" }, [
+                _c(
+                  "ul",
+                  _vm._l(_vm.ingredients, function(ingredient, index) {
+                    return _c("li", { key: index }, [
+                      _c("b", [
+                        _vm._v(
+                          _vm._s(ingredient.quantity) +
+                            " " +
+                            _vm._s(ingredient.measurement)
+                        )
+                      ]),
+                      _vm._v(" " + _vm._s(ingredient.title))
+                    ])
+                  })
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "recipe-single__servings" }, [
+                _c("form", { staticClass: "form", attrs: { action: "#" } }, [
+                  _c("label", [_vm._v("Serves")]),
+                  _vm._v(" "),
                   _c("input", {
                     directives: [
                       {
@@ -52660,52 +52655,44 @@ var render = function() {
                         _vm.qty = $event.target.value
                       }
                     }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c(
-                "ul",
-                _vm._l(_vm.ingredients, function(ingredient, index) {
-                  return _c("li", { key: index }, [
-                    _c("b", [
-                      _vm._v(
-                        _vm._s(ingredient.quantity) +
-                          " " +
-                          _vm._s(ingredient.measurement)
-                      )
-                    ]),
-                    _vm._v(" " + _vm._s(ingredient.title))
-                  ])
-                })
-              ),
-              _vm._v(" "),
-              _c("p", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "btn",
-                    on: {
-                      click: function($event) {
-                        $event.preventDefault()
-                        _vm.saveShoppingList()
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn",
+                      on: {
+                        click: function($event) {
+                          $event.preventDefault()
+                          _vm.saveShoppingList()
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Add To Shopping List")]
-                )
+                    },
+                    [_vm._v("Add To Shopping List")]
+                  )
+                ])
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "recipe-single-method" }, [
-              _c("h3", [_vm._v("Method")]),
+            _c("div", { staticClass: "recipe-single-body" }, [
+              _c("div", { staticClass: "recipe-single__introduction" }, [
+                _c("h3", [_vm._v("Introduction")]),
+                _vm._v(" "),
+                _c("p", [_vm._v(_vm._s(_vm.recipe.description))])
+              ]),
               _vm._v(" "),
-              _c(
-                "ol",
-                _vm._l(_vm.recipe.method, function(method) {
-                  return _c("li", { key: method.id }, [_vm._v(_vm._s(method))])
-                })
-              )
+              _c("div", { staticClass: "recipe-single__method" }, [
+                _c("h3", [_vm._v("Method")]),
+                _vm._v(" "),
+                _c(
+                  "ol",
+                  _vm._l(_vm.recipe.method, function(method) {
+                    return _c("li", { key: method.id }, [
+                      _vm._v(_vm._s(method))
+                    ])
+                  })
+                )
+              ])
             ])
           ])
         ])
@@ -52717,7 +52704,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "recipe-single-lead__image" }, [
+    return _c("div", { staticClass: "recipe-single__image" }, [
       _c("div", { staticClass: "inner-image" }, [
         _c("img", {
           attrs: {
