@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="app">
     <header class="site-header" v-bind:class="scrollTop">
         <div class="container">
             <h1><router-link :to="{ name: 'home' }"><img src="/img/logo.svg"></router-link></h1>
@@ -33,8 +33,10 @@
             </nav>
         </div>
     </header>
-    
-    <router-view></router-view>
+
+    <main>
+        <router-view></router-view>
+    </main>
 
     <footer class="footer">
         <div class="container">

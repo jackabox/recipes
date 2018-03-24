@@ -8,14 +8,17 @@ html {
 }
 
 body {
-	display: flex;
-	min-height: 100vh;
-	flex-direction: column;
     font-family: $font-family;
     font-size: $font-size-base;
     line-height: $line-height-base;
     background-color: $body-bg;
-    padding-top: 70px;
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 70px;    
+	flex-direction: column;
 }
 
 main {
