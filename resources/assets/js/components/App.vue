@@ -12,7 +12,7 @@
                     <li class="divider"></li>                    
                     <li><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></li>
 
-                    <li class="divider" v-if="$auth.check()"></li>                    
+                    <li class="divider"></li>                    
                     <li v-if="$auth.check()">
                        <router-link :to="{ name: 'shopping-list' }"><icon src="/img/zondicons/shopping-cart.svg" /></router-link>
                     </li>
@@ -33,26 +33,29 @@
             </nav>
         </div>
     </header>
-
-    <div class="container">    
-        <router-view></router-view>
-    </div>
+    
+    <router-view></router-view>
 
     <footer class="footer">
-        <p class="footer__links">
-            <span v-if="!$auth.check()">
-                <router-link :to="{ name: 'login' }">Login</router-link>
-            </span>
-            <span v-if="$auth.check()">
-                <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>
-            </span>
-            •
-            Privacy Policy
-            • 
-            Terms of Use
-        </p>
-        <p class="footer__copy">&copy; 2018 Recipes.<br>
-            Site <a href="https://madebylune.co">Made By Lune</a>.</p>
+        <div class="container">
+            <p class="footer__copy">
+                <b><a href="https://madebylune.co">Made By Lune</a>.</b><br>
+                &copy; Copyright 2018+. All rights reserved.
+            </p>
+            <p class="footer__links">
+                <span v-if="!$auth.check()">
+                    <router-link :to="{ name: 'login' }">Login</router-link>
+                </span>
+                <span v-if="$auth.check()">
+                    <router-link :to="{ name: 'dashboard' }">Dashboard</router-link>
+                </span>
+                •
+                Privacy Policy
+                • 
+                Terms of Use
+            </p>
+           
+        </div>
     </footer>
 </div>
 </template>

@@ -54,42 +54,42 @@ const router = new VueRouter({
             name: 'search',
             component: Search,
             meta: {
-                auth: true
+                auth: false
             }
         },{
             path: '/recipes',
             name: 'recipes.index',
             component: Recipes,
             meta: {
-                auth: true
+                auth: false
             }
         },{
             path: '/recipe/:slug',
             name: 'recipes.single',
             component: RecipesSingle,
             meta: {
-                auth: true
+                auth: false
             }
         },{
             path: '/categories/',
             name: 'categories',
             component: Categories,
             meta: {
-                auth: true
+                auth: false
             }
         },{
             path: '/category/:slug',
             name: 'category.show',
             component: Category,
             meta: {
-                auth: true
+                auth: false
             }
         },{
             path: '/pantry',
             name: 'pantry',
             component: Pantry,
             meta: {
-                auth: true
+                auth: false
             }
         },{
             path: '/shopping-list',

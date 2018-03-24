@@ -1601,42 +1601,42 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
         name: 'search',
         component: __WEBPACK_IMPORTED_MODULE_19__components_Search___default.a,
         meta: {
-            auth: true
+            auth: false
         }
     }, {
         path: '/recipes',
         name: 'recipes.index',
         component: __WEBPACK_IMPORTED_MODULE_9__components_Recipes___default.a,
         meta: {
-            auth: true
+            auth: false
         }
     }, {
         path: '/recipe/:slug',
         name: 'recipes.single',
         component: __WEBPACK_IMPORTED_MODULE_10__components_RecipesSingle___default.a,
         meta: {
-            auth: true
+            auth: false
         }
     }, {
         path: '/categories/',
         name: 'categories',
         component: __WEBPACK_IMPORTED_MODULE_11__components_Categories___default.a,
         meta: {
-            auth: true
+            auth: false
         }
     }, {
         path: '/category/:slug',
         name: 'category.show',
         component: __WEBPACK_IMPORTED_MODULE_12__components_Category___default.a,
         meta: {
-            auth: true
+            auth: false
         }
     }, {
         path: '/pantry',
         name: 'pantry',
         component: __WEBPACK_IMPORTED_MODULE_13__components_Pantry___default.a,
         meta: {
-            auth: true
+            auth: false
         }
     }, {
         path: '/shopping-list',
@@ -51233,6 +51233,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -51270,135 +51273,166 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("header", { staticClass: "site-header", class: _vm.scrollTop }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "h1",
-          [
-            _c("router-link", { attrs: { to: { name: "home" } } }, [
-              _c("img", { attrs: { src: "/img/logo.svg" } })
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("nav", { staticClass: "site-navigation" }, [
-          _c("ul", [
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  { attrs: { to: { name: "recipes.index" } } },
-                  [_vm._v("Recipes")]
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c("router-link", { attrs: { to: { name: "categories" } } }, [
-                  _vm._v("Categories")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c("router-link", { attrs: { to: { name: "pantry" } } }, [
-                  _vm._v("Pantry")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("li", { staticClass: "divider" }),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  { attrs: { to: { name: "search" } } },
-                  [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _vm.$auth.check() ? _c("li", { staticClass: "divider" }) : _vm._e(),
-            _vm._v(" "),
-            _vm.$auth.check()
-              ? _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { attrs: { to: { name: "shopping-list" } } },
-                      [
-                        _c("icon", {
-                          attrs: { src: "/img/zondicons/shopping-cart.svg" }
-                        })
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.$auth.check() ? _c("li", { staticClass: "divider" }) : _vm._e(),
-            _vm._v(" "),
-            _vm.$auth.check()
-              ? _c("li", { staticClass: "account" }, [
-                  _c("img", {
-                    staticClass: "profile-pic",
-                    attrs: { src: "https://placehold.it/40", alt: "" }
-                  }),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Jack")]),
-                  _vm._v(" "),
-                  _c("ul", [
-                    _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          { attrs: { to: { name: "dashboard" } } },
-                          [_vm._v("Dashboard")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("li", [
+  return _c(
+    "div",
+    [
+      _c("header", { staticClass: "site-header", class: _vm.scrollTop }, [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "h1",
+            [
+              _c("router-link", { attrs: { to: { name: "home" } } }, [
+                _c("img", { attrs: { src: "/img/logo.svg" } })
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("nav", { staticClass: "site-navigation" }, [
+            _c("ul", [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: { name: "recipes.index" } } },
+                    [_vm._v("Recipes")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: { name: "categories" } } }, [
+                    _vm._v("Categories")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: { name: "pantry" } } }, [
+                    _vm._v("Pantry")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("li", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: { name: "search" } } },
+                    [
+                      _c("icon", {
+                        attrs: { src: "/img/zondicons/search.svg" }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("li", { staticClass: "divider" }),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c(
+                    "li",
+                    [
                       _c(
-                        "a",
-                        {
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.$auth.logout()
-                            }
-                          }
-                        },
-                        [_vm._v("Logout")]
+                        "router-link",
+                        { attrs: { to: { name: "shopping-list" } } },
+                        [
+                          _c("icon", {
+                            attrs: { src: "/img/zondicons/shopping-cart.svg" }
+                          })
+                        ],
+                        1
                       )
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c("li", { staticClass: "divider" })
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c("li", { staticClass: "account" }, [
+                    _c("img", {
+                      staticClass: "profile-pic",
+                      attrs: { src: "https://placehold.it/40", alt: "" }
+                    }),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Jack")]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: { name: "dashboard" } } },
+                            [_vm._v("Dashboard")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.$auth.logout()
+                              }
+                            }
+                          },
+                          [_vm._v("Logout")]
+                        )
+                      ])
                     ])
                   ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.$auth.check()
+                ? _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: { name: "login" } } }, [
+                        _vm._v("Login")
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("router-view"),
+      _vm._v(" "),
+      _c("footer", { staticClass: "footer" }, [
+        _c("div", { staticClass: "container" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("p", { staticClass: "footer__links" }, [
             !_vm.$auth.check()
               ? _c(
-                  "li",
+                  "span",
                   [
                     _c("router-link", { attrs: { to: { name: "login" } } }, [
                       _vm._v("Login")
@@ -51406,47 +51440,30 @@ var render = function() {
                   ],
                   1
                 )
-              : _vm._e()
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.$auth.check()
+              ? _c(
+                  "span",
+                  [
+                    _c(
+                      "router-link",
+                      { attrs: { to: { name: "dashboard" } } },
+                      [_vm._v("Dashboard")]
+                    )
+                  ],
+                  1
+                )
+              : _vm._e(),
+            _vm._v(
+              "\n                •\n                Privacy Policy\n                • \n                Terms of Use\n            "
+            )
           ])
         ])
       ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "container" }, [_c("router-view")], 1),
-    _vm._v(" "),
-    _c("footer", { staticClass: "footer" }, [
-      _c("p", { staticClass: "footer__links" }, [
-        !_vm.$auth.check()
-          ? _c(
-              "span",
-              [
-                _c("router-link", { attrs: { to: { name: "login" } } }, [
-                  _vm._v("Login")
-                ])
-              ],
-              1
-            )
-          : _vm._e(),
-        _vm._v(" "),
-        _vm.$auth.check()
-          ? _c(
-              "span",
-              [
-                _c("router-link", { attrs: { to: { name: "dashboard" } } }, [
-                  _vm._v("Dashboard")
-                ])
-              ],
-              1
-            )
-          : _vm._e(),
-        _vm._v(
-          "\n            •\n            Privacy Policy\n            • \n            Terms of Use\n        "
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(0)
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -51454,13 +51471,16 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("p", { staticClass: "footer__copy" }, [
-      _vm._v("© 2018 Recipes."),
-      _c("br"),
-      _vm._v("\n            Site "),
-      _c("a", { attrs: { href: "https://madebylune.co" } }, [
-        _vm._v("Made By Lune")
+      _c("b", [
+        _c("a", { attrs: { href: "https://madebylune.co" } }, [
+          _vm._v("Made By Lune")
+        ]),
+        _vm._v(".")
       ]),
-      _vm._v(".")
+      _c("br"),
+      _vm._v(
+        "\n                © Copyright 2018+. All rights reserved.\n            "
+      )
     ])
   }
 ]
@@ -52141,6 +52161,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -52281,7 +52303,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", { staticClass: "page-title" }, [_vm._v("All Recipes")]),
+    _vm._m(0),
     _vm._v(" "),
     _vm.loading
       ? _c("div", { staticClass: "loading" }, [
@@ -52312,7 +52334,7 @@ var render = function() {
     _vm.recipes
       ? _c(
           "div",
-          { staticClass: "recipes" },
+          { staticClass: "recipes container" },
           _vm._l(_vm.recipes, function(recipe) {
             return _c("recipe-item", {
               key: recipe.id,
@@ -52323,7 +52345,16 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v("All Recipes")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {

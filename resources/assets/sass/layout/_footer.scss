@@ -1,11 +1,19 @@
 footer {
-    max-width: 400px;
-    margin: 80px auto 60px;
-    text-align: center;
-
-    
+    padding: 20px 0 20px;
+    background: #242136;
+    margin-top: 80px;
 
     p {
         font-size: 1.4rem;
+    }
+
+    p, a  {
+        color: white;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
     }
 }

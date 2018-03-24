@@ -1,6 +1,8 @@
 <template>
     <div>
-        <h1 class="page-title">All Recipes</h1>
+        <div class="page-header">
+            <h1 class="container">All Recipes</h1>
+        </div>
 
         <div class="loading" v-if="loading">
             loading...
@@ -16,7 +18,7 @@
             </p>
         </div>
 
-        <div v-if="recipes" class="recipes">
+        <div v-if="recipes" class="recipes container">
             <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>
         </div>
     </div>
