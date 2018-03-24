@@ -51236,8 +51236,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -51275,135 +51273,167 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "app" }, [
-    _c("header", { staticClass: "site-header", class: _vm.scrollTop }, [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "h1",
-          [
-            _c("router-link", { attrs: { to: { name: "home" } } }, [
-              _c("img", { attrs: { src: "/img/logo.svg" } })
-            ])
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c("nav", { staticClass: "site-navigation" }, [
-          _c("ul", [
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  { attrs: { to: { name: "recipes.index" } } },
-                  [_vm._v("Recipes")]
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c("router-link", { attrs: { to: { name: "categories" } } }, [
-                  _vm._v("Categories")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c("router-link", { attrs: { to: { name: "pantry" } } }, [
-                  _vm._v("Pantry")
-                ])
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("li", { staticClass: "divider" }),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  { attrs: { to: { name: "search" } } },
-                  [_c("icon", { attrs: { src: "/img/zondicons/search.svg" } })],
-                  1
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c("li", { staticClass: "divider" }),
-            _vm._v(" "),
-            _vm.$auth.check()
-              ? _c(
-                  "li",
-                  [
-                    _c(
-                      "router-link",
-                      { attrs: { to: { name: "shopping-list" } } },
-                      [
-                        _c("icon", {
-                          attrs: { src: "/img/zondicons/shopping-cart.svg" }
-                        })
-                      ],
-                      1
-                    )
-                  ],
-                  1
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.$auth.check() ? _c("li", { staticClass: "divider" }) : _vm._e(),
-            _vm._v(" "),
-            _vm.$auth.check()
-              ? _c("li", { staticClass: "account" }, [
-                  _c("img", {
-                    staticClass: "profile-pic",
-                    attrs: { src: "https://placehold.it/40", alt: "" }
-                  }),
-                  _vm._v(" "),
-                  _c("a", { attrs: { href: "#" } }, [_vm._v("Jack")]),
-                  _vm._v(" "),
-                  _c("ul", [
-                    _c(
-                      "li",
-                      [
-                        _c(
-                          "router-link",
-                          { attrs: { to: { name: "dashboard" } } },
-                          [_vm._v("Dashboard")]
-                        )
-                      ],
-                      1
-                    ),
-                    _vm._v(" "),
-                    _c("li", [
+  return _c(
+    "div",
+    { staticClass: "app" },
+    [
+      _c("header", { staticClass: "site-header", class: _vm.scrollTop }, [
+        _c("div", { staticClass: "container" }, [
+          _c(
+            "h1",
+            [
+              _c("router-link", { attrs: { to: { name: "home" } } }, [
+                _c("img", { attrs: { src: "/img/logo.svg" } })
+              ])
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("nav", { staticClass: "site-navigation" }, [
+            _c("ul", [
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: { name: "recipes.index" } } },
+                    [_vm._v("Recipes")]
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: { name: "categories" } } }, [
+                    _vm._v("Categories")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c("router-link", { attrs: { to: { name: "pantry" } } }, [
+                    _vm._v("Pantry")
+                  ])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("li", { staticClass: "divider" }),
+              _vm._v(" "),
+              _c(
+                "li",
+                [
+                  _c(
+                    "router-link",
+                    { attrs: { to: { name: "search" } } },
+                    [
+                      _c("icon", {
+                        attrs: { src: "/img/zondicons/search.svg" }
+                      })
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("li", { staticClass: "divider" }),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c(
+                    "li",
+                    [
                       _c(
-                        "a",
-                        {
-                          attrs: { href: "#" },
-                          on: {
-                            click: function($event) {
-                              $event.preventDefault()
-                              _vm.$auth.logout()
-                            }
-                          }
-                        },
-                        [_vm._v("Logout")]
+                        "router-link",
+                        { attrs: { to: { name: "shopping-list" } } },
+                        [
+                          _c("icon", {
+                            attrs: { src: "/img/zondicons/shopping-cart.svg" }
+                          })
+                        ],
+                        1
                       )
+                    ],
+                    1
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c("li", { staticClass: "divider" })
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.$auth.check()
+                ? _c("li", { staticClass: "account" }, [
+                    _c("img", {
+                      staticClass: "profile-pic",
+                      attrs: { src: "https://placehold.it/40", alt: "" }
+                    }),
+                    _vm._v(" "),
+                    _c("a", { attrs: { href: "#" } }, [_vm._v("Jack")]),
+                    _vm._v(" "),
+                    _c("ul", [
+                      _c(
+                        "li",
+                        [
+                          _c(
+                            "router-link",
+                            { attrs: { to: { name: "dashboard" } } },
+                            [_vm._v("Dashboard")]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c("li", [
+                        _c(
+                          "a",
+                          {
+                            attrs: { href: "#" },
+                            on: {
+                              click: function($event) {
+                                $event.preventDefault()
+                                _vm.$auth.logout()
+                              }
+                            }
+                          },
+                          [_vm._v("Logout")]
+                        )
+                      ])
                     ])
                   ])
-                ])
-              : _vm._e(),
-            _vm._v(" "),
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.$auth.check()
+                ? _c(
+                    "li",
+                    [
+                      _c("router-link", { attrs: { to: { name: "login" } } }, [
+                        _vm._v("Login")
+                      ])
+                    ],
+                    1
+                  )
+                : _vm._e()
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("router-view"),
+      _vm._v(" "),
+      _c("footer", { staticClass: "footer" }, [
+        _c("div", { staticClass: "container" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c("p", { staticClass: "footer__links" }, [
             !_vm.$auth.check()
               ? _c(
-                  "li",
+                  "span",
                   [
                     _c("router-link", { attrs: { to: { name: "login" } } }, [
                       _vm._v("Login")
@@ -51411,49 +51441,30 @@ var render = function() {
                   ],
                   1
                 )
-              : _vm._e()
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.$auth.check()
+              ? _c(
+                  "span",
+                  [
+                    _c(
+                      "router-link",
+                      { attrs: { to: { name: "dashboard" } } },
+                      [_vm._v("Dashboard")]
+                    )
+                  ],
+                  1
+                )
+              : _vm._e(),
+            _vm._v(
+              "\n                •\n                Privacy Policy\n                • \n                Terms of Use\n            "
+            )
           ])
         ])
       ])
-    ]),
-    _vm._v(" "),
-    _c("main", [_c("router-view")], 1),
-    _vm._v(" "),
-    _c("footer", { staticClass: "footer" }, [
-      _c("div", { staticClass: "container" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("p", { staticClass: "footer__links" }, [
-          !_vm.$auth.check()
-            ? _c(
-                "span",
-                [
-                  _c("router-link", { attrs: { to: { name: "login" } } }, [
-                    _vm._v("Login")
-                  ])
-                ],
-                1
-              )
-            : _vm._e(),
-          _vm._v(" "),
-          _vm.$auth.check()
-            ? _c(
-                "span",
-                [
-                  _c("router-link", { attrs: { to: { name: "dashboard" } } }, [
-                    _vm._v("Dashboard")
-                  ])
-                ],
-                1
-              )
-            : _vm._e(),
-          _vm._v(
-            "\n                •\n                Privacy Policy\n                • \n                Terms of Use\n            "
-          )
-        ])
-      ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = [
   function() {
@@ -51870,6 +51881,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -51907,95 +51924,108 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "login-container" }, [
-    _vm.error
-      ? _c("div", { staticClass: "alert alert-danger" }, [
-          _c("p", [
-            _vm._v(
-              "There was an error, unable to sign in with those credentials."
-            )
-          ])
-        ])
-      : _vm._e(),
+  return _c("main", [
+    _vm._m(0),
     _vm._v(" "),
-    _c(
-      "form",
-      {
-        staticClass: "form form--login",
-        attrs: { autocomplete: "off", method: "post" },
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            _vm.login($event)
+    _c("div", { staticClass: "container" }, [
+      _vm.error
+        ? _c("div", { staticClass: "alert alert-danger" }, [
+            _c("p", [
+              _vm._v(
+                "There was an error, unable to sign in with those credentials."
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          staticClass: "form form--login",
+          attrs: { autocomplete: "off", method: "post" },
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              _vm.login($event)
+            }
           }
-        }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.email,
-                expression: "email"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: {
-              type: "email",
-              id: "email",
-              placeholder: "user@example.com",
-              required: ""
-            },
-            domProps: { value: _vm.email },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+        },
+        [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "email" } }, [_vm._v("Email")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
                 }
-                _vm.email = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.password,
-                expression: "password"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { type: "password", id: "password", required: "" },
-            domProps: { value: _vm.password },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
+              ],
+              staticClass: "form-control",
+              attrs: {
+                type: "email",
+                id: "email",
+                placeholder: "user@example.com",
+                required: ""
+              },
+              domProps: { value: _vm.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
                 }
-                _vm.password = $event.target.value
               }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
-          _vm._v("Sign in")
-        ])
-      ]
-    )
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "password" } }, [_vm._v("Password")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.password,
+                  expression: "password"
+                }
+              ],
+              staticClass: "form-control",
+              attrs: { type: "password", id: "password", required: "" },
+              domProps: { value: _vm.password },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.password = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("button", { staticClass: "btn", attrs: { type: "submit" } }, [
+            _vm._v("Sign in")
+          ])
+        ]
+      )
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v("Login")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -52060,9 +52090,18 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("Home")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", [
+      _c("div", { staticClass: "container" }, [_c("p", [_vm._v("Home")])])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -52127,6 +52166,8 @@ module.exports = Component.exports
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue__);
+//
+//
 //
 //
 //
@@ -52292,47 +52333,49 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("main", [
     _vm._m(0),
     _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
+    _c("div", { staticClass: "container" }, [
+      _vm.loading
+        ? _c("div", { staticClass: "loading" }, [
+            _vm._v("\n            loading...\n        ")
           ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.recipes
-      ? _c(
-          "div",
-          { staticClass: "recipes container" },
-          _vm._l(_vm.recipes, function(recipe) {
-            return _c("recipe-item", {
-              key: recipe.id,
-              attrs: { recipe: recipe }
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.error
+        ? _c("div", { staticClass: "error" }, [
+            _vm._v("\n            " + _vm._s(_vm.error) + "\n\n            "),
+            _c("p", [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.fetchData($event)
+                    }
+                  }
+                },
+                [_vm._v("\n                    Try Again\n                ")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.recipes
+        ? _c(
+            "div",
+            { staticClass: "recipes" },
+            _vm._l(_vm.recipes, function(recipe) {
+              return _c("recipe-item", {
+                key: recipe.id,
+                attrs: { recipe: recipe }
+              })
             })
-          })
-        )
-      : _vm._e()
+          )
+        : _vm._e()
+    ])
   ])
 }
 var staticRenderFns = [
@@ -52553,7 +52596,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("main", [
     _vm.loading
       ? _c("div", { staticClass: "loading" }, [
           _vm._v("\n        loading...\n    ")
@@ -52799,6 +52842,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -52843,65 +52890,76 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "page-title" }, [_vm._v("Categories")]),
+  return _c("main", [
+    _vm._m(0),
     _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
+    _c("div", { staticClass: "container" }, [
+      _vm.loading
+        ? _c("div", { staticClass: "loading" }, [
+            _vm._v("\n            loading...\n        ")
           ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.categories
-      ? _c(
-          "div",
-          { staticClass: "recipes" },
-          _vm._l(_vm.categories, function(category) {
-            return _c(
-              "div",
-              { key: category.id, staticClass: "recipes__item" },
-              [
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: {
-                        name: "category.show",
-                        params: { slug: category.slug }
-                      }
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.error
+        ? _c("div", { staticClass: "error" }, [
+            _vm._v("\n            " + _vm._s(_vm.error) + "\n\n            "),
+            _c("p", [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.fetchData($event)
                     }
-                  },
-                  [_c("h3", [_vm._v(_vm._s(category.title))])]
-                )
-              ],
-              1
-            )
-          })
-        )
-      : _vm._e()
+                  }
+                },
+                [_vm._v("\n                    Try Again\n                ")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.categories
+        ? _c(
+            "div",
+            { staticClass: "recipes" },
+            _vm._l(_vm.categories, function(category) {
+              return _c(
+                "div",
+                { key: category.id, staticClass: "recipes__item" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: {
+                          name: "category.show",
+                          params: { slug: category.slug }
+                        }
+                      }
+                    },
+                    [_c("h3", [_vm._v(_vm._s(category.title))])]
+                  )
+                ],
+                1
+              )
+            })
+          )
+        : _vm._e()
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v("Categories")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -53256,6 +53314,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -53280,46 +53343,57 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("section", [
-      _c("h1", { staticClass: "page-title" }, [_vm._v("Pantry")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "intro-message" }, [
-        _vm._v(
-          "Whenever you are cooking food, you are going to need a few basics. Whether that's a simple thing as salt (which you'll find in most recipes) or maybe flour if your a baker at heart. Below is a list of our personal recommendations for your pantry, along with the top ingredients in our recipes."
-        )
+    return _c("main", [
+      _c("div", { staticClass: "page-header" }, [
+        _c("h1", { staticClass: "container" }, [_vm._v("Pantry")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "pantry" }, [
-        _c("div", { staticClass: "pantry-group box-shadow" }, [
-          _c("h4", { staticClass: "pantry-group__title" }, [_vm._v("Basics")]),
-          _vm._v(" "),
-          _c("ol", { staticClass: "pantry-group__items" }, [
-            _c("li", [_vm._v("Sea Salt "), _c("span", [_vm._v("must have")])]),
-            _vm._v(" "),
-            _c("li", [
-              _vm._v("Black Peppercorns "),
-              _c("span", [_vm._v("must have")])
-            ]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Extra Virgin Olive Oil")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Vegetable Oil")])
-          ])
+      _c("div", { staticClass: "container" }, [
+        _c("p", { staticClass: "intro-message" }, [
+          _vm._v(
+            "Whenever you are cooking food, you are going to need a few basics. Whether that's a simple thing as salt (which you'll find in most recipes) or maybe flour if your a baker at heart. Below is a list of our personal recommendations for your pantry, along with the top ingredients in our recipes."
+          )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "pantry-group box-shadow" }, [
-          _c("h4", { staticClass: "pantry-group__title" }, [_vm._v("Baking")]),
+        _c("div", { staticClass: "pantry" }, [
+          _c("div", { staticClass: "pantry-group box-shadow" }, [
+            _c("h4", { staticClass: "pantry-group__title" }, [
+              _vm._v("Basics")
+            ]),
+            _vm._v(" "),
+            _c("ol", { staticClass: "pantry-group__items" }, [
+              _c("li", [
+                _vm._v("Sea Salt "),
+                _c("span", [_vm._v("must have")])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _vm._v("Black Peppercorns "),
+                _c("span", [_vm._v("must have")])
+              ]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Extra Virgin Olive Oil")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Vegetable Oil")])
+            ])
+          ]),
           _vm._v(" "),
-          _c("ol", { staticClass: "pantry-group__items" }, [
-            _c("li", [_vm._v("Flour "), _c("span", [_vm._v("must have")])]),
+          _c("div", { staticClass: "pantry-group box-shadow" }, [
+            _c("h4", { staticClass: "pantry-group__title" }, [
+              _vm._v("Baking")
+            ]),
             _vm._v(" "),
-            _c("li", [_vm._v("Baking Soda ")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Baking Powder")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Cocoa powder")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("Vanilla Extract")])
+            _c("ol", { staticClass: "pantry-group__items" }, [
+              _c("li", [_vm._v("Flour "), _c("span", [_vm._v("must have")])]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Baking Soda ")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Baking Powder")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Cocoa powder")]),
+              _vm._v(" "),
+              _c("li", [_vm._v("Vanilla Extract")])
+            ])
           ])
         ])
       ])
@@ -53390,9 +53464,24 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("p", [_vm._v("404, Not Found")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("main", [
+      _c("div", { staticClass: "page-header" }, [
+        _c("h1", { staticClass: "container" }, [_vm._v("404, Page Not Found")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c("p", [_vm._v("Woopsie, sorry there!")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -53520,6 +53609,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -53573,54 +53666,65 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h2", [_vm._v("Shopping List")]),
+  return _c("main", [
+    _vm._m(0),
     _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _c(
-      "ul",
-      { staticClass: "shopping-list" },
-      _vm._l(_vm.list, function(item) {
-        return _c("li", { key: item.index }, [
-          _c("b", [_vm._v(_vm._s(item.qty) + _vm._s(item.measurement))]),
-          _vm._v(" " + _vm._s(item.ingredient) + "\n\n            "),
-          _c(
-            "div",
-            { staticClass: "actions" },
-            [
-              _c("icon", {
-                staticClass: "actions__tick",
-                attrs: { src: "/img/zondicons/checkmark.svg" },
-                on: {
-                  click: function($event) {
-                    _vm.changeIngredientStatus(item)
+    _c("div", { staticClass: "container" }, [
+      _vm.loading
+        ? _c("div", { staticClass: "loading" }, [
+            _vm._v("\n            loading...\n        ")
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "shopping-list" },
+        _vm._l(_vm.list, function(item) {
+          return _c("li", { key: item.index }, [
+            _c("b", [_vm._v(_vm._s(item.qty) + _vm._s(item.measurement))]),
+            _vm._v(" " + _vm._s(item.ingredient) + "\n\n                "),
+            _c(
+              "div",
+              { staticClass: "actions" },
+              [
+                _c("icon", {
+                  staticClass: "actions__tick",
+                  attrs: { src: "/img/zondicons/checkmark.svg" },
+                  on: {
+                    click: function($event) {
+                      _vm.changeIngredientStatus(item)
+                    }
                   }
-                }
-              }),
-              _vm._v(" "),
-              _c("icon", {
-                staticClass: "actions__cross",
-                attrs: { src: "/img/zondicons/close.svg" },
-                on: {
-                  click: function($event) {
-                    _vm.removeIngredient(item)
+                }),
+                _vm._v(" "),
+                _c("icon", {
+                  staticClass: "actions__cross",
+                  attrs: { src: "/img/zondicons/close.svg" },
+                  on: {
+                    click: function($event) {
+                      _vm.removeIngredient(item)
+                    }
                   }
-                }
-              })
-            ],
-            1
-          )
-        ])
-      })
-    )
+                })
+              ],
+              1
+            )
+          ])
+        })
+      )
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v("Shopping List")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -54838,7 +54942,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("main", [
     _vm._m(0),
     _vm._v(" "),
     _c("div", { staticClass: "container" }, [

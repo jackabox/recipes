@@ -1,22 +1,26 @@
 <template>
-<div>
-    <h2>Shopping List</h2>
-
-    <div class="loading" v-if="loading">
-        loading...
+<main>
+    <div class="page-header">
+        <h1 class="container">Shopping List</h1>
     </div>
 
-    <ul class="shopping-list">
-        <li v-for="item in list" :key="item.index">
-            <b>{{ item.qty }}{{ item.measurement }}</b> {{ item.ingredient }}
+    <div class="container">
+        <div class="loading" v-if="loading">
+            loading...
+        </div>
 
-            <div class="actions">
-                <icon src="/img/zondicons/checkmark.svg" class="actions__tick" @click="changeIngredientStatus(item)" />
-                <icon src="/img/zondicons/close.svg" class="actions__cross" @click="removeIngredient(item)" />
-            </div>
-        </li>
-    </ul>
-</div>
+        <ul class="shopping-list">
+            <li v-for="item in list" :key="item.index">
+                <b>{{ item.qty }}{{ item.measurement }}</b> {{ item.ingredient }}
+
+                <div class="actions">
+                    <icon src="/img/zondicons/checkmark.svg" class="actions__tick" @click="changeIngredientStatus(item)" />
+                    <icon src="/img/zondicons/close.svg" class="actions__cross" @click="removeIngredient(item)" />
+                </div>
+            </li>
+        </ul>
+    </div>
+</main>
 </template>
 
 <script>

@@ -34,9 +34,7 @@
         </div>
     </header>
 
-    <main>
-        <router-view></router-view>
-    </main>
+    <router-view></router-view>
 
     <footer class="footer">
         <div class="container">

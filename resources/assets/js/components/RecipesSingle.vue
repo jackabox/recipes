@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <main>
         <div class="loading" v-if="loading">
             loading...
         </div>
@@ -69,7 +69,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </template>
 
 <script>

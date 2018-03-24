@@ -1,6 +1,10 @@
 <template>
-    <section>
-        <h1 class="page-title">Pantry</h1>
+<main>
+    <div class="page-header">
+        <h1 class="container">Pantry</h1>
+    </div>
+
+    <div class="container">
         <p class="intro-message">Whenever you are cooking food, you are going to need a few basics. Whether that's a simple thing as salt (which you'll find in most recipes) or maybe flour if your a baker at heart. Below is a list of our personal recommendations for your pantry, along with the top ingredients in our recipes.</p>
 
         <div class="pantry">
@@ -25,7 +29,8 @@
                 </ol>
             </div>
         </div>
-    </section>
+    </div>
+</main>
 </template>
 
 <script>

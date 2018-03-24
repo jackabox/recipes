@@ -1,5 +1,10 @@
 <template>
-<div class="login-container">
+<main>
+  <div class="page-header">
+      <h1 class="container">Login</h1>
+  </div>
+
+  <div class="container">
     <div class="alert alert-danger" v-if="error">
         <p>There was an error, unable to sign in with those credentials.</p>
     </div>
@@ -17,7 +22,8 @@
 
         <button type="submit" class="btn">Sign in</button>
     </form>
-</div>
+  </div>
+</main>
 </template>
 
 <script>

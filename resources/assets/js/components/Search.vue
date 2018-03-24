@@ -1,5 +1,5 @@
 <template>
-<div>
+<main>
     <div class="page-header">
         <h1 class="container">Search</h1>
     </div>
@@ -29,7 +29,7 @@
             </p>
         </div>
     </div>
-</div>
+</main>
 </template>
 
 <script>
