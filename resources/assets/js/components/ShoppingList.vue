@@ -16,7 +16,7 @@
                 <div class="actions">
                     <a href="#" @click="changeIngredientStatus(item, index)"><icon src="/img/zondicons/checkmark.svg" class="actions__tick" /></a>
 
-                    <icon src="/img/zondicons/close.svg" class="actions__cross" @click="removeIngredient(item)" />
+                    <a href="#" @click="removeIngredient(item, index)" ><icon src="/img/zondicons/close.svg" class="actions__cross" /></a>
                 </div>
             </li>
         </ul>
@@ -61,16 +61,12 @@ export default {
                 });
         },
         changeIngredientStatus(data, index) {
-            console.log(data);
-
             let status = (data.bought === 1 ? 0 : 1)
 
             let params = {
                 status: status,
                 ingredient: data.ingredient
             }
-
-            console.log(index);
 
             axios
                 .patch(route('shopping-list.item.update'), params)
@@ -85,8 +81,17 @@ export default {
         isBought(item) {
             return (item.bought === 1 ? 'bought' : '')
         },
-        removeIngredient(data) {
-            console.log('ok')
+        removeIngredient(data, index) {
+            // @todo: add a confirmation here
+            axios
+                .delete(route('shopping-list.item.delete'), {data})
+                .then(response => {
+                    console.log(response.data)
+                    this.list.splice(index, 1)
+                }).catch(error => {
+                    this.loading = false;
+                    this.error = error.response.data.message || error.message;
+                });
         }
     }
 }

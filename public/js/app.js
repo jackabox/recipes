@@ -53629,16 +53629,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         changeIngredientStatus: function changeIngredientStatus(data, index) {
             var _this3 = this;
 
-            console.log(data);
-
             var status = data.bought === 1 ? 0 : 1;
 
             var params = {
                 status: status,
                 ingredient: data.ingredient
             };
-
-            console.log(index);
 
             axios.patch(route('shopping-list.item.update'), params).then(function (response) {
                 console.log(response);
@@ -53651,8 +53647,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         isBought: function isBought(item) {
             return item.bought === 1 ? 'bought' : '';
         },
-        removeIngredient: function removeIngredient(data) {
-            console.log('ok');
+        removeIngredient: function removeIngredient(data, index) {
+            var _this4 = this;
+
+            // @todo: add a confirmation here
+            axios.delete(route('shopping-list.item.delete'), { data: data }).then(function (response) {
+                console.log(response.data);
+                _this4.list.splice(index, 1);
+            }).catch(function (error) {
+                _this4.loading = false;
+                _this4.error = error.response.data.message || error.message;
+            });
         }
     }
 });
@@ -53686,41 +53691,45 @@ var render = function() {
                 _vm._s(item.ingredient) +
                 "\n                \n                "
             ),
-            _c(
-              "div",
-              { staticClass: "actions" },
-              [
-                _c(
-                  "a",
-                  {
-                    attrs: { href: "#" },
-                    on: {
-                      click: function($event) {
-                        _vm.changeIngredientStatus(item, index)
-                      }
-                    }
-                  },
-                  [
-                    _c("icon", {
-                      staticClass: "actions__tick",
-                      attrs: { src: "/img/zondicons/checkmark.svg" }
-                    })
-                  ],
-                  1
-                ),
-                _vm._v(" "),
-                _c("icon", {
-                  staticClass: "actions__cross",
-                  attrs: { src: "/img/zondicons/close.svg" },
+            _c("div", { staticClass: "actions" }, [
+              _c(
+                "a",
+                {
+                  attrs: { href: "#" },
                   on: {
                     click: function($event) {
-                      _vm.removeIngredient(item)
+                      _vm.changeIngredientStatus(item, index)
                     }
                   }
-                })
-              ],
-              1
-            )
+                },
+                [
+                  _c("icon", {
+                    staticClass: "actions__tick",
+                    attrs: { src: "/img/zondicons/checkmark.svg" }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  attrs: { href: "#" },
+                  on: {
+                    click: function($event) {
+                      _vm.removeIngredient(item, index)
+                    }
+                  }
+                },
+                [
+                  _c("icon", {
+                    staticClass: "actions__cross",
+                    attrs: { src: "/img/zondicons/close.svg" }
+                  })
+                ],
+                1
+              )
+            ])
           ])
         })
       )

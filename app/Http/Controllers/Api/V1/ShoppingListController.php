@@ -46,14 +46,15 @@ class ShoppingListController extends Controller
 
     public function deleteItem(Request $request)
     {
-        $items = ShoppingList::where('ingredient', $request->ingredient)->delete();
-        return response()->json('Item Updated');
+        $items = ShoppingList::where('user_id', auth()->id())->where('ingredient', $request->ingredient)->delete();
+        
+        return response()->json('Item Deleted');
         
     }
 
     public function changeItem(Request $request)
     {
-        $items = ShoppingList::where('ingredient', $request->ingredient)->update(['bought' => $request->status]);
+        $items = ShoppingList::where('user_id', auth()->id())->where('ingredient', $request->ingredient)->update(['bought' => $request->status]);
         return response()->json('Item Updated');
     }
 }
