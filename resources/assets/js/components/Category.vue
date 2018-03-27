@@ -1,7 +1,10 @@
 <template>
-    <div>
-        <h1 class="page-title">Category</h1>
+<main>
+    <div class="page-header">
+        <h1 class="container">Category</h1>
+    </div>
 
+    <div class="container">
         <div class="loading" v-if="loading">
             loading...
         </div>
@@ -23,6 +26,7 @@
             No recipes
         </div>
     </div>
+</main>
 </template>
 
 <script>

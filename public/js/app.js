@@ -52740,17 +52740,21 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(113)
+}
 var normalizeComponent = __webpack_require__(0)
 /* script */
 var __vue_script__ = __webpack_require__(72)
 /* template */
-var __vue_template__ = __webpack_require__(73)
+var __vue_template__ = __webpack_require__(115)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-09142593"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -52822,6 +52826,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 
@@ -52859,93 +52865,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 73 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("main", [
-    _vm._m(0),
-    _vm._v(" "),
-    _c("div", { staticClass: "container" }, [
-      _vm.loading
-        ? _c("div", { staticClass: "loading" }, [
-            _vm._v("\n            loading...\n        ")
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.error
-        ? _c("div", { staticClass: "error" }, [
-            _vm._v("\n            " + _vm._s(_vm.error) + "\n\n            "),
-            _c("p", [
-              _c(
-                "button",
-                {
-                  on: {
-                    click: function($event) {
-                      $event.preventDefault()
-                      _vm.fetchData($event)
-                    }
-                  }
-                },
-                [_vm._v("\n                    Try Again\n                ")]
-              )
-            ])
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.categories
-        ? _c(
-            "div",
-            { staticClass: "recipes" },
-            _vm._l(_vm.categories, function(category) {
-              return _c(
-                "div",
-                { key: category.id, staticClass: "recipes__item" },
-                [
-                  _c(
-                    "router-link",
-                    {
-                      attrs: {
-                        to: {
-                          name: "category.show",
-                          params: { slug: category.slug }
-                        }
-                      }
-                    },
-                    [_c("h3", [_vm._v(_vm._s(category.title))])]
-                  )
-                ],
-                1
-              )
-            })
-          )
-        : _vm._e()
-    ])
-  ])
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page-header" }, [
-      _c("h1", { staticClass: "container" }, [_vm._v("Categories")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-09142593", module.exports)
-  }
-}
-
-/***/ }),
+/* 73 */,
 /* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -53029,6 +52949,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -53077,50 +53001,61 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", { staticClass: "page-title" }, [_vm._v("Category")]),
+  return _c("main", [
+    _vm._m(0),
     _vm._v(" "),
-    _vm.loading
-      ? _c("div", { staticClass: "loading" }, [
-          _vm._v("\n        loading...\n    ")
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.error
-      ? _c("div", { staticClass: "error" }, [
-          _vm._v("\n        " + _vm._s(_vm.error) + "\n\n        "),
-          _c("p", [
-            _c(
-              "button",
-              {
-                on: {
-                  click: function($event) {
-                    $event.preventDefault()
-                    _vm.fetchData($event)
-                  }
-                }
-              },
-              [_vm._v("\n                Try Again\n            ")]
-            )
+    _c("div", { staticClass: "container" }, [
+      _vm.loading
+        ? _c("div", { staticClass: "loading" }, [
+            _vm._v("\n            loading...\n        ")
           ])
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    _vm.recipes
-      ? _c(
-          "div",
-          { staticClass: "recipes" },
-          _vm._l(_vm.recipes, function(recipe) {
-            return _c("recipe-item", {
-              key: recipe.id,
-              attrs: { recipe: recipe }
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.error
+        ? _c("div", { staticClass: "error" }, [
+            _vm._v("\n            " + _vm._s(_vm.error) + "\n\n            "),
+            _c("p", [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.fetchData($event)
+                    }
+                  }
+                },
+                [_vm._v("\n                    Try Again\n                ")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.recipes
+        ? _c(
+            "div",
+            { staticClass: "recipes" },
+            _vm._l(_vm.recipes, function(recipe) {
+              return _c("recipe-item", {
+                key: recipe.id,
+                attrs: { recipe: recipe }
+              })
             })
-          })
-        )
-      : _c("div", [_vm._v("\n        No recipes\n    ")])
+          )
+        : _c("div", [_vm._v("\n            No recipes\n        ")])
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v("Category")])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -56192,6 +56127,145 @@ module.exports = {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 110 */,
+/* 111 */,
+/* 112 */,
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(114);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(13)("c1f3e8bc", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-09142593\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Categories.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-09142593\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Categories.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 114 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(12)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n@media (min-width: 560px) {\n.categories[data-v-09142593] {\n    display: grid;\n    grid-gap: 25px;\n    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 13px), 1fr));\n    grid-auto-rows: minmax(120px, auto);\n    grid-auto-flow: dense;\n}\n}\n.category[data-v-09142593] {\n  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);\n          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);\n  position: relative;\n  font-size: 0;\n  margin-bottom: 25px;\n  -webkit-transition: .3s all ease-in-out;\n  transition: .3s all ease-in-out;\n}\n@media (min-width: 560px) {\n.category[data-v-09142593] {\n      margin-bottom: 0;\n}\n}\n.category[data-v-09142593]:hover, .category[data-v-09142593]:focus {\n    -webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);\n            box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);\n}\n.category h3[data-v-09142593] {\n    position: absolute;\n    bottom: 20px;\n    left: 20px;\n    color: white;\n    padding: 0;\n    font-size: 2.8rem;\n    text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);\n    z-index: 12;\n}\n.overlay[data-v-09142593] {\n  background: rgba(0, 0, 0, 0.1);\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  position: absolute;\n  z-index: 10;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("main", [
+    _vm._m(0),
+    _vm._v(" "),
+    _c("div", { staticClass: "container" }, [
+      _vm.loading
+        ? _c("div", { staticClass: "loading" }, [
+            _vm._v("\n            loading...\n        ")
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.error
+        ? _c("div", { staticClass: "error" }, [
+            _vm._v("\n            " + _vm._s(_vm.error) + "\n\n            "),
+            _c("p", [
+              _c(
+                "button",
+                {
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      _vm.fetchData($event)
+                    }
+                  }
+                },
+                [_vm._v("\n                    Try Again\n                ")]
+              )
+            ])
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.categories
+        ? _c(
+            "div",
+            { staticClass: "categories" },
+            _vm._l(_vm.categories, function(category) {
+              return _c(
+                "div",
+                { key: category.id, staticClass: "category" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      attrs: {
+                        to: {
+                          name: "category.show",
+                          params: { slug: category.slug }
+                        }
+                      }
+                    },
+                    [
+                      _c("img", {
+                        staticClass: "category__image",
+                        attrs: { src: "https://placehold.it/700x400", alt: "" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "overlay" }),
+                      _vm._v(" "),
+                      _c("h3", [_vm._v(_vm._s(category.title))])
+                    ]
+                  )
+                ],
+                1
+              )
+            })
+          )
+        : _vm._e()
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "page-header" }, [
+      _c("h1", { staticClass: "container" }, [_vm._v("Categories")])
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-09142593", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

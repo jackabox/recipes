@@ -19,9 +19,11 @@
             </p>
         </div>
 
-        <div v-if="categories" class="recipes">
-            <div v-for="category in categories" class="recipes__item" :key="category.id">
+        <div v-if="categories" class="categories">
+            <div v-for="category in categories" class="category" :key="category.id">
                 <router-link :to="{ name: 'category.show', params: { slug: category.slug }}">
+                    <img class="category__image" src="https://placehold.it/700x400" alt="">
+                    <div class="overlay"></div>
                     <h3>{{ category.title }}</h3>
                 </router-link>
             </div>
@@ -65,3 +67,56 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+@import '../../sass/variables';
+
+.categories {
+    @media (min-width: 560px) {
+        display: grid;
+        grid-gap: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 13px), 1fr));
+        grid-auto-rows: minmax(120px, auto);
+        grid-auto-flow: dense;
+    }
+}
+
+.category {
+    box-shadow: $box-shadow;
+    position: relative;
+    font-size: 0;
+    margin-bottom: 25px;
+    transition: .3s all ease-in-out;
+    
+    @media (min-width: 560px) {
+        margin-bottom: 0;
+    }
+
+
+    &:hover,
+    &:focus {
+       box-shadow: $box-shadow-hover;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        padding: 0;
+        font-size: 2.8rem;
+        text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
+        z-index: 12;
+    }
+}
+
+.overlay {
+    background: rgba(0,0,0,0.1);
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+}
+</style>
