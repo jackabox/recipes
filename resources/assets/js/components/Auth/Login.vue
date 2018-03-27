@@ -40,7 +40,7 @@
         var app = this
 
         this.$auth.login({
-            params: {
+            data: {
               email: app.email,
               password: app.password
             }, 

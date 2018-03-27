@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Tag;
+use App\Models\Category;
 
-class TagSeeder extends Seeder
+class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,17 +12,17 @@ class TagSeeder extends Seeder
      */
     public function run()
     {
-        $tags = [
+        $categories = [
             'Breakfast',
             'Lunch',
             'Dinner',
             'Dessert',
-            'Light Bite',
+            'Light Bite'
         ];
 
-        foreach ($tags as $tag) {
-            Tag::create([
-                'title' => $tag
+        foreach ($categories as $c) {
+            Category::create([
+                'title' => $c
             ]);
         }
     }

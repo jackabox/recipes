@@ -33,8 +33,8 @@ Route::prefix('v1')->namespace('Api\V1')->group(function() {
     Route::get('/recipes/{recipe}', 'RecipeController@show')->name('recipe.single');
     Route::post('/recipes/create', 'RecipeController@create');
  
-    Route::get('/category/', 'TagController@index')->name('category');
-    Route::get('/category/{category}', 'TagController@show')->name('category.show');
+    Route::get('/category/', 'CategoryController@index')->name('category');
+    Route::get('/category/{category}', 'CategoryController@show')->name('category.show');
     
 
     Route::get('/shopping-list', 'ShoppingListController@get')->name('shopping-list');
@@ -44,4 +44,7 @@ Route::prefix('v1')->namespace('Api\V1')->group(function() {
 
     # Search
     Route::post('search', 'SearchController@get')->name('search');
+
+    # Profile
+    Route::get('profile/{user}', 'ProfileController@show')->name('profile');
 });

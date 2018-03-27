@@ -9,9 +9,9 @@ class Recipe extends Model
 {
     use Sluggable;
 
-    public function tags() 
+    public function categories() 
     {
-        return $this->hasMany(RecipeTag::class);
+        return $this->hasMany(RecipeCategory::class);
     }
 
     public function ingredients() 

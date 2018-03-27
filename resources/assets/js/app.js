@@ -29,10 +29,13 @@ import Category from './components/Category'
 import Pantry from './components/Pantry'
 import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
+import Search from './components/Search' 
+
+// Profile / Account
+import Profile from './components/Profile'
 import Dashboard from './components/Account/Dashboard' 
 import RecipeCreate from './components/Account/RecipeCreate' 
 import Settings from './components/Account/Settings' 
-import Search from './components/Search' 
 
 // routes
 const router = new VueRouter({
@@ -77,6 +80,10 @@ const router = new VueRouter({
             meta: {
                 auth: true
             }
+        },{
+            path: '/profile/:slug',
+            name: 'profile',
+            component: Profile
         },{
             path: '/me/settings',
             name: 'me.settings',

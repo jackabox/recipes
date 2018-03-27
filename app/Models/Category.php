@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
 
-class Tag extends Model
+class Category extends Model
 {
     use Sluggable;
 
-    public function tags() 
+    public function catgories() 
     {
-        return $this->hasMany(RecipeTag::class);
+        return $this->hasMany(RecipeCategory::class);
     }
 
     /**

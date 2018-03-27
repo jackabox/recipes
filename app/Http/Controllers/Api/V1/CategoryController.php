@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Api\V1;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Tag;
+use App\Models\Category;
 use App\Models\Recipe;
 
-class TagController extends Controller
+class CategoryController extends Controller
 {
     public function __construct() 
     {
@@ -16,15 +16,15 @@ class TagController extends Controller
     
     public function index() 
     {
-        $categories = Tag::all();
+        $categories = Category::all();
 
         return response()->json($categories);
     }
 
-    public function show(Tag $category)
+    public function show(Category $category)
     {
-        $category_recipes = Recipe::whereHas('tags', function ($query) use ($category) {
-            $query->where('tag_id', $category->id);
+        $category_recipes = Recipe::whereHas('categories', function ($query) use ($category) {
+            $query->where('category_id', $category->id);
         })->latest()->paginate();
 
         return response()->json($category_recipes);

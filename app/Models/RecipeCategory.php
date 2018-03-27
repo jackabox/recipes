@@ -4,11 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class RecipeTag extends Model
+class RecipeCategory extends Model
 {
-    public function tag() 
+    public function category() 
     {
-        return $this->belongsTo(Tag::class);
+        return $this->belongsTo(Category::class);
     }
 
     public function recipe() 
