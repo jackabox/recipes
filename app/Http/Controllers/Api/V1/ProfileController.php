@@ -10,8 +10,13 @@ class ProfileController extends Controller
 {
     public function show(User $user)
     {
-        $user->load('profile');
-        
-        return response()->json($user);
+        $profile = $user->profile;
+        $recipes = $user->recipes()->take(3)->get();
+
+        return response()->json([
+            'user' => $user,
+            'profile' => $profile,
+            'recipes' => $recipes
+        ]);
     }
 }

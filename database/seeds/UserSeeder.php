@@ -20,5 +20,10 @@ class UserSeeder extends Seeder
             'password' => Hash::make('secret'),
             'remember_token' => str_random(10)
         ]);
+
+        DB::table('profiles')->insert([
+            'user_id' => 1,
+            'description' => 'Chef boy genius'
+        ]);
     }
 }

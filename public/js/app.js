@@ -56378,7 +56378,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "\n.profile-banner[data-v-4bdda942] {\n  position: relative;\n  padding-left: 180px;\n}\n.profile-image[data-v-4bdda942] {\n  position: absolute;\n  width: 160px;\n  height: 160px;\n  left: 0;\n  top: 40px;\n}\n.profile-image img[data-v-4bdda942] {\n    border-radius: 100%;\n}\n", ""]);
 
 // exports
 
@@ -56389,6 +56389,23 @@ exports.push([module.i, "", ""]);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -56404,11 +56421,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    components: {
+        'recipe-item': __WEBPACK_IMPORTED_MODULE_0__components_RecipeItem_vue___default.a
+    },
     data: function data() {
         return {
             slug: this.$route.params.slug,
+            user: [],
             profile: [],
+            recipes: [],
             loading: false
         };
     },
@@ -56424,7 +56448,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             axios.get(route('profile', this.slug)).then(function (response) {
                 _this.loading = false;
-                _this.profile = response.data;
+                _this.user = response.data.user;
+                _this.profile = response.data.profile;
+                _this.recipes = response.data.recipes;
             }).catch(function (error) {
                 _this.loading = false;
                 _this.error = error.response.data.message || error.message;
@@ -56442,14 +56468,39 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("main", [
-    _vm._m(0),
+    _c("div", { staticClass: "page-header" }, [
+      _c("div", { staticClass: "container profile-banner" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("h1", [_vm._v(_vm._s(_vm.user.name))]),
+        _vm._v(" "),
+        _vm.profile.description
+          ? _c("p", [_vm._v(_vm._s(_vm.profile.description))])
+          : _vm._e()
+      ])
+    ]),
     _vm._v(" "),
     _c("div", { staticClass: "container" }, [
       _vm.loading
         ? _c("div", { staticClass: "loading" }, [
             _vm._v("\n            loading...\n        ")
           ])
-        : _vm._e()
+        : _vm._e(),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Top Recipes")]),
+      _vm._v(" "),
+      _vm.recipes
+        ? _c(
+            "div",
+            { staticClass: "recipes" },
+            _vm._l(_vm.recipes, function(recipe) {
+              return _c("recipe-item", {
+                key: recipe.id,
+                attrs: { recipe: recipe }
+              })
+            })
+          )
+        : _c("div", [_vm._v("\n            No recipes\n        ")])
     ])
   ])
 }
@@ -56458,8 +56509,8 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "page-header" }, [
-      _c("h1", { staticClass: "container" }, [_vm._v("Account")])
+    return _c("div", { staticClass: "profile-image" }, [
+      _c("img", { attrs: { src: "https://placehold.it/300", alt: "" } })
     ])
   }
 ]
