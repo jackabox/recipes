@@ -17,7 +17,6 @@
         </div>
 
         <div class="form-group">
-
             <h2>Select an image</h2>
             <input type="file" @change="previewImage" accept="image/*">
 

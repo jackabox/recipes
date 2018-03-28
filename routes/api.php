@@ -47,4 +47,9 @@ Route::prefix('v1')->namespace('Api\V1')->group(function() {
 
     # Profile
     Route::get('profile/{user}', 'ProfileController@show')->name('profile');
+
+    # Settings
+    Route::get('settings', 'SettingsController@index')->name('settings');
+    Route::post('settings/update/basic', 'SettingsController@updateBasicInfo')->name('settings.update.basic');
+    
 });
