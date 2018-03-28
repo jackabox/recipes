@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
 
-class Recipe extends Model
+class Recipe extends Model implements HasMedia
 {
-    use Sluggable;
+    use Sluggable, HasMediaTrait;
 
     public function categories() 
     {

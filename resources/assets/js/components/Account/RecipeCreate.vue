@@ -16,6 +16,16 @@
             <textarea class="form-control" v-model="recipe.description"></textarea>
         </div>
 
+        <div class="form-group">
+
+            <h2>Select an image</h2>
+            <input type="file" @change="previewImage" accept="image/*">
+
+            <div class="image-preview" v-if="imageData.length > 0">
+                <img class="preview" :src="imageData">
+            </div>
+        </div>
+
         <div class="mini-fields">
             <div class="form-group">
                 <label for="title">Cook Time</label>
@@ -102,7 +112,9 @@ export default {
     },
     data() {
         return {
+            imageData: '',
             recipe: {
+                image: '',
                 title: '',
                 description: '',
                 cook_time: '',
@@ -141,21 +153,49 @@ export default {
         },
         saveRecipe() {
             console.log('starting save');
-            
+
+            var form = new FormData();
+            form.append('image', this.recipe.image)
+            form.append('title', this.recipe.title)
+            form.append('description', this.recipe.description)
+            form.append('cook_time', this.recipe.cook_time)
+            form.append('prep_time', this.recipe.prep_time)
+            form.append('serves', this.recipe.serves)
+            form.append('method', JSON.stringify(this.recipe.method))
+            form.append('ingredients', JSON.stringify(this.recipe.ingredients))
+
             axios
-                .post('v1/recipes/create', { 
-                    title: this.recipe.title, 
-                    description: this.recipe.description, 
-                    cook_time: this.recipe.cook_time, 
-                    prep_time: this.recipe.prep_time, 
-                    serves: this.recipe.serves, 
-                    method: this.recipe.method, 
-                    ingredients: this.recipe.ingredients, 
+                .post('v1/recipes/create', form, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
                 }).then(response => {
                     console.log(response.data)
                 }).catch(error => {
                     console.log(error)
                 })
+        },
+        previewImage: function(event) {
+
+
+            // Reference to the DOM input element
+            var input = event.target;
+            // Ensure that you have a file before attempting to read it
+            if (input.files && input.files[0]) {
+                // add the image data to the recipe
+                this.recipe.image = input.files[0];
+                
+                // create a new FileReader to read this image and convert to base64 format
+                var reader = new FileReader();
+                // Define a callback function to run, when FileReader finishes its job
+                reader.onload = (e) => {
+                    // Note: arrow function used here, so that "this.imageData" refers to the imageData of Vue component
+                    // Read image as base64 and set to imageData
+                    this.imageData = e.target.result;
+                }
+                // Start the reader job - read file as a data url (base64 format)
+                reader.readAsDataURL(input.files[0]);
+            }
         }
     }
 }

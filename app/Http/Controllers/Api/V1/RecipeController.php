@@ -34,8 +34,9 @@ class RecipeController extends Controller
             'cook_time' => 'required|integer|min:0',
             'prep_time' => 'required|integer|min:0',
             'serves' => 'required|integer|min:1',
-            'ingredients' => 'required|array',
-            'method' => 'required|array'
+            'ingredients' => 'required|json',
+            'method' => 'required|json',
+            'image'  => 'image'
         ]);
 
         if ($validator->fails()) {
@@ -46,7 +47,6 @@ class RecipeController extends Controller
             ]);
         }
 
-
         $recipe = new Recipe();
         $recipe->title = $request->title;
         $recipe->description = $request->description;
@@ -54,10 +54,16 @@ class RecipeController extends Controller
         $recipe->prep_time = $request->prep_time;
         $recipe->user_id = auth()->id();
         $recipe->serves = $request->serves;
-        $recipe->method = json_encode($request->method);
+        $recipe->method = $request->method;
         $recipe->save();
 
-        foreach ($request->ingredients as $ingredient) {
+        if ($request->image) {
+            $recipe
+                ->addMedia($request->image)
+                ->toMediaCollection();
+        }
+
+        foreach (json_decode($request->ingredients) as $ingredient) {
             RecipeIngredient::create([
                 'recipe_id' => $recipe->id,
                 'title' => $ingredient['title'],                
