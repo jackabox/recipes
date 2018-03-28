@@ -22,7 +22,8 @@
 
             <div class="recipe-single__image">
                 <div class="inner-image">
-                    <img src="https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=7b65345dde1da9bc81241c54a4f7ce2d" alt="">
+                    <img v-if="recipe.media_url" :src="recipe.media_url" :alt="recipe.title">
+                    <img v-else src="https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=7b65345dde1da9bc81241c54a4f7ce2d" alt="">
                 </div>
             </div>  
 

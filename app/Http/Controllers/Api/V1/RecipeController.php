@@ -17,12 +17,24 @@ class RecipeController extends Controller
 
     public function index() 
     {
-        return response()->json(Recipe::latest()->paginate(12));
+        $recipes = Recipe::with('media')->latest()->paginate(12);
+        
+        $recipes->each(function($recipe) {
+            if ($recipe->getMedia()->count() > 0) {
+                $recipe->media_url = $recipe->getMedia()[0]->getUrl();
+            }
+        });
+        
+        return response()->json($recipes);
     }
 
     public function show(Request $request, Recipe $recipe)
     {
-        $recipe->load('ingredients');
+        $recipe->load('ingredients', 'media');
+        
+        if ($recipe->getMedia()->count() > 0) {
+            $recipe->media_url = $recipe->getMedia()[0]->getUrl();
+        }
 
         return response()->json($recipe);
     }
