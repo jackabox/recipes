@@ -14,7 +14,7 @@ class ProfileController extends Controller
         $recipes = $user->recipes()->take(3)->get();
 
         return response()->json([
-            'user' => $user,
+            'user'    => $user,
             'profile' => $profile,
             'recipes' => $recipes
         ]);

@@ -1,32 +1,41 @@
 <template>
-    <div>
-        <h1>Dashboard</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus impedit magni magnam cumque repellendus quod!</p>
-
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Add Recipe</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
-                <p>
-                    <router-link :to="{ name: 'dashboard.recipe.add' }" class="btn btn-primary">Click</router-link>
-                </p>
-            </div>
-
-            <div class="col-md-4">
-                <h2>Create Collection</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
-                <p><a href="" class="btn btn-primary">Click</a></p>
-            </div>
-
-            <div class="col-md-4">
-                <h2>Account Settings</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
-                 <p>
-                    <router-link :to="{ name: 'me.settings' }" class="btn btn-primary">Click</router-link>
-                </p>
-            </div>
+    <main>
+        <div class="page-header">
+            <h1 class="container">Dashboard</h1>
         </div>
-    </div>
+
+        <div class="container">
+            <p>Get quick access to manage your account or add a new recipe to the site.</p>
+
+            <div class="row">
+                <div class="col">
+                    <h3>Add Recipe</h3>
+                    <p>Share your latest or greatest recipes with the community. Once submitted, we'll need to approve it.</p>
+                    <p>
+                        <router-link :to="{ name: 'dashboard.recipe.add' }" class="btn btn-primary">Add Recipe</router-link>
+                    </p>
+                </div>
+
+                <!-- <div class="col-md-4">
+                    <h3>Create Collection</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sunt veritatis sequi nobis voluptatem ipsa!</p>
+                    <p><a href="" class="btn btn-primary">Click</a></p>
+                </div> -->
+
+                <div class="col">
+                    <h3>Account Settings</h3>
+                    <p>Update your account details, manage your account settings or close your account.</p>
+                    <p>
+                        <router-link :to="{ name: 'me.settings' }" class="btn btn-primary">Manage Account</router-link>
+                    </p>
+                </div>
+            </div>
+
+            <!-- <div class="stats-graph">
+                <h3>Stats</h3>
+            </div> -->
+        </div>
+    </main>
 </template>
 
 <script>
@@ -34,3 +43,14 @@ export default {
 
 }
 </script>
+
+<style lang="scss" scoped>
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 49%;
+}
+</style>
