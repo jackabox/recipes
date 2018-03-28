@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Recipe;
 use Validator;
 use App\Models\RecipeIngredient;
+use Carbon\Carbon;
 
 class RecipeController extends Controller
 {
@@ -21,7 +22,7 @@ class RecipeController extends Controller
         
         $recipes->each(function($recipe) {
             if ($recipe->getMedia()->count() > 0) {
-                $recipe->media_url = $recipe->getMedia()[0]->getUrl();
+                $recipe->media_url = $recipe->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
             }
         });
         
@@ -31,9 +32,9 @@ class RecipeController extends Controller
     public function show(Request $request, Recipe $recipe)
     {
         $recipe->load('ingredients', 'media');
-        
+
         if ($recipe->getMedia()->count() > 0) {
-            $recipe->media_url = $recipe->getMedia()[0]->getUrl();
+            $recipe->media_url = $recipe->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
         }
 
         return response()->json($recipe);
@@ -78,9 +79,9 @@ class RecipeController extends Controller
         foreach (json_decode($request->ingredients) as $ingredient) {
             RecipeIngredient::create([
                 'recipe_id' => $recipe->id,
-                'title' => $ingredient['title'],                
-                'quantity' => $ingredient['quantity'],
-                'measurement' => $ingredient['measurement'],
+                'title' => $ingredient->title,                
+                'quantity' => $ingredient->quantity,
+                'measurement' => $ingredient->measurement,
             ]);
         }
 

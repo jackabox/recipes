@@ -121,9 +121,7 @@ export default {
                 prep_time: '',
                 serves: '',
                 method: [
-                    {
-                        description: '',
-                    }
+                    {}
                 ],
                 ingredients: []
             },
