@@ -3,7 +3,7 @@
         <div class="page-header">
             <div class="container profile-banner">
                 <div class="profile-image">
-                    <img src="https://placehold.it/300" alt="">
+                    <img :src="user.profile_pic" alt="">
                 </div>
 
                 <h1>{{ user.name }}</h1>

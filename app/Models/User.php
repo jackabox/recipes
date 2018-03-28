@@ -8,6 +8,7 @@ use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
 use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Carbon\Carbon;
 
 class User extends Authenticatable implements JWTSubject, HasMedia
 {
@@ -29,6 +30,10 @@ class User extends Authenticatable implements JWTSubject, HasMedia
      */
     protected $hidden = [
         'password', 'remember_token',
+    ];
+
+    protected $appends = [
+        'profile_pic'
     ];
 
     /**
@@ -84,5 +89,12 @@ class User extends Authenticatable implements JWTSubject, HasMedia
     public function recipes() 
     {
         return $this->hasMany(Recipe::class);
+    }
+
+    public function getProfilePicAttribute()
+    {
+        if ($this->getMedia()->count() > 0) {
+            return $this->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
+        }
     }
 }

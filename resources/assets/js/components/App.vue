@@ -19,7 +19,7 @@
 
                     <li class="divider" v-if="$auth.check()"></li>
                     <li class="account" v-if="$auth.check()">
-                        <img class="profile-pic" src="https://placehold.it/40" alt="">
+                        <img class="profile-pic" :src="$auth.user().profile_pic" alt="">
                         <router-link :to="{ name: 'profile', params: { slug: $auth.user().username }}">Jack</router-link>
                         <ul>
                             <li><router-link :to="{ name: 'dashboard' }">Dashboard</router-link></li>
