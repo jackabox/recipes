@@ -95,6 +95,8 @@ class User extends Authenticatable implements JWTSubject, HasMedia
     {
         if ($this->getMedia()->count() > 0) {
             return $this->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
+        } else {
+            return 'https://placehold.it/300';
         }
     }
 }
