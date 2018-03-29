@@ -25,8 +25,13 @@ class CategoryController extends Controller
     {
         $category_recipes = Recipe::whereHas('categories', function ($query) use ($category) {
             $query->where('category_id', $category->id);
-        })->latest()->paginate();
+        })->latest()->paginate(12);
 
-        return response()->json($category_recipes);
+        $data = [
+            'name' => $category->title,
+            'recipes' => $category_recipes
+        ];
+
+        return response()->json($data);
     }
 }

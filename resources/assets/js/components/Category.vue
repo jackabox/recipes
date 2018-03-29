@@ -1,7 +1,7 @@
 <template>
 <main>
     <div class="page-header">
-        <h1 class="container">Category</h1>
+        <h1 class="container">Category: {{ category }}</h1>
     </div>
 
     <div class="container">
@@ -30,12 +30,11 @@
 </template>
 
 <script>
-    import axios from 'axios';
     import RecipeItem from '../components/RecipeItem.vue'
     
     export default {
         components: {
-            'recipe-item': RecipeItem,
+            RecipeItem,
         },
         data() {
             return {
@@ -43,6 +42,7 @@
                 loading: false,
                 recipes: null,
                 errors: null,
+                category: null
             };
         },
         
@@ -60,7 +60,8 @@
                         console.log(response.data);
 
                         this.loading = false; // loading is done
-                        this.recipes = response.data.data; // set the users from the response
+                        this.category = response.data.name;
+                        this.recipes = response.data.recipes.data; // set the users from the response
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
