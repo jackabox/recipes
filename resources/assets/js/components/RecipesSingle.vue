@@ -37,12 +37,6 @@
                             <span>{{ recipe.cook_time }}</span> Cook Time
                         </p>
                     </div>
-                    <h3>Ingredients</h3>
-                    <div class="recipe-single__ingredients">
-                        <ul>
-                            <li v-for="(ingredient, index) in ingredients" :key="index"><b>{{ ingredient.quantity }} {{ ingredient.measurement }}</b> {{ ingredient.title }}</li>
-                        </ul>
-                    </div>  
 
                     <div class="recipe-single__servings">
                         <form action="#" class="form">
@@ -51,6 +45,15 @@
                             <button @click.prevent="saveShoppingList()" class="btn" v-if="$auth.check()">Add To Shopping List</button>
                         </form>                 
                     </div>
+                    
+                    <h3>Ingredients</h3>
+                    <div class="recipe-single__ingredients">
+                        <ul>
+                            <li v-for="(ingredient, index) in ingredients" :key="index"><b>{{ ingredient.quantity }} {{ ingredient.measurement }}</b> {{ ingredient.title }}</li>
+                        </ul>
+                    </div>  
+
+                    
                 </div>
 
                 <div class="recipe-single-body">
@@ -61,8 +64,8 @@
 
                     <div class="recipe-single__method">
                         <h3>Method</h3>
-                        <ol>
-                            <li v-for="method in recipe.method" :key="method.id">{{ method }}</li>
+                        <ol class="method-list">
+                            <li v-for="(method, index) in steps" :key="index" v-bind:class="methodIsDone(method)" @click="markMethodDone(method, index)">{{ method.description }}</li>
                         </ol>
                     </div>
 
@@ -84,6 +87,7 @@
                 qty: null,
                 newQty: 1,
                 oldQty: 1,
+                steps: {},
                 ingredients: {}
             }
         },
@@ -101,6 +105,7 @@
                         this.loading = false; // loading is done
                         this.recipe = response.data; // set the users from the response
                         this.ingredients = response.data.ingredients;
+                        this.steps = response.data.method;
                         this.oldQty = this.recipe.serves;
                         this.qty = this.recipe.serves;
 
@@ -117,6 +122,12 @@
                 }
 
                 this.$root.$emit('update-shopping-list', data)
+            },
+            methodIsDone(method) {
+                return (method.status === 'done' ? 'done' : '')
+            },
+            markMethodDone(method, index) {
+                this.steps[index].status = (method.status === '' ? 'done' : '');
             }
         },
         watch: {
@@ -136,3 +147,34 @@
         }
     }
 </script>
+
+<style lang="scss" scoped>
+.method-list li {
+    transition: all 0.2s ease;
+
+    &:before {
+        content: "\2713";
+        font-size: 13px;
+        color: #e0e0e0;
+        transition: all 0.2s ease;
+        position: absolute;
+        text-align: center;
+        display: block;
+        left: -40px;
+        top: 6px;
+        width: 20px;
+        height: 20px;
+        background: #e0e0e0;
+        border-radius: 4px;
+    }
+    
+    &.done {
+        text-decoration: line-through;
+
+        &:before {
+            color: #fff;
+            background-color: #796EC6;
+        }
+    }
+}
+</style>

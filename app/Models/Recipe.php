@@ -28,7 +28,13 @@ class Recipe extends Model implements HasMedia
 
     public function getMethodAttribute($value)
     {
-        return json_decode($value);
+        $method = json_decode($value);
+        
+        foreach ($method as $m) {
+            $m->status = '';
+        }
+
+        return $method;
     }
 
     /**

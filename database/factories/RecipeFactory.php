@@ -21,7 +21,9 @@ $factory->define(App\Models\Recipe::class, function (FakerGen $faker) {
     $method_list = [];
 
     for ($i = 0; $i < $method; $i++) {
-        $method_list[$i] = $faker->paragraph();
+        $method_list[$i] = [
+            'description' => $faker->paragraph()
+        ];
     }
     
     return [
