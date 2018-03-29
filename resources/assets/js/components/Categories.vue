@@ -22,7 +22,8 @@
         <div v-if="categories" class="categories">
             <div v-for="category in categories" class="category" :key="category.id">
                 <router-link :to="{ name: 'category.show', params: { slug: category.slug }}">
-                    <img class="category__image" src="https://placehold.it/700x400" alt="">
+                    <img v-if="category.picture" :src="category.picture" :alt="category.title">
+                    <img v-else src="/img/example-image.jpg" alt="">
                     <div class="overlay"></div>
                     <h3>{{ category.title }}</h3>
                 </router-link>
@@ -104,14 +105,14 @@
         left: 20px;
         color: white;
         padding: 0;
-        font-size: 2.8rem;
+        font-size: 3rem;
         text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
         z-index: 12;
     }
 }
 
 .overlay {
-    background: rgba(0,0,0,0.1);
+    background: rgba(0,0,0,0.2);
     top: 0; 
     left: 0;
     right: 0;

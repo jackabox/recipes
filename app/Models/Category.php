@@ -4,10 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Cviebrock\EloquentSluggable\Sluggable;
+use Spatie\MediaLibrary\HasMedia\HasMediaTrait;
+use Spatie\MediaLibrary\HasMedia\HasMedia;
+use Carbon\Carbon;
 
-class Category extends Model
+class Category extends Model implements HasMedia
 {
-    use Sluggable;
+    use Sluggable, HasMediaTrait;
+
+    protected $appends = [
+        'picture'
+    ];
 
     public function catgories() 
     {
@@ -36,5 +43,14 @@ class Category extends Model
     public function getRouteKeyName()
     {
         return 'slug';
+    }
+
+    public function getPictureAttribute()
+    {
+        if ($this->getMedia()->count() > 0) {
+            return $this->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
+        } else {
+            return 'https://placehold.it/300';
+        }
     }
 }
