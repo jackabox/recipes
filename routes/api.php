@@ -30,6 +30,7 @@ Route::group(['prefix' => 'auth'], function ($router) {
 
 Route::prefix('v1')->namespace('Api\V1')->group(function() {
     Route::get('/recipes', 'RecipeController@index');
+    Route::get('/recipes/top', 'RecipeController@top')->name('recipes.top');
     Route::get('/recipes/{recipe}', 'RecipeController@show')->name('recipe.single');
     Route::post('/recipes/create', 'RecipeController@create');
  

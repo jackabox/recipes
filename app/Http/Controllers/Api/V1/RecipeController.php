@@ -8,6 +8,7 @@ use App\Models\Recipe;
 use Validator;
 use App\Models\RecipeIngredient;
 use Carbon\Carbon;
+use App\Http\Resources\RecipeResource;
 
 class RecipeController extends Controller
 {
@@ -26,7 +27,8 @@ class RecipeController extends Controller
             }
         });
         
-        return response()->json($recipes);
+        // return response()->json($recipes);
+        return RecipeResource::collection($recipes);
     }
 
     public function show(Request $request, Recipe $recipe)
@@ -38,6 +40,19 @@ class RecipeController extends Controller
         }
 
         return response()->json($recipe);
+    }
+
+    public function top(Request $request)
+    {
+        $recipes = Recipe::with('media')->latest()->take(3)->get();
+        
+        $recipes->each(function($recipe) {
+            if ($recipe->getMedia()->count() > 0) {
+                $recipe->media_url = $recipe->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
+            }
+        });
+
+        return response()->json($recipes);
     }
 
     public function create(Request $request)
