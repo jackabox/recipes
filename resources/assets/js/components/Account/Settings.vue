@@ -18,11 +18,11 @@
                         </div>
                         <div class="form-group">
                             <label>Name</label>                            
-                            <input type="text" class="form-control" placeholder="John Doe" v-model="user.name">
+                            <input type="text" class="form-control" placeholder="John Doe" v-model="user.name" required>
                         </div>
                         <div class="form-group">
                             <label>Username</label>
-                            <input type="text" class="form-control" placeholder="fuzzycats" v-model="user.username">
+                            <input type="text" class="form-control" placeholder="fuzzycats" v-model="user.username" required>
                         </div>
         
                         <p><button type="submit" class="btn">Update</button></p>
@@ -34,11 +34,11 @@
                         <p>Your current email is {{ user.email }}. To update this, please fill out the fields below.</p>   
                         <div class="form-group">
                             <label>New Email</label>    
-                            <input type="text" class="form-control" placeholder="john@doe.com" v-model="email.email">
+                            <input type="text" class="form-control" placeholder="john@doe.com" v-model="email.email" required>
                         </div>
                         <div class="form-group">
                             <label>Confirm Password</label>                                
-                            <input type="password" class="form-control" placeholder="password" v-model="email.password">
+                            <input type="password" class="form-control" placeholder="password" v-model="email.password" required>
                         </div>
                         <p><button type="submit" class="btn">Update</button></p>
                     </form>
@@ -48,15 +48,15 @@
                     <form action="POST" class="form" @submit.prevent="updatePassword">
                         <div class="form-group">
                             <label>Current Password</label>
-                            <input type="password" class="form-control" placeholder="fuzzycats" v-model="password.old">
+                            <input type="password" class="form-control" placeholder="fuzzycats" v-model="password.old" required>
                         </div>
                         <div class="form-group">
                             <label>New Password</label>
-                            <input type="password" class="form-control" placeholder="fuzzydogs" v-model="password.old">
+                            <input type="password" class="form-control" placeholder="fuzzydogs" v-model="password.new" required>
                         </div>
                         <div class="form-group">
                             <label>Confirm New Password</label>
-                            <input type="password" class="form-control" placeholder="fuzzydogs" v-model="password.old">
+                            <input type="password" class="form-control" placeholder="fuzzydogs" v-model="password.confirm" required>
                         </div>
                         <p><button type="submit" class="btn">Update</button></p>
                     </form>
@@ -139,36 +139,39 @@ export default {
             axios
                 .patch(route('settings.update.email'), this.email)
                 .then(response => {
-                    this.email = {
-                        email: '',
-                        password: ''
-                    }
-
-                    this.message = {
+                    this.$notify({
                         type: 'success',
-                        message: response.message
-                    }
+                        title: 'Email Updated',
+                        text: response.data.message,
+                        duration: 6000
+                    });
                 }).catch(error => {
-                    console.log(error);
-                });
+                    this.$notify({
+                        type: 'error',
+                        title: 'Error Updating Email',
+                        text: error.response.data.message,
+                        duration: 6000
+                    });
+                })
         },
         updatePassword() {
             axios
                 .patch(route('settings.update.password'), this.password)
                 .then(response => {
-                    this.password = {
-                        old: '',
-                        new: '',
-                        confirm: ''
-                    }
-
-                    this.message = {
+                    this.$notify({
                         type: 'success',
-                        message: response.message
-                    }
+                        title: 'Email Updated',
+                        text: response.data.message,
+                        duration: 6000
+                    });
                 }).catch(error => {
-                    console.log(error);
-                });
+                    this.$notify({
+                        type: 'error',
+                        title: 'Error Updating Email',
+                        text: error.response.data.message,
+                        duration: 6000
+                    });
+                })
         },
         previewImage: function(event) {
             // Reference to the DOM input element

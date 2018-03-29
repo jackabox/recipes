@@ -69,11 +69,15 @@ class SettingsController extends Controller
             ], 422);
         }
 
-        if (Hash::check($request->password, auth()->user()->password)) {
-            auth()->user()->update([
-                'email' => $request->email
-            ]);
+        if (! Hash::check($request->password, auth()->user()->password)) {
+            return response()->json([
+                'message' => 'Incorrect Password',
+            ], 422);
         }
+
+        auth()->user()->update([
+            'email' => $request->email
+        ]);
 
         return response()->json([
             'message' => 'Email Updated',
