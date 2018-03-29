@@ -152,6 +152,10 @@
 .method-list li {
     transition: all 0.2s ease;
 
+    &:hover {
+        cursor: pointer;
+    }
+
     &:before {
         content: "\2713";
         font-size: 13px;
