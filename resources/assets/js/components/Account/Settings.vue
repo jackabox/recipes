@@ -31,15 +31,20 @@
                     <p><button type="submit" class="btn">Save</button></p>
                 </form>
 
-
-             <p><input type="text" class="form-control" placeholder="email" v-model="user.email"></p>
-                    <p><input type="password" class="form-control" placeholder="confirm password"></p>
+                <form action="POST" class="form" @submit.prevent="updateEmail">
+                    <h6>Email</h6>
+                    
+                    <p><input type="text" class="form-control" placeholder="email" v-model="email.email"></p>
+                    <p><input type="password" class="form-control" placeholder="confirm password" v-model="email.password"></p>
+                    <p><button type="submit" class="btn">Save</button></p>                   
+                </form>
 
                 <h6>Password</h6>
                 
-                <form action="POST" class="form" @submit.prevent="passwordChange">
-                    <p><input type="password" class="form-control" placeholder="old password"></p>
-                    <p><input type="password" class="form-control" placeholder="new password"></p>
+                <form action="POST" class="form" @submit.prevent="updatePassword">
+                    <p><input type="password" class="form-control" placeholder="old password" v-model="password.old"></p>
+                    <p><input type="password" class="form-control" placeholder="new password" v-model="password.new"></p>
+                    <p><input type="password" class="form-control" placeholder="confirm new password" v-model="password.confirm"></p>
                     <p><button type="submit" class="btn">Save</button></p>
                 </form>
             </div>
@@ -51,12 +56,18 @@
 export default {
     data() {
         return {
+            message: {},
             imageData: '',
             image: '',
             user: [],
             password: {
                 old: '',
-                new: ''
+                new: '',
+                confirm: ''
+            },
+            email: {
+                email: '',
+                password: '',
             }
         }
     },
@@ -75,12 +86,16 @@ export default {
         },
         updateBasicDetails() {
             var form = new FormData();
-            form.append('image', this.image)
+
+            if (this.image) {
+                form.append('image', this.image)
+            }
+
             form.append('username', this.user.username)
             form.append('name', this.user.name)
 
             axios
-                .post(route('settings.update.basic'), form, {
+                .patch(route('settings.update.basic'), form, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
@@ -92,8 +107,40 @@ export default {
             
             
         },
-        passwordChange() {
-            console.log('password update')
+        updateEmail() {
+            axios
+                .patch(route('settings.update.email'), this.email)
+                .then(response => {
+                    this.email = {
+                        email: '',
+                        password: ''
+                    }
+
+                    this.message = {
+                        type: 'success',
+                        message: response.message
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
+        },
+        updatePassword() {
+            axios
+                .patch(route('settings.update.password'), this.password)
+                .then(response => {
+                    this.password = {
+                        old: '',
+                        new: '',
+                        confirm: ''
+                    }
+
+                    this.message = {
+                        type: 'success',
+                        message: response.message
+                    }
+                }).catch(error => {
+                    console.log(error);
+                });
         },
         previewImage: function(event) {
             // Reference to the DOM input element
