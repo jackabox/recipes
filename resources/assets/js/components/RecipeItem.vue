@@ -7,10 +7,12 @@
         </div>
         <div class="recipes__desc">
             <h3>{{ this.recipe.title }}</h3>
-            <p><em>by</em> <a href="#">Jack Whiting</a></p>
+           
         </div>
         <div class="recipes__meta">
             <icon src="/img/zondicons/time.svg"></icon> {{ this.recipe.prep_time + this.recipe.cook_time }} mins
+
+            <span v-if="this.recipe.user"><em>by</em> <router-link :to="{ name: 'profile', params: { slug: this.recipe.user.username }}">{{ this.recipe.user.username }}</router-link></span>
         </div>
     </router-link>
 </div>
@@ -26,3 +28,18 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.recipes__desc {
+    margin-bottom: 10px;
+}
+.recipes__meta {
+    span {
+        margin-left: 20px;
+    }
+
+    .icon {
+        margin-left: 0;
+    }
+}
+</style>

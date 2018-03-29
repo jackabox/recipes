@@ -19,7 +19,7 @@ class RecipeController extends Controller
 
     public function index() 
     {
-        $recipes = Recipe::with('media')->latest()->paginate(12);
+        $recipes = Recipe::with('media', 'user')->latest()->paginate(12);
         
         $recipes->each(function($recipe) {
             if ($recipe->getMedia()->count() > 0) {
@@ -33,7 +33,7 @@ class RecipeController extends Controller
 
     public function show(Request $request, Recipe $recipe)
     {
-        $recipe->load('ingredients', 'media');
+        $recipe->load('ingredients', 'media', 'user');
 
         if ($recipe->getMedia()->count() > 0) {
             $recipe->media_url = $recipe->getMedia()[0]->getTemporaryUrl(Carbon::now()->addMinutes(10));
@@ -44,7 +44,7 @@ class RecipeController extends Controller
 
     public function top(Request $request)
     {
-        $recipes = Recipe::with('media')->latest()->take(3)->get();
+        $recipes = Recipe::with('media', 'user')->latest()->take(3)->get();
         
         $recipes->each(function($recipe) {
             if ($recipe->getMedia()->count() > 0) {
