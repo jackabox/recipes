@@ -23,7 +23,7 @@
             <div class="recipe-single__image">
                 <div class="inner-image">
                     <img v-if="recipe.media_url" :src="recipe.media_url" :alt="recipe.title">
-                    <img v-else src="https://images.unsplash.com/photo-1465014925804-7b9ede58d0d7?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&s=7b65345dde1da9bc81241c54a4f7ce2d" alt="">
+                    <img v-else src="/img/example-image.jpg" alt="">
                 </div>
             </div>  
 
@@ -48,7 +48,7 @@
                         <form action="#" class="form">
                             <label>Serves</label>
                             <input type="number" name="qty" v-model="qty" min="1">
-                            <button @click.prevent="saveShoppingList()" class="btn">Add To Shopping List</button>
+                            <button @click.prevent="saveShoppingList()" class="btn" v-if="$auth.check()">Add To Shopping List</button>
                         </form>                 
                     </div>
                 </div>
