@@ -36,6 +36,8 @@
 
     <router-view></router-view>
 
+    <notifications position="70px center" width="100%" classes="my-notification" />
+
     <footer class="footer">
         <div class="container">
             <p class="footer__copy">

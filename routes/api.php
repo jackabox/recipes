@@ -50,7 +50,7 @@ Route::prefix('v1')->namespace('Api\V1')->group(function() {
 
     # Settings
     Route::get('settings', 'SettingsController@index')->name('settings');
-    Route::patch('settings/update/basic', 'SettingsController@updateBasicInfo')->name('settings.update.basic');
+    Route::post('settings/update/basic', 'SettingsController@updateBasicInfo')->name('settings.update.basic');
     Route::patch('settings/update/email', 'SettingsController@updateEmail')->name('settings.update.email');
     Route::patch('settings/update/password', 'SettingsController@updatePassword')->name('settings.update.password');
     

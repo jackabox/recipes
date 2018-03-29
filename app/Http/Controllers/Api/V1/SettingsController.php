@@ -32,9 +32,10 @@ class SettingsController extends Controller
 
         $validator = Validator::make($request->all(), $rules);
 
+
         if ($validator->fails()) {
             return response()->json([
-                'message' => 'validator failed',
+                'message' => 'Please Check Your Details',
                 'errors' => $validator->errors()
             ], 422);
         }
