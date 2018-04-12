@@ -78,6 +78,11 @@
 }
 
 
-.vue-typer .custom.char.selected {
-    background-color: rgba(120, 108, 198, 0.2);
+.vue-typer {
+    .custom.char {
+        color:rgba(36, 33, 54, 0.3);
+    }
+    .custom.char.selected {
+        background-color: rgba(120, 108, 198, 0.2);
+    }
 }
