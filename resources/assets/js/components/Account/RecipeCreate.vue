@@ -17,7 +17,8 @@
         </div>
 
         <div class="form-group">
-            <h2>Select an image</h2>
+            <label for="category">Cover Image</label>
+            
             <input type="file" @change="previewImage" accept="image/*">
 
             <div class="image-preview" v-if="imageData.length > 0">
@@ -42,9 +43,16 @@
             </div>
         </div>
 
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select name="category" v-model="recipe.category">
+                <option value="">Select a Category</option>
+                <option value="1">Breakfast</option>
+            </select>
+        </div>
+
         <div class="details">
             <!-- Ingredients -->
-    
             <h3>Ingredients</h3>
             <div class="ingredients" v-if="recipe.ingredients.length > 0">
                 <div class="ingredients__item" v-for="(ing, index) in recipe.ingredients" :key="index" readonly>
@@ -86,7 +94,7 @@
             <h3>Method</h3>
             <draggable :list="recipe.method" class="dragArea">
                 <div v-for="(m, index) in recipe.method" :key="index" class="form-group">
-                    <label>Step {{ index + 1 }}</label>
+                    <label><icon src="/img/zondicons/dots-horizontal-double.svg" /> Step {{ index + 1 }}</label>
                     <textarea class="form-control" v-model="m.description"></textarea>
                 </div>
             </draggable>
@@ -119,6 +127,7 @@ export default {
                 cook_time: '',
                 prep_time: '',
                 serves: '',
+                category: '',
                 method: [
                     {}
                 ],
@@ -157,6 +166,7 @@ export default {
             form.append('description', this.recipe.description)
             form.append('cook_time', this.recipe.cook_time)
             form.append('prep_time', this.recipe.prep_time)
+            form.append('category', this.recipe.category)
             form.append('serves', this.recipe.serves)
             form.append('method', JSON.stringify(this.recipe.method))
             form.append('ingredients', JSON.stringify(this.recipe.ingredients))
@@ -238,6 +248,20 @@ export default {
 
 .method {
     margin-bottom: 20px;
+}
+
+.icon {
+    margin-top: 4px;
+    fill: #ccc;
+
+    &:hover {
+        cursor: move;
+        cursor: grab;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
 }
 </style>
 

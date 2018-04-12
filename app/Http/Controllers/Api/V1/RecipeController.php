@@ -83,6 +83,7 @@ class RecipeController extends Controller
         $recipe->user_id = auth()->id();
         $recipe->serves = $request->serves;
         $recipe->method = $request->method;
+        $recipe->category_id = $request->category;
         $recipe->save();
 
         if ($request->image) {

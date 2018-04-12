@@ -82,7 +82,7 @@ export default {
     &--sub {
         font-size: 3rem;
         margin-bottom: 20px;
-        color:  rgba(36, 33, 54, 0.3);
+        color: rgba(36, 33, 54, 0.4);
         font-weight: 400;
     }
 }
