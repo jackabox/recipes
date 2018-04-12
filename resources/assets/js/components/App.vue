@@ -14,7 +14,7 @@
 
                     <li class="divider"></li>                    
                     <li v-if="$auth.check()">
-                       <router-link :to="{ name: 'shopping-list' }"><icon src="/img/zondicons/shopping-cart.svg" /></router-link>
+                        <shopping-list-mini />
                     </li>
 
                     <li class="divider" v-if="$auth.check()"></li>

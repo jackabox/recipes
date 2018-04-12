@@ -30,6 +30,7 @@ import Category from './components/Category'
 import Pantry from './components/Pantry'
 import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
+import ShoppingListMini from './components/ShoppingListMini' 
 import Search from './components/Search' 
 
 // Profile / Account
@@ -117,7 +118,7 @@ const router = new VueRouter({
 Vue.router = router
 App.router = Vue.router
 
-// Vue.component('shopping-list', ShoppingList)
+Vue.component('shopping-list-mini', ShoppingListMini)
 Vue.component('icon', Icon)
 Vue.use(Notifications)
 
