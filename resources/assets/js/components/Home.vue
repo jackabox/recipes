@@ -3,7 +3,7 @@
     <div class="lead-area">
         <div class="container">
             <p class="home home--lead">Mmmm, tasty.</p>
-            <p class="home home--sub">Browse or start collecting your perfect recipes for <vue-typer :text="strings"></vue-typer>.</p>
+            <p class="home home--sub">Browse recipes for the perfect<br> <vue-typer :text="strings"></vue-typer>.</p>
             <p><router-link :to="{ name: 'recipes.index' }" :class="'btn'">Browse Recipes</router-link></p>
         </div>
     </div>
@@ -32,10 +32,10 @@ export default {
         return {
             recipes: null,
             strings: [
-                'an indian fakeaway',
-                'a romantic night in',
-                'the perfect sunday roast',
-                'little fluffy cupcakes'
+                'romantic night in',
+                'sunday roast',
+                'fluffy cupcakes',
+                'indian fakeaway'
             ]
         }
     },
