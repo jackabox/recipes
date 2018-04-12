@@ -34,6 +34,12 @@ export default {
                 .post(route('shopping-list.update'), data)
                 .then(response => {
                     this.count = response.data.length
+                    this.$notify({
+                        type: 'success',
+                        title: 'Adding to Shopping List',
+                        text: 'Hooray',
+                        duration: 6000
+                    });
                 }).catch(error => {
                     this.loading = false;
                     this.error = error.response.data.message || error.message;
@@ -56,5 +62,6 @@ export default {
         height: 24px;
         line-height: 24px;
         border-radius: 100%;
+        text-align: center;
     }
 </style>
