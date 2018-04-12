@@ -56,7 +56,7 @@
             <h3>Ingredients</h3>
             <div class="ingredients" v-if="recipe.ingredients.length > 0">
                 <div class="ingredients__item" v-for="(ing, index) in recipe.ingredients" :key="index" readonly>
-                    <b>{{ ing.quantity }}{{ ing.measurement }}</b> {{ ing.title }} <span>remove</span>
+                    <b>{{ ing.quantity }}{{ ing.measurement }}</b> {{ ing.title }} <a @click="removeIngredient(index)">remove</a>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
             <h3>Method</h3>
             <draggable :list="recipe.method" class="dragArea">
                 <div v-for="(m, index) in recipe.method" :key="index" class="form-group">
-                    <label><icon src="/img/zondicons/dots-horizontal-double.svg" /> Step {{ index + 1 }}</label>
+                    <label><icon src="/img/zondicons/dots-horizontal-double.svg" /> Step {{ index + 1 }} <a v-if="index != 0" @click="removeMethodStep(index)">remove</a></label>
                     <textarea class="form-control" v-model="m.description"></textarea>
                 </div>
             </draggable>
@@ -160,12 +160,18 @@ export default {
                 title: ''
             }
         },
+        removeIngredient(item) {
+            this.recipe.ingredients.splice(item, 1)
+        },
         addMethodStep() {
             let methodData = {
                 description: ''
             }
 
             this.recipe.method.push(methodData)
+        },
+        removeMethodStep(method) {
+            this.recipe.method.splice(method, 1)
         },
         saveRecipe() {
             console.log('starting save');
@@ -232,8 +238,12 @@ export default {
     margin-top: 10px;
     margin-bottom: 10px;    
 
-    span {
+    a {
         float: right;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__item {
@@ -258,6 +268,17 @@ export default {
 
 .method {
     margin-bottom: 20px;
+
+    label {
+        a {
+            float: right;
+            font-weight: normal;
+            
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .icon {
