@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Api\V1;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Recipe;
-use App\Models\Tag;
+use App\Models\Category;
 use App\Models\RecipeIngredient;
 
 class SearchController extends Controller
@@ -13,11 +13,11 @@ class SearchController extends Controller
     public function get(Request $request)
     {
         $search = Recipe::where('title', 'LIKE', '%' . $request->input('term') . '%')->get();
-        $tags = Tag::where('title', 'LIKE', '%' . $request->input('term') . '%')->get();
+        $categories = Category::where('title', 'LIKE', '%' . $request->input('term') . '%')->get();
         $ingredients = RecipeIngredient::where('title', 'LIKE', '%' . $request->input('term') . '%')->get();
 
-        $tags->each(function($item) {
-            $item->type = 'tag';
+        $categories->each(function($item) {
+            $item->type = 'category';
         });
 
         $search->each(function($item) {
@@ -29,7 +29,7 @@ class SearchController extends Controller
             $item->type = 'ingredient';
         });
 
-        $search = $search->merge($tags);
+        $search = $search->merge($categories);
         $search = $search->merge($ingredients);
 
         return response()->json($search->take(10));
