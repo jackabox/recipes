@@ -59,7 +59,7 @@
                         console.log(response.data);
 
                         this.loading = false; // loading is done
-                        this.categories = response.data;
+                        this.categories = response.data.data;
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
