@@ -9,6 +9,7 @@ use Validator;
 use App\Models\RecipeIngredient;
 use Carbon\Carbon;
 use App\Http\Resources\RecipeResource;
+use App\Models\RecipeCategory;
 
 class RecipeController extends Controller
 {
@@ -83,8 +84,14 @@ class RecipeController extends Controller
         $recipe->user_id = auth()->id();
         $recipe->serves = $request->serves;
         $recipe->method = $request->method;
-        $recipe->category_id = $request->category;
         $recipe->save();
+
+        if ($request->category) {
+            RecipeCategory::create([
+                'recipe_id' => $recipe->id,
+                'category_id' => $request->category
+            ]);
+        }
 
         if ($request->image) {
             $recipe

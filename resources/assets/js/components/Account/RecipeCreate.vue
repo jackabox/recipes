@@ -43,11 +43,11 @@
             </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group" v-if="categories">
             <label for="category">Category</label>
             <select name="category" v-model="recipe.category">
                 <option value="">Select a Category</option>
-                <option value="1">Breakfast</option>
+                <option v-for="(category) in categories" :key="category.id" :value="category.id">{{ category.title }}</option>
             </select>
         </div>
 
@@ -137,10 +137,20 @@ export default {
                 quantity: null,
                 measurement: '',
                 title: ''
-            }
+            },
+            categories: []
         }
     },
+    created() {
+        this.getCategories();
+    },
     methods: {
+        getCategories() {
+            axios.get(route('category.all'))
+                .then(response => {
+                    this.categories = response.data;
+                });
+        },
         addIngredient() {
             this.recipe.ingredients.push(this.ingredient)
 

@@ -35,6 +35,7 @@ Route::prefix('v1')->namespace('Api\V1')->group(function() {
     Route::post('/recipes/create', 'RecipeController@create');
  
     Route::get('/category/', 'CategoryController@index')->name('category');
+    Route::get('/category/all', 'CategoryController@all')->name('category.all');
     Route::get('/category/{category}', 'CategoryController@show')->name('category.show');
     
 
