@@ -57,17 +57,20 @@ const router = new VueRouter({
         },{
             path: '/recipes',
             name: 'recipes.index',
-            component: Recipes
-        },{
-            path: '/recipe/:slug',
-            name: 'recipes.single',
-            component: RecipesSingle
+            component: Recipes,
+            children: [
+                {
+                    path: ':slug',
+                    name: 'recipes.single',
+                    component: RecipesSingle
+                }
+            ]
         },{
             path: '/categories/',
             name: 'categories',
             component: Categories
         },{
-            path: '/category/:slug',
+            path: '/categories/:slug',
             name: 'category.show',
             component: Category
         },{
@@ -86,20 +89,20 @@ const router = new VueRouter({
             name: 'profile',
             component: Profile
         },{
-            path: '/me/settings',
-            name: 'me.settings',
-            component: Settings,
-            meta: {
-                auth: true
-            }
-        },{
             path: '/dashboard',
             name: 'dashboard',
             component: Dashboard,
             meta: {
                 auth: true
             }
-        }, {
+        },{
+            path: '/dashboard/settings',
+            name: 'me.settings',
+            component: Settings,
+            meta: {
+                auth: true
+            }
+        },{
             path: '/dashboard/recipes/add',
             name: 'dashboard.recipe.add',
             component: RecipeCreate,

@@ -60,6 +60,8 @@ export default {
     height: 60vh;
     min-height: 400px;
     position: relative;
+    background: url('/img/main-bg.jpg') 50% 0% no-repeat;
+    background-size: cover;
 
     .container {
         position: relative;
@@ -85,12 +87,12 @@ export default {
 
 .top-recipes {
     background-color: rgba(120, 108, 198, 0.04);
-    padding: 50px 0;
+    padding: 80px 0;
     margin-bottom: -80px;
 
     h3 {
         padding-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         text-align: center;
     }
 }
