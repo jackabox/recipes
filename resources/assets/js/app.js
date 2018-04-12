@@ -58,14 +58,11 @@ const router = new VueRouter({
             path: '/recipes',
             name: 'recipes.index',
             component: Recipes,
-            children: [
-                {
-                    path: ':slug',
-                    name: 'recipes.single',
-                    component: RecipesSingle
-                }
-            ]
-        },{
+        }, {
+            path: '/recipes/:slug',
+            name: 'recipes.single',
+            component: RecipesSingle
+        }, {
             path: '/categories/',
             name: 'categories',
             component: Categories

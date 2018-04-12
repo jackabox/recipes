@@ -131,17 +131,17 @@
             }
         },
         watch: {
-            qty(newQty, oldQty) {         
+            qty(newQty, oldQty) {     
                 if (newQty) {
-                    this.newQty = newQty;
+                    this.newQty = (newQty > 0 ? newQty : 1);
                 }
 
                 if (oldQty) {
-                    this.oldQty = oldQty;
+                    this.oldQty = (oldQty > 0 ? oldQty : 1);
                 }
 
                 for(var i = 0; i <= this.ingredients.length; i++){
-                    this.ingredients[i].quantity = this.ingredients[i].quantity / this.oldQty * this.newQty;
+                    this.ingredients[i].quantity = (this.ingredients[i].quantity / this.oldQty * this.newQty).toFixed(0);
                 }
             }
         }
