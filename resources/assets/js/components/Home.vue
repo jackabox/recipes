@@ -72,23 +72,45 @@ export default {
 }
 
 .home {
-    max-width: 240px;
-    // max-width: 560px;
+    max-width: 260px;
+
+    @media (min-width: 600px) {
+        max-width: 360px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 560px;
+    }
 
     &--lead {
-        font-size: 2.4rem;
-        // font-size: 5rem;
+        font-size: 3rem;    
         font-weight: bold;
         line-height: 1;
+
+        @media (min-width: 600px) {
+            font-size: 4rem;
+        }    
+
+        @media (min-width: 768px) {
+            font-size: 5rem;
+        }
     }
 
     &--sub {
-        font-size: 1.9rem;
-        // font-size: 3rem;
+        font-size: 2rem;
         margin-bottom: 10px;
-        // margin-bottom: 20px;
         color: rgba(36, 33, 54, 0.4);
         font-weight: 400;
+
+        @media (min-width: 600px) {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }    
+
+        @media (min-width: 768px) {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
     }
 }
 
