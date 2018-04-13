@@ -138,7 +138,6 @@
               min-width: 115px;
               display: none;
               text-align: left;
-              margin-top: -4px;
               transition: .4s all;
               top: -100px;         
               opacity: 0;
@@ -154,14 +153,14 @@
 
               a {                
                   padding: 8px 20px;
-                  border-bottom: 1px solid darken(#796ec6, 5%);
-                  background: #796ec6;                    
+                  border-bottom: 1px solid darken(#242136, 5%);
+                  background: #242136;                    
                   display: block;
                   font-size: 1.5rem;
                   color: white;
 
                   &:hover {
-                      background: darken(#796ec6, 5%)
+                      background: lighten(#242136, 20%)
                   }
               }
           }
@@ -170,11 +169,10 @@
 
       a {
           display: block;
-          line-height: 20px;
           transition: .4s all;
 
         @media (min-width: 768px) {
-          padding: 20px 10px;
+          padding: 30px 10px;
 
         }
 
@@ -198,6 +196,8 @@
       width: 16px;
       height: 16px;
       transition: .4s all;
+      position: relative;
+      top: 5px;
       
   }
 
@@ -206,7 +206,7 @@
       width: 36px;
       height: auto;
       margin-right: 6px;
-      margin-top: -7px;
+      margin-top: -3px;
       display: none;
 
       @media (min-width: 768px) {

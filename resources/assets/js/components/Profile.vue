@@ -16,7 +16,7 @@
                 loading...
             </div>
 
-            <h3>Top Recipes</h3>
+            <h3>User Recipes</h3>
             <div v-if="recipes" class="recipes">
                 <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>
             </div>
@@ -84,5 +84,10 @@ export default {
     img {
         border-radius: 100%;
     }
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 </style>

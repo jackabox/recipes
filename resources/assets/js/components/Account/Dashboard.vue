@@ -45,12 +45,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .row {
-    display: flex;
-    justify-content: space-between;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .col {
-    width: 49%;
+    margin-bottom: 20px;
+    @media (min-width: 768px) {  
+        width: 49%;
+        margin-bottom: 0;
+    }
 }
 </style>
