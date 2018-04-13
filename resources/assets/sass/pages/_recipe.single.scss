@@ -13,23 +13,31 @@
 }
 
 .recipe-single__inner {
-    display: flex;
-    justify-content: space-between;
+    @media (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .recipe-single-sidebar {
-    width: 320px;
+    @media (min-width: 768px) {
+        width: 320px;
+    }
 }
 
 .recipe-single-body {
-    width: calc(100% - 360px);
+    @media (min-width: 768px) {    
+        width: calc(100% - 360px);
+    }
 }
 
 .recipe-single__prep-cook {
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
-    padding-top: 3rem;
+    @media (min-width: 768px) {
+        padding-top: 3rem;
+    }
 
     .prep-time,
     .cook-time {

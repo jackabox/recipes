@@ -27,6 +27,7 @@
                 </div>
             </div>  
 
+   
             <div class="recipe-single__inner">
                 <div class="recipe-single-sidebar">
                     <div class="recipe-single__prep-cook">
@@ -77,6 +78,7 @@
 </template>
 
 <script>
+
     export default {
         data() {
             return {
