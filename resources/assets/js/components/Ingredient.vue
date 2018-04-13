@@ -27,7 +27,6 @@
         </div>
 
         <pagination :meta="meta"></pagination>
-        
     </div>
 </main>
 </template>

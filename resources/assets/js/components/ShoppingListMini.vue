@@ -2,6 +2,7 @@
     <router-link :to="{ name: 'shopping-list' }" class="small">
         <icon src="/img/zondicons/shopping-cart.svg" />
         <span class="count" v-if="count">{{ count }}</span>   
+        <span class="icon-text">Shopping List</span>
     </router-link>
 </template>
 

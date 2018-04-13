@@ -57,7 +57,8 @@ export default {
 
 <style lang="scss" scoped>
 .lead-area {
-    height: 60vh;
+    height: calc(80vh - 70px);
+    // height: 60vh;
     min-height: 400px;
     position: relative;
     background: url('/img/main-bg.jpg') 50% 0% no-repeat;
@@ -71,24 +72,28 @@ export default {
 }
 
 .home {
-    max-width: 560px;
+    max-width: 240px;
+    // max-width: 560px;
 
     &--lead {
-        font-size: 5rem;
+        font-size: 2.4rem;
+        // font-size: 5rem;
         font-weight: bold;
         line-height: 1;
     }
 
     &--sub {
-        font-size: 3rem;
-        margin-bottom: 20px;
+        font-size: 1.9rem;
+        // font-size: 3rem;
+        margin-bottom: 10px;
+        // margin-bottom: 20px;
         color: rgba(36, 33, 54, 0.4);
         font-weight: 400;
     }
 }
 
 .top-recipes {
-    background-color: rgba(120, 108, 198, 0.04);
+    // background-color: rgba(120, 108, 198, 0.04);
     padding: 80px 0;
     margin-bottom: -80px;
 

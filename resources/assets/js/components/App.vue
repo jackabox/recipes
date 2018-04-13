@@ -2,32 +2,43 @@
 <div class="app">
     <header class="site-header" v-bind:class="scrollTop">
         <div class="container">
-            <h1><router-link :to="{ name: 'home' }"><img src="/img/logo.svg"></router-link></h1>
+            <h1><router-link @click.native="menuopen = false" :to="{ name: 'home' }"><img src="/img/logo.svg"></router-link></h1>
+
+            <input id="burger" type="checkbox" v-model="menuopen">
+
+            <label for="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
             <nav class="site-navigation">
                 <ul>
-                    <li><router-link :to="{ name: 'recipes.index' }">Recipes</router-link></li>
-                    <li><router-link :to="{ name: 'categories' }">Categories</router-link></li>                   
-                    <li><router-link :to="{ name: 'pantry' }">Pantry</router-link></li>
+                    <li><router-link @click.native="menuopen = false" :to="{ name: 'recipes.index' }">Recipes</router-link></li>
+                    <li><router-link @click.native="menuopen = false" :to="{ name: 'categories' }">Categories</router-link></li>                   
+                    <li><router-link @click.native="menuopen = false" :to="{ name: 'pantry' }">Pantry</router-link></li>
                     <li class="divider"></li>                    
-                    <li><router-link :to="{ name: 'search' }"><icon src="/img/zondicons/search.svg" /></router-link></li>
+                    <li><router-link @click.native="menuopen = false" :to="{ name: 'search' }">
+                        <icon src="/img/zondicons/search.svg" />
+                        <span class="icon-text">Search</span>
+                        
+                    </router-link></li>
 
                     <li class="divider"></li>                    
                     <li v-if="$auth.check()">
-                        <shopping-list-mini />
+                        <shopping-list-mini @click.native="menuopen = false" />
                     </li>
 
                     <li class="divider" v-if="$auth.check()"></li>
                     <li class="account" v-if="$auth.check()">
-                       
-                        <router-link :to="{ name: 'profile', params: { slug: $auth.user().username }}"><img class="profile-pic" :src="$auth.user().profile_pic" alt=""> Jack <icon src="/img/zondicons/cheveron-down.svg" class="chevron" /></router-link>
+                        <router-link :to="{ name: 'profile', params: { slug: $auth.user().username }}" @click.native="menuopen = false"><img class="profile-pic" :src="$auth.user().profile_pic" alt=""> Jack <icon src="/img/zondicons/cheveron-down.svg" class="chevron" /></router-link>
                         <ul>
-                            <li><router-link :to="{ name: 'dashboard' }">Dashboard</router-link></li>
-                            <li><a href="#" @click.prevent="$auth.logout()">Logout</a></li>
+                            <li><router-link @click.native="menuopen = false"  :to="{ name: 'dashboard' }">Dashboard</router-link></li>
+                            <li><a @click.native="menuopen = false" href="#" @click.prevent="$auth.logout()">Logout</a></li>
                         </ul>
                     </li>
                     <li v-if="!$auth.check()">
-                        <router-link :to="{ name: 'login' }">Login</router-link>
+                        <router-link @click.native="menuopen = false" :to="{ name: 'login' }">Login</router-link>
                     </li>
                 </ul>      
             </nav>
@@ -66,7 +77,8 @@
 export default {
     data () {
         return {
-            scrolled: false
+            scrolled: false,
+            menuopen: false
         }
     },
     created () {
@@ -95,5 +107,11 @@ export default {
 .chevron {
     color: rgba(0,0,0,.5);
     margin-top: -2px;
+}
+
+h1 {
+    z-index: 10;
+    margin-left: 15px;
+    margin-top: 0;
 }
 </style>

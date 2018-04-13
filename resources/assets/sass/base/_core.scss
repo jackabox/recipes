@@ -17,8 +17,12 @@ body {
 .app {
     display: flex;
     min-height: 100vh;
-    padding-top: 70px;    
-	flex-direction: column;
+    padding-top: 60px; 
+    flex-direction: column;
+    
+    @media (min-width: 768px) {   
+        padding-top: 70px;    
+    }
 }
 
 main {
