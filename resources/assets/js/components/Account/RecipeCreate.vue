@@ -255,14 +255,24 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    flex-flow: row wrap;
 
     .btn {
         width: 120px;
+        margin-top: 20px;
+        
+        @media (min-width: 600px) {
+            margin-top: 0;
+        }        
     }
 
     .form-group {
-        width: calc((96% - 120px) / 3);
+        width: calc(96% / 3);
         margin-bottom: 0;
+
+        @media (min-width: 600px) {
+            width: calc((96% - 120px) / 3);
+        }
     }
 }
 
