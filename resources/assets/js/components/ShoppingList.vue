@@ -109,7 +109,7 @@ export default {
             font-size: 1.8rem;
             padding: 1.2rem 0;
             position: relative;
-            transition: .2s all ease-in-out;
+            transition: .3s all;
             
             &.bought {
                 text-decoration: line-through;
