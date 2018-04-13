@@ -55,6 +55,7 @@ export default {
 
 .col {
     margin-bottom: 20px;
+    
     @media (min-width: 768px) {  
         width: 49%;
         margin-bottom: 0;

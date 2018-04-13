@@ -5,11 +5,12 @@
     left: 0;
     right: 0;
     width: 100%;
+    min-height: 60px;
     z-index: 20;
     transition: .3s all ease-in-out;
 
     &.fixed {
-        box-shadow: $box-shadow;        
+        box-shadow: $box-shadow;
     }
 
     .container {
