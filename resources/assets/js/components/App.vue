@@ -108,10 +108,4 @@ export default {
     color: rgba(0,0,0,.5);
     margin-top: -2px;
 }
-
-h1 {
-    z-index: 10;
-    margin-left: 15px;
-    margin-top: 0;
-}
 </style>
