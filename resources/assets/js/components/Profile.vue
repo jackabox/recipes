@@ -6,7 +6,7 @@
                     <img :src="user.profile_pic" alt="">
                 </div>
 
-                <h1>{{ user.name }}</h1>
+                <h2>{{ user.name }}</h2>
                 <p v-if="profile.description">{{ profile.description }}</p>
             </div>
         </div>
@@ -71,20 +71,53 @@ export default {
 
 .profile-banner {
     position: relative;
-    padding-left: 180px;
+    text-align: center;
+    padding-top: 130px;
+
+    @media (min-width: 600px) {
+        padding-left: 160px;
+        padding-top: 0;
+        text-align: left;
+    }
+
+    @media (min-width: 768px) {
+        padding-left: 190px;
+    }
+
+    p {
+        padding: 0;
+    }
+
 }
 
 .profile-image {
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    left: 0;
-    top: 40px;
+    position: absolute;        
+    width: 140px;
+    height: 140px;
+    left: 50%;
+    margin-left: -70px;
+    top: 10px;
+
+    @media (min-width: 600px) {
+        left: 15px;
+        margin-left: 0;
+    }
+
+    @media (min-width: 768px) {
+        width: 160px;
+        height: 160px;
+    }    
 
     img {
         border-radius: 100%;
     }
 }
+
+h2 {
+    // padding-top: 0;
+    padding-bottom: 10px;
+}
+
 
 h3 {
     text-align: center;
