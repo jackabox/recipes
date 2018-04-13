@@ -23,73 +23,32 @@
             <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>
         </div>
 
-        <ul class="pagination">
-            <li v-for="(page, index) in pageCount" :class="['page-item', {'active': page == pagination.current_page}]" :key="index">
-                <a href="#" class="page-link" @click.prevent="changePage(page)">
-                    {{ page }}
-                </a>
-            </li>
-        </ul>
-
-        <div class="pagination" v-show="showPagination">
-            <button :disabled="! olderResults" @click.prevent="goToPage('prev')">Prev</button>
-            {{ paginationCount }}
-            <button :disabled="! newerResults" @click.prevent="goToPage('next')">Next</button>
-        </div>
+        <pagination :meta="meta"></pagination>
     </div>
 </main>
 </template>
 
 <script>
     import RecipeItem from '../components/RecipeItem.vue'
+    import Pagination from '../components/Utilities/Pagination.vue'
     
     export default {
         components: {
-            'recipe-item': RecipeItem
+            RecipeItem,
+            Pagination
         },
         data() {
             return {
                 loading: false,
                 recipes: null,
                 errors: null,  
-                page: 1,
                 meta: null,
+                page: 1
             };
         },
         created() {
+            this.$on('paginate', this.updatePage)                        
             this.fetchData();
-        },
-        computed: {
-            newerResults() {
-                if (! this.meta || this.meta.current_page === this.meta.last_page) {
-                    return;
-                }
-
-                return this.meta.current_page + 1;
-            },
-            olderResults() {
-                if (! this.meta || this.meta.current_page === 1) {
-                    return;
-                }
-
-                return this.meta.current_page - 1;
-            },
-            showPagination() {
-                if (! this.meta || this.meta.total <= this.meta.per_page) {
-                    return;
-                }
-
-                return true;
-            },
-            paginationCount() {
-                if (! this.meta) {
-                    return;
-                }
-
-                const { current_page, last_page } = this.meta;
-
-                return `${current_page} of ${last_page}`;
-            },
         },
         methods: {
             fetchData() {            
@@ -106,16 +65,10 @@
                         this.error = error.response.data.message || error.message;
                     });
             },
-            goToPage(type) {
-                if (type === 'next') {
-                    this.page = this.page + 1;
-                } else {
-                    this.page = this.page - 1;
-                }
-
-                window.scrollTo(0, 0);
+            updatePage(data) {
+                this.page = data;
                 this.fetchData();
-            },
+            }
         }
     }
 </script>

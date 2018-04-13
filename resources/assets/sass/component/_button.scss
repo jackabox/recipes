@@ -35,11 +35,11 @@
 }
 
 .btn--tertiary {
-
+    background-color: darken($grey-soft, 5%);
+    color: hsla(0,0,0,.6);
 }
 
 .btn--grey {
     background-color: darken($grey-soft, 5%);
     color: hsla(0,0,0,.6);
 }
-

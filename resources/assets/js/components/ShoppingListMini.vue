@@ -15,7 +15,6 @@ export default {
     created() {
         this.$root.$on('update-shopping-list', this.saveShoppingList)
         this.getShoppingList();
-        
     },
     methods: {
         getShoppingList() {

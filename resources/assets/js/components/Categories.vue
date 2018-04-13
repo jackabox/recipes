@@ -28,6 +28,8 @@
                     <h3>{{ category.title }}</h3>
                 </router-link>
             </div>
+
+            <pagination :meta="meta"></pagination>
         </div>
     </div>
 </main>
@@ -35,17 +37,23 @@
 
 <script>
     import axios from 'axios';
+    import Pagination from '../components/Utilities/Pagination.vue'
     
     export default {
+        components: {
+            Pagination
+        },
         data() {
             return {
                 slug: this.$route.params.slug,
                 loading: false,
                 categories: null,
                 errors: null,
+                meta: null,                
             };
         },
         created() {
+            this.$on('paginate', this.updatePage)                                    
             this.fetchData();
         },
         methods: {
@@ -54,16 +62,19 @@
                 this.loading = true;
                 
                 axios
-                    .get(route('category'))
+                    .get('v1/category?page=' + this.page)
                     .then(response => {
-                        console.log(response.data);
-
                         this.loading = false; // loading is done
                         this.categories = response.data.data;
+                        this.meta = response.data.meta                        
                     }).catch(error => {
                         this.loading = false;
                         this.error = error.response.data.message || error.message;
                     });
+            },
+            updatePage(data) {
+                this.page = data;
+                this.fetchData();
             }
         }
     }
