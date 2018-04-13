@@ -1,7 +1,7 @@
 <template>
 <main>
     <div class="page-header">
-        <h1 class="container">Category: {{ meta.category }}</h1>
+        <h1 class="container">Ingredient: {{ meta.ingredient }}</h1>
     </div>
 
     <div class="container">
@@ -20,13 +20,14 @@
         </div>
 
         <div v-if="recipes" class="recipes">
-            <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>
+            <recipe-item v-for="recipe in recipes" :key="recipe.id"  :recipe="recipe"></recipe-item>            
         </div>
         <div v-else>
             No recipes
         </div>
 
-        <pagination v-if="meta" :meta="meta"></pagination>        
+        <pagination :meta="meta"></pagination>
+        
     </div>
 </main>
 </template>
@@ -38,7 +39,7 @@
     export default {
         components: {
             RecipeItem,
-            Pagination
+            Pagination            
         },
         data() {
             return {
@@ -49,10 +50,11 @@
                 meta: null,
                 page: 1
             };
-        },  
+        },
+        
         created() {
             this.fetchData();
-            this.$on('paginate', this.updatePage)                        
+            this.$on('paginate', this.updatePage)            
         },
         methods: {
             fetchData() {
@@ -60,10 +62,9 @@
                 this.loading = true;
                 
                 axios
-                    .get(route('category.show', { category: this.slug, page: this.page}))
+                    .get(route('ingredients.show', { ingredient: this.slug, page: this.page}))
                     .then(response => {
                         console.log(response.data);
-
                         this.loading = false; // loading is done
                         this.meta = response.data.meta                        
                         this.recipes = response.data.data; // set the users from the response

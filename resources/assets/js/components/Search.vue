@@ -18,10 +18,10 @@
                 <router-link v-if="result.type === 'recipe'" :to="{ name: 'recipes.single', params: { slug: result.slug }}">
                     {{ result.title }}
                 </router-link>
-                <router-link v-else-if="result.type === 'tag'" :to="{ name: 'tag.show', params: { slug: result.slug }}">
+                <router-link v-else-if="result.type === 'category'" :to="{ name: 'category.show', params: { slug: result.slug }}">
                     {{ result.title }}
                 </router-link>                    
-                <router-link v-else :to="{ name: 'home' }">
+                <router-link v-else-if="result.type === 'ingredient'" :to="{ name: 'ingredient.show', params: { slug: result.slug }}">
                     {{ result.title }}                
                 </router-link>
                 

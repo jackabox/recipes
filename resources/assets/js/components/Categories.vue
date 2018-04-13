@@ -28,9 +28,9 @@
                     <h3>{{ category.title }}</h3>
                 </router-link>
             </div>
-
-            <pagination :meta="meta"></pagination>
         </div>
+        
+        <pagination :meta="meta"></pagination>  
     </div>
 </main>
 </template>

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Recipe;
+use App\Http\Resources\CategoryResource;
+use App\Http\Resources\RecipeResource;
 
 class CategoryController extends Controller
 {
@@ -16,9 +18,9 @@ class CategoryController extends Controller
     
     public function index() 
     {
-        $categories = Category::paginate(10);
+        $categories = Category::paginate(12);
 
-        return response()->json($categories);
+        return CategoryResource::collection($categories);
     }
 
     public function all()
@@ -29,15 +31,13 @@ class CategoryController extends Controller
 
     public function show(Category $category)
     {
-        $category_recipes = Recipe::whereHas('categories', function ($query) use ($category) {
+        $recipes = Recipe::whereHas('categories', function ($query) use ($category) {
             $query->where('category_id', $category->id);
         })->latest()->paginate(12);
 
-        $data = [
-            'name' => $category->title,
-            'recipes' => $category_recipes
-        ];
 
-        return response()->json($data);
+        return RecipeResource::collection($recipes)->additional(['meta' => [
+            'category' => $category->title,
+        ]]);
     }
 }

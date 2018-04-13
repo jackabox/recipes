@@ -45,7 +45,7 @@ class RecipeController extends Controller
 
     public function top(Request $request)
     {
-        $recipes = Recipe::with('media', 'user')->latest()->take(3)->get();
+        $recipes = Recipe::with('media', 'user')->latest()->take(6)->get();
         
         $recipes->each(function($recipe) {
             if ($recipe->getMedia()->count() > 0) {

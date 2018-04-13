@@ -27,6 +27,7 @@ import Recipes from './components/Recipes'
 import RecipesSingle from './components/RecipesSingle'
 import Categories from './components/Categories'
 import Category from './components/Category'
+import Ingredient from './components/Ingredient'
 import Pantry from './components/Pantry'
 import NotFound from './components/NotFound'
 import ShoppingList from './components/ShoppingList' 
@@ -71,6 +72,10 @@ const router = new VueRouter({
             path: '/categories/:slug',
             name: 'category.show',
             component: Category
+        },{
+            path: '/ingredients/:slug',
+            name: 'ingredient.show',
+            component: Ingredient
         },{
             path: '/pantry',
             name: 'pantry',
