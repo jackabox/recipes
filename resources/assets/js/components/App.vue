@@ -19,8 +19,8 @@
 
                     <li class="divider" v-if="$auth.check()"></li>
                     <li class="account" v-if="$auth.check()">
-                        <img class="profile-pic" :src="$auth.user().profile_pic" alt="">
-                        <router-link :to="{ name: 'profile', params: { slug: $auth.user().username }}">Jack</router-link>
+                       
+                        <router-link :to="{ name: 'profile', params: { slug: $auth.user().username }}"><img class="profile-pic" :src="$auth.user().profile_pic" alt=""> Jack <icon src="/img/zondicons/cheveron-down.svg" class="chevron" /></router-link>
                         <ul>
                             <li><router-link :to="{ name: 'dashboard' }">Dashboard</router-link></li>
                             <li><a href="#" @click.prevent="$auth.logout()">Logout</a></li>
@@ -90,3 +90,10 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+.chevron {
+    color: rgba(0,0,0,.5);
+    margin-top: -2px;
+}
+</style>

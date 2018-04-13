@@ -49,7 +49,8 @@
                 loading: false,
                 categories: null,
                 errors: null,
-                meta: null,                
+                meta: null,
+                page: 1                
             };
         },
         created() {

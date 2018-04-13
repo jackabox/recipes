@@ -7,7 +7,6 @@
     width: 100%;
     z-index: 20;
     transition: .3s all ease-in-out;
-    height: 70px;
 
     &.fixed {
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .1);        
@@ -17,7 +16,7 @@
         display: flex;
         flex-flow: row;
         align-items: center;
-        padding: 16px 0;
+        padding: 10px 0;
         justify-content: space-between;
     }
 
@@ -56,22 +55,80 @@
 
         > li {
             display: inline-block;
-            margin-left: 2rem;
+
+            &:hover {
+                ul {
+                    display: block;
+                    top: auto;
+                    opacity: 1;
+                }
+            } 
+
+            img {
+                float: left;
+            }
 
             > ul {
+                position: absolute;
+                width: inherit;
+                min-width: 115px;
                 display: none;
+                text-align: left;
+                margin-top: -4px;
+                transition: .4s all;
+                top: -100px;         
+                opacity: 0;
+
+                > li {
+                    text-align: left;
+
+                    &:last-child a {
+                        border-bottom: 0;
+                    }
+                }
+
+                a {
+                    padding: 8px 20px;
+                    border-bottom: 1px solid darken(#796ec6, 5%);
+                    background: #796ec6;                    
+                    display: block;
+                    font-size: 1.5rem;
+                    color: white;
+
+                    &:hover {
+                        background: darken(#796ec6, 5%)
+                    }
+                }
             }
         }
 
         a {
-            padding: 20px 0;
+            padding: 20px 10px;
+            display: block;
             line-height: 20px;
+            transition: .4s all;
+
+            
         }
+
+        > li:hover, > li:focus {
+            > a {
+                color: #796ec6
+            }
+
+            .icon {
+                fill: #796ec6;
+            }
+        }
+
+       
     }
 
     .icon {
         width: 16px;
         height: 16px;
+        transition: .4s all;
+        
     }
 
     .profile-pic {
@@ -79,7 +136,7 @@
         width: 36px;
         height: auto;
         margin-right: 6px;
-        margin-top: -2px;
+        margin-top: -7px;
     }
 
     .divider {
@@ -88,7 +145,6 @@
         border-left:1px solid #eee;
         height: 26px;
         vertical-align: middle;
-        margin-left: 2rem;
     }
 }
 
