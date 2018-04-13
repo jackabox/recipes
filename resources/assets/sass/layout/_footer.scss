@@ -12,8 +12,10 @@ footer {
     }
 
     .container {
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            flex-flow: row;
+        }
     }
 }
